@@ -62,7 +62,7 @@ nav {
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #4ade80;
+      color: map-get($color, $key: success);
     }
   }
 }
