@@ -1,6 +1,8 @@
 <template>
   <header>
-    logo
+    <button class="logo">
+      <img src="./assets/logo.png" alt="" />
+    </button>
 
     <nav>
       <router-link to="/">Home123</router-link> |
@@ -10,8 +12,9 @@
     </nav>
     <!-- <button>漢堡</button> -->
   </header>
-
-  <router-view />
+  <main>
+    <router-view />
+  </main>
 
   <footer>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, eos!
@@ -19,6 +22,30 @@
 </template>
 
 <style lang="scss">
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .logo {
+    background: none;
+    border: none;
+    width: 50px;
+
+    img {
+      width: 100%;
+    }
+  }
+  nav {
+    margin: auto;
+  }
+}
+
+main {
+  margin-top: 20%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import LoginView from "@/views/LoginView.vue";
 import storeView from "@/views/storeView.vue";
+import NotFound from "@/views/NotFoundView.vue";
 
 const routes = [
   {
@@ -30,13 +31,24 @@ const routes = [
     name: "/store",
     // component: LoginView,
     component: () =>
-      import(/* webpackChunkName: "Login" */ "@/views/storeView.vue"),
+      import(/* webpackChunkName: "store" */ "@/views/storeView.vue"),
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "/NotFound",
+    // component: LoginView,
+    component: () =>
+      import(/* webpackChunkName: "err" */ "@/views/NotFoundView.vue"),
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // 始终滚动到顶部
+    return { top: 0 };
+  },
 });
 
 export default router;
