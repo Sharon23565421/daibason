@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an store page</h1>
+    <h1>測試</h1>
   </div>
 </template>
