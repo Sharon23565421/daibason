@@ -1,9 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home123</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <header>
+    logo
+
+    <nav>
+      <router-link to="/">Home123</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/Login">Login</router-link> |
+      <router-link to="/store">store</router-link>
+    </nav>
+    <!-- <button>漢堡</button> -->
+  </header>
+
   <router-view />
+
+  <footer>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, eos!
+  </footer>
 </template>
 
 <style lang="scss">
