@@ -15,7 +15,15 @@
         </label>
       </div>
     </div>
+    <div class="icon">
+      <router-link to="" class="">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </router-link>
 
+      <router-link to="" class="">
+        <i class="fa-solid fa-user"></i>
+      </router-link>
+    </div>
     <nav class="navbar">
       <!-- <router-link to="/">Home123</router-link> | -->
       <router-link to="/mrt" class="mrt">捷運推薦</router-link>
@@ -46,17 +54,22 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    text-decoration: none;
-
-    &.router-link-exact-active {
-      color: map-get($color, $key: success);
-    }
-  }
+a {
+  text-decoration: none;
+  color: #333;
 }
+
+// nav {
+//   padding: 30px;
+
+//   a {
+//     font-weight: bold;
+//     color: #2c3e50;
+//     text-decoration: none;
+
+//     &.router-link-exact-active {
+//       color: map-get($color, $key: success);
+//     }
+//   }
+// }
 </style>
