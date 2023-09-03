@@ -3,9 +3,9 @@
     <nav>
       <router-link to="/">Home123</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/Login">Login</router-link> |
       <router-link to="/store">store</router-link> |
-      <router-link to="/RegisterView">register</router-link>
+      <router-link to="/Login">Login</router-link> |
+      <router-link to="/RegSuccess">RegSuccess</router-link>
     </nav>
   </header>
 

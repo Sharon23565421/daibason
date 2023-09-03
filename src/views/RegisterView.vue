@@ -1,40 +1,40 @@
 
 <template>
-  <div class="loginWrap">
-    <div class="loginPic">
+  <div class="registerWrap">
+    <div class="registerPic">
       <img src="https://picsum.photos/500/800/?random=1">
     </div>
-    <div class="loginText">
+    <div class="registerText">
       <h1>會員註冊</h1>
-      <form action="">
-        <div class="loginName">
+      <form action="RegSuccess" class="regForm">
+        <div class="registerName">
           <label for="name">姓名</label>
           <input type="text" id="name">
         </div>
-        <div class="loginGender">
+        <div class="registerGender">
           <label for="gender">性別</label>
           <select>
             <option value="">男</option>
             <option value="">女</option>
           </select>
         </div>
-        <div class="loginBir">
+        <div class="registerBir">
           <label for="bir">生日</label>
           <input type="date" id="bir">
         </div>
-        <div class="loginTel">
+        <div class="registerTel">
           <label for="tel">電話</label>
           <input type="text" id="tel">
         </div>
-        <div class="loginEmail">
+        <div class="registerEmail">
           <label for="email">信箱</label>
           <input type="text" id="email">
         </div>
-        <div class="loginPwd">
+        <div class="registerPwd">
           <label for="pwd">密碼</label>
           <input type="password" id="pwd" v-model="userPwd">
         </div>
-        <div class="loginCheck">
+        <div class="registerCheck">
           <label for="check">再次輸入</label>
           <input type="text" id="check">
         </div>
@@ -58,7 +58,7 @@ export default {
     }
   },
   methods: {
-    login() {
+    register() {
       if (this.userId == this.userIdTrue && this.userPwd == this.userPwdTrue) {
         alert('登入成功')
       }
@@ -71,23 +71,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.loginWrap {
+.registerWrap {
   // border: 1px solid red;
-  // width: 1200px;
-  // margin: auto;
+  width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: center;
-  // background-image: url("https://picsum.photos/800/800/?random=50");
-  // background-repeat: no-repeat;
 
-  .loginPic {
+  .registerPic {
     border: 1px solid #aaa;
     position: relative;
     left: 50px;
     border-radius: 20px;
 
-    // z-index: -1;
-    // width: 100%;
     img {
       border-radius: 20px;
       width: 100%;
@@ -95,12 +91,11 @@ export default {
     }
   }
 
-  .loginText {
+  .registerText {
     border: 1px solid #aaa;
     border-radius: 20px;
     position: relative;
     right: 50px;
-    // z-index: 5;
     background-color: #fff;
 
     button {
@@ -115,7 +110,7 @@ export default {
       margin-top: 100px;
     }
 
-    form {
+    .regForm {
       // border: 1px solid red;
       // width: 80%;
       // margin: auto;
@@ -125,9 +120,9 @@ export default {
       grid-template-rows: repeat(6, 50px);
       align-items: center;
       justify-items: left;
-      gap: 30px;
+      gap: 50px;
       padding: 0 50px;
-      
+
 
       label {
         display: block;
@@ -142,23 +137,23 @@ export default {
         width: 100%;
       }
 
-      .loginBir{
+      .registerBir {
         width: 100%;
       }
- 
 
-      .loginEmail {
+
+      .registerEmail {
         // border: 1px solid red;
         width: 100%;
         grid-area: 3/1/4/3;
       }
 
-      .loginPwd {
+      .registerPwd {
         width: 100%;
         grid-area: 4/1/5/3;
       }
 
-      .loginCheck {
+      .registerCheck {
         width: 100%;
         grid-area: 5/1/6/3;
       }
@@ -169,46 +164,30 @@ export default {
         border-radius: 20px;
         padding: 5px 20px;
         border: transparent;
+        // background-color: #ddd;
 
       }
     }
   }
+}
 
-  // @media screen and (max-width:414px) {
-  //   .loginWrap {
-  //     // display: block;
-  //     flex-direction: column;
+@media screen and (max-width:414px) {
+  .registerWrap {
+    width: 100%;
 
-  //     .loginPic {
-  //       left: 0;
-  //       top: 20px;
+    .registerPic {
+      // border: 1px solid red;
+      display: none;
+    }
 
-  //       // height: 200px;
-  //       img {
-  //         height: 200px;
-  //         width: 100%;
-  //       }
-  //     }
+    .registerText {
+      right: 0;
 
-  //     .loginText {
-  //       right: 0;
-  //       bottom: 20px;
-
-  //       .loginOther {
-  //         margin-top: 50px;
-
-  //         button {
-  //           margin: 0 20px;
-  //           background-color: transparent;
-  //           border: transparent;
-
-  //           span {
-  //             display: none;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
+      h1 {
+        text-align: center;
+      }
+    }
+  }
 }
 </style>
 
