@@ -4,7 +4,7 @@
     <div class="header">
       <div class="line"></div>
       <router-link to="/">
-        <img src="./img/Group-42.jpg" alt="" />
+        <img src="@/img/logo.png" alt="" />
       </router-link>
       <div class="line"></div>
       <div class="hb">
@@ -42,7 +42,18 @@
     <!-- Main -->
   </main>
 
-  <footer>Footer</footer>
+  <footer>
+    <div class="footerLogo">
+      <router-link to="/">
+        <img src="@/img/logo.png" alt="" />
+      </router-link>
+    </div>
+    <div class="footerTxt">
+      <p>E-mail : daibason@gmail.com</p>
+      <p>本網站為緯育CHD103其展示作品，非商業用途。</p>
+    </div>
+
+  </footer>
 </template>
 
 <style lang="scss">
@@ -50,7 +61,7 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // text-align: center;
   color: #2c3e50;
 }
 

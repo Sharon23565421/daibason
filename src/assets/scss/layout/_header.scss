@@ -35,7 +35,8 @@
 header {
   width: 100%;
   padding: $padding;
-  max-width: $max-width;
+  // max-width: $max-width;
+  margin: auto;
 
   .header {
     width: 100%;
@@ -49,6 +50,10 @@ header {
       margin: 0 2%;
       border-radius: $border-radius;
       border: 1px solid #d9d9d9;
+    }
+
+    img{
+      width: 75px;
     }
 
     .hb {
@@ -74,7 +79,7 @@ header {
   }
 
   .icon {
-    width: 50%;
+    width: 56%;
     text-align: right;
     margin-inline: auto;
     a {
@@ -113,7 +118,7 @@ header {
       }
 
       img {
-        width: 80%;
+        width: 75px;
       }
 
       .hb {
