@@ -1,11 +1,31 @@
 <template>
+  <input type="checkbox" name="" id="menu-check" />
   <header>
-    <nav>
-      <router-link to="/">Home123</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/Login">Login</router-link> |
-      <router-link to="/store">store</router-link> |
-      <router-link to="/RegisterView">register</router-link>
+    <div class="header">
+      <div class="line"></div>
+      <router-link to="/">
+        <img src="./img/Group-42.jpg" alt="" />
+      </router-link>
+      <div class="line"></div>
+      <div class="hb">
+        <label for="menu-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <!-- <router-link to="/">Home123</router-link> | -->
+      <router-link to="/mrt" class="mrt">捷運推薦</router-link>
+      <router-link to="/game" class="game">捷運冒險</router-link>
+      <router-link to="/contribute" class="contribute">投稿專欄</router-link>
+      <!-- <router-link to="/RegisterView">register</router-link> -->
+      <router-link to="/Login" class="login">會員中心</router-link>
+      <router-link to="/store" class="store">精選購物</router-link>
+      <router-link to="/newView" class="new">最新消息</router-link>
+      <router-link to="/about" class="about">關於我們</router-link>
     </nav>
   </header>
 
@@ -14,9 +34,7 @@
     <!-- Main -->
   </main>
 
-  <footer>
-    Footer
-  </footer>
+  <footer>Footer</footer>
 </template>
 
 <style lang="scss">

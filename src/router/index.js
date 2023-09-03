@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import LoginView from "@/views/LoginView.vue";
-import storeView from "@/views/storeView.vue";
-import NotFound from "@/views/NotFoundView.vue";
+// import LoginView from "@/views/LoginView.vue";
+// import storeView from "@/views/storeView.vue";
+// import NotFound from "@/views/NotFoundView.vue";
 
 const routes = [
   {
@@ -40,6 +40,35 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "store" */ "@/views/storeView.vue"),
   },
+  {
+    path: "/mrt",
+    name: "/mrt",
+    // component: LoginView,
+    component: () =>
+      import(/* webpackChunkName: "mrt" */ "@/views/mrtView.vue"),
+  },
+  {
+    path: "/game",
+    name: "/game",
+    // component: LoginView,
+    component: () =>
+      import(/* webpackChunkName: "game" */ "@/views/gameView.vue"),
+  },
+  {
+    path: "/contribute",
+    name: "/contribute",
+    // component: LoginView,
+    component: () =>
+      import(/* webpackChunkName: "contribute" */ "@/views/contributeView.vue"),
+  },
+  {
+    path: "/newView",
+    name: "/newView",
+    // component: LoginView,
+    component: () =>
+      import(/* webpackChunkName: "newView" */ "@/views/newView.vue"),
+  },
+
   {
     path: "/:pathMatch(.*)*",
     name: "/NotFound",

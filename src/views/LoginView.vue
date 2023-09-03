@@ -1,8 +1,7 @@
-
 <template>
   <div class="loginWrap">
     <div class="loginPic">
-      <img src="https://picsum.photos/500/800/?random=1">
+      <img src="https://picsum.photos/500/800/?random=1" />
     </div>
     <div class="loginText">
       <h1>會員登入</h1>
@@ -10,16 +9,12 @@
         <button>
           <i class="fa-brands fa-google"></i>
           <!-- <i class="fa-solid fa-face-surprise"></i> -->
-          <span>
-            Google登入
-          </span>
+          <span> Google登入 </span>
         </button>
         <button>
           <i class="fa-brands fa-facebook"></i>
           <!-- <i class="fa-regular fa-face-smile"></i> -->
-          <span>
-            Facebook登入
-          </span>
+          <span> Facebook登入 </span>
           <!-- <i class="fa-brands fa-facebook"></i> -->
         </button>
       </div>
@@ -27,12 +22,12 @@
       <form action="">
         <div class="loginEmail">
           <label for="email">信箱</label>
-          <input type="text" id="email" v-model="userId">
+          <input type="text" id="email" v-model="userId" />
           <!-- {{ userId }} -->
         </div>
         <div class="loginPwd">
           <label for="pwd">密碼</label>
-          <input type="password" id="pwd" v-model="userPwd">
+          <input type="password" id="pwd" v-model="userPwd" />
           <!-- {{ userPwd }} -->
         </div>
         <a href="#">忘記密碼 ?</a>
@@ -43,29 +38,26 @@
   </div>
 </template>
 
-
 <script>
-
 export default {
   data() {
     return {
-      userId: '',
-      userPwd: '',
-      userIdTrue: 'qaq@gmail.com',
-      userPwdTrue: 111
-    }
+      userId: "",
+      userPwd: "",
+      userIdTrue: "qaq@gmail.com",
+      userPwdTrue: 111,
+    };
   },
   methods: {
     login() {
       if (this.userId == this.userIdTrue && this.userPwd == this.userPwdTrue) {
-        alert('登入成功')
+        alert("登入成功");
+      } else {
+        alert("登入失敗");
       }
-      else {
-        alert('登入失敗')
-      }
-    }
+    },
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -131,7 +123,7 @@ export default {
       // display: inline-block;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0;
@@ -141,7 +133,7 @@ export default {
       }
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0;
@@ -202,13 +194,11 @@ export default {
       text-decoration: none;
       // margin-top: 20px;
       color: #000;
-
     }
   }
-
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width: 414px) {
   .loginWrap {
     // display: block;
     flex-direction: column;
@@ -245,4 +235,3 @@ export default {
   }
 }
 </style>
-
