@@ -1,3 +1,9 @@
+// $map: (
+//   key: "value",
+//   large: 60px,
+//   medium: 55px,
+//   small: 18px
+// );
 $map: (
   key: "value",
   large: 60px,
@@ -8,9 +14,9 @@ $map: (
 $fontsizes: (
   //  '.key' : value,
   "h1": 40px,
-  "h2": 46px,
-  "h3": 36px,
+  "h2": 32px,
+  "h3": 24px,
   "span": 14px,
   "div": 16px,
-  ".title_h2": 38px
+  "p": 16px
 ); // map
