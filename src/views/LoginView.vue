@@ -19,7 +19,7 @@
         </button>
       </div>
       <div class="loginOr">OR</div>
-      <form action="">
+      <form action="" class="loginForm">
         <div class="loginEmail">
           <label for="email">信箱</label>
           <input type="text" id="email" v-model="userId" />
@@ -33,7 +33,7 @@
         <a href="#">忘記密碼 ?</a>
         <button @click="login">登入</button>
       </form>
-      <a href="#">還沒有會員 ? 會員註冊</a>
+      <a href="RegisterView">還沒有會員 ? 會員註冊</a>
     </div>
   </div>
 </template>
@@ -60,15 +60,13 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .loginWrap {
   // border: 1px solid red;
-  // width: 1200px;
-  // margin: auto;
+  width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: center;
-  // background-image: url("https://picsum.photos/800/800/?random=50");
-  // background-repeat: no-repeat;
 
   .loginPic {
     border: 1px solid #aaa;
@@ -143,7 +141,7 @@ export default {
       }
     }
 
-    form {
+    .loginForm {
       margin-top: 50px;
 
       // border: 1px solid red;
@@ -167,19 +165,14 @@ export default {
         }
       }
 
-      // a {
-      //   border: 1px solid red;
-
-      // }
-
       button {
         // border: 1px solid red;
         display: block;
         width: 80%;
         margin: auto;
-        margin-top: 20px;
+        margin-top: 50px;
         padding: 5px 20px;
-        background-color: #ddd;
+        // background-color: #ddd;
         border-radius: 20px;
         border: transparent;
       }
@@ -189,7 +182,7 @@ export default {
       // border: 1px solid red;
       display: block;
       width: 80%;
-      margin: 20px auto;
+      margin: 25px auto;
       text-align: left;
       text-decoration: none;
       // margin-top: 20px;
@@ -201,6 +194,7 @@ export default {
 @media screen and (max-width: 414px) {
   .loginWrap {
     // display: block;
+    width: 100%;
     flex-direction: column;
 
     .loginPic {
@@ -217,9 +211,15 @@ export default {
     .loginText {
       right: 0;
       bottom: 20px;
+      h1{
+        text-align: center;
+      }
 
       .loginOther {
         margin-top: 50px;
+        i{
+          font-size: 24px;
+        }
 
         button {
           margin: 0 20px;

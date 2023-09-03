@@ -21,22 +21,25 @@ const routes = [
   },
   {
     path: "/Login",
-    name: "/Login",
-    // component: LoginView,
+    name: "login",
     component: () =>
       import(/* webpackChunkName: "Login" */ "@/views/LoginView.vue"),
   },
   {
     path: "/RegisterView",
-    name: "/RegisterView",
-    // component: LoginView,
+    name: "Register",
     component: () =>
-      import(/* webpackChunkName: "RegisterView" */ "@/views/RegisterView.vue"),
+      import(/* webpackChunkName: "Register" */ "@/views/RegisterView.vue"),
+  },
+  {
+    path: "/RegSuccess",
+    name: "RegSuccess",
+    component: () =>
+      import(/* webpackChunkName: "RegSuccess" */ "@/views/RegSuccess.vue"),
   },
   {
     path: "/store",
     name: "/store",
-    // component: LoginView,
     component: () =>
       import(/* webpackChunkName: "store" */ "@/views/storeView.vue"),
   },
@@ -72,7 +75,6 @@ const routes = [
   {
     path: "/:pathMatch(.*)*",
     name: "/NotFound",
-    // component: LoginView,
     component: () =>
       import(/* webpackChunkName: "err" */ "@/views/NotFoundView.vue"),
   },
