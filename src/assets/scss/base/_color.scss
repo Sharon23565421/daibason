@@ -1,7 +1,12 @@
 $color: (
-  "primary": #4b4efc,
-  "secondary": #aa72f8,
-  "success": #4ade80,
-  "warning" : #F59E0B,
-  "error" :  #EF4444,
+  "blue": #32c8e1,
+  "purple": #9164cd,
+  "green": #4bc887,
+  "yellow": #fff04b,
+  "orange": #ffbb33,
+  "red": #dc4b55,
+  "brown": #a67c52,
 );
+
+// 引用方式
+//  color: map-get($color, $key: success);
