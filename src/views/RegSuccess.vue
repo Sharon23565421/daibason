@@ -58,7 +58,7 @@ export default {
             font-size: 24px;
 
             i {
-                scale: 5;
+                // scale: 5;
                 // border: 1px solid red;
                 // margin-bottom: 100px;
                 // font-size: 40px;

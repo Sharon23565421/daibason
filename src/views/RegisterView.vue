@@ -70,7 +70,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .registerWrap {
   // border: 1px solid red;
   width: 1200px;
