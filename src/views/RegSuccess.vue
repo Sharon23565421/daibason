@@ -25,7 +25,8 @@ export default {
 <style lang="scss">
 .regsucWrap {
     // border: 1px solid red;
-    width: 1200px;
+    // width: 1200px;
+    width: 60%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -35,12 +36,12 @@ export default {
         // border: 1px solid #aaa;
         position: relative;
         left: 50px;
-        border-radius: 20px;
+        border-radius: $border-radius;
 
         img {
             width: 100%;
             vertical-align: bottom;
-            border-radius: 20px;
+            border-radius: $border-radius;
         }
     }
 
@@ -48,20 +49,18 @@ export default {
         border: 1px solid #aaa;
         width: 500px;
         background-color: #fff;
-        border-radius: 20px;
+        border-radius: $border-radius;
         position: relative;
         right: 50px;
 
         .regsucIcon {
             // border: 1px solid red;
             margin-top: 70%;
-            font-size: 24px;
+            font-size: map-get($map: $fontsizes, $key: p);
 
-            i {
-                // scale: 5;
+            svg {
                 // border: 1px solid red;
-                // margin-bottom: 100px;
-                // font-size: 40px;
+                scale: 6;
             }
 
             p {

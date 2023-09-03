@@ -73,7 +73,8 @@ export default {
 <style lang="scss">
 .registerWrap {
   // border: 1px solid red;
-  width: 1200px;
+  // width: 1200px;
+  width: 60%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -82,10 +83,10 @@ export default {
     border: 1px solid #aaa;
     position: relative;
     left: 50px;
-    border-radius: 20px;
+    border-radius: $border-radius;
 
     img {
-      border-radius: 20px;
+      border-radius: $border-radius;
       width: 100%;
       vertical-align: bottom;
     }
@@ -93,7 +94,7 @@ export default {
 
   .registerText {
     border: 1px solid #aaa;
-    border-radius: 20px;
+    border-radius: $border-radius;
     position: relative;
     right: 50px;
     background-color: #fff;
@@ -106,7 +107,7 @@ export default {
       width: 80%;
       margin: auto;
       text-align: left;
-      font-size: 40px;
+      font-size: map-get($map: $fontsizes, $key: h1);
       margin-top: 100px;
     }
 
@@ -161,7 +162,7 @@ export default {
       button {
         width: 100%;
         grid-area: 6/1/7/3;
-        border-radius: 20px;
+        border-radius: $border-radius;
         padding: 5px 20px;
         border: transparent;
         // background-color: #ddd;

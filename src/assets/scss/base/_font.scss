@@ -4,6 +4,11 @@
 //   medium: 55px,
 //   small: 18px
 // );
+
+// 引用方式
+// font-size: map-get($map: $fontsizes, $key: h1);
+
+
 $map: (
   key: "value",
   large: 60px,
