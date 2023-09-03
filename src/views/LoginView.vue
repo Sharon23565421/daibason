@@ -63,7 +63,8 @@ export default {
 <style lang="scss">
 .loginWrap {
   // border: 1px solid red;
-  width: 1200px;
+  // width: 1200px;
+  width: 60%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -72,12 +73,12 @@ export default {
     border: 1px solid #aaa;
     position: relative;
     left: 50px;
-    border-radius: 20px;
+    border-radius: $border-radius;
 
     // z-index: -1;
     // width: 100%;
     img {
-      border-radius: 20px;
+      border-radius: $border-radius;
       width: 100%;
       vertical-align: bottom;
     }
@@ -85,7 +86,7 @@ export default {
 
   .loginText {
     border: 1px solid #aaa;
-    border-radius: 20px;
+    border-radius: $border-radius;
     position: relative;
     right: 50px;
     // z-index: 5;
@@ -99,7 +100,7 @@ export default {
       width: 80%;
       margin: auto;
       text-align: left;
-      font-size: 40px;
+      font-size: map-get($map: $fontsizes, $key: h1);
       margin-top: 100px;
     }
 
@@ -109,8 +110,13 @@ export default {
       button {
         margin: 0 50px;
         padding: 5px 20px;
-        border-radius: 20px;
+        border-radius: $border-radius;
         border: 1px solid #aaa;
+
+        svg {
+          // border: 1px solid red;
+          scale: 1.3;
+        }
       }
     }
 
@@ -173,7 +179,7 @@ export default {
         margin-top: 50px;
         padding: 5px 20px;
         // background-color: #ddd;
-        border-radius: 20px;
+        border-radius: $border-radius;
         border: transparent;
       }
     }
@@ -211,20 +217,22 @@ export default {
     .loginText {
       right: 0;
       bottom: 20px;
-      h1{
+
+      h1 {
         text-align: center;
       }
 
       .loginOther {
         margin-top: 50px;
-        i{
-          font-size: 24px;
-        }
 
         button {
           margin: 0 20px;
           background-color: transparent;
           border: transparent;
+
+          svg {
+            scale: 2;
+          }
 
           span {
             display: none;
