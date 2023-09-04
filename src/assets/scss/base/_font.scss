@@ -1,14 +1,3 @@
-// $map: (
-//   key: "value",
-//   large: 60px,
-//   medium: 55px,
-//   small: 18px
-// );
-
-// 引用方式
-// font-size: map-get($map: $fontsizes, $key: h1);
-
-
 $map: (
   key: "value",
   large: 60px,
@@ -16,14 +5,49 @@ $map: (
   small: 18px,
 );
 
+$fontweight: (
+  fw_stitle: 700,
+  fw_bold: bold,
+);
+
 $fontsizes: (
-  //  '.key' : value,
-  "h1": 40px,
-  "h2": 32px,
-  "h3": 24px,
-  "span": 16px,
-  "div": 16px,
-  "p": 16px,
-  "s_span": 14px,
-  "s_p": 14px
-); // map
+  // ".key": value,
+  h1: 40px,
+  h2: 32px,
+  h3: 24px,
+  h4: 18px,
+  span: 16px,
+  p: 16px
+);
+
+h1 {
+  font-size: map-get($fontsizes, h1);
+  font-weight: map-get($fontweight, fw_stitle);
+}
+
+h2 {
+  font-size: map-get($fontsizes, h2);
+  font-weight: map-get($fontweight, fw_stitle);
+}
+
+h3 {
+  font-size: map-get($fontsizes, h3);
+  font-weight: map-get($fontweight, fw_stitle);
+}
+
+h4 {
+  font-size: map-get($fontsizes, h4);
+  font-weight: map-get($fontweight, fw_stitle);
+}
+
+span {
+  font-size: map-get($fontsizes, span);
+}
+
+p {
+  font-size: map-get($fontsizes, p);
+}
+
+.s_text {
+  font-size: 14px;
+}
