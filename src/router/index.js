@@ -73,11 +73,18 @@ const routes = [
   },
 
   {
+    path: "/forgetPwd",
+    name: "/forgetPwd",
+    component: () =>
+      import(/* webpackChunkName: "forgetPwd" */ "@/views/forgetPwd.vue"),
+  },
+
+  {
     path: "/:pathMatch(.*)*",
     name: "/NotFound",
     component: () =>
       import(/* webpackChunkName: "err" */ "@/views/NotFoundView.vue"),
-  },
+  }
 ];
 
 const router = createRouter({
