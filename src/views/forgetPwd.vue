@@ -1,18 +1,18 @@
 
 <template>
-    <div class="registerWrap">
-        <div class="registerPic">
+    <div class="forgetPwdWrap">
+        <div class="forgetPwdPic">
             <img src="https://picsum.photos/500/800/?random=1">
         </div>
-        <div class="registerText">
+        <div class="forgetPwdText">
             <h1>忘記密碼</h1>
-            <form action="RegSuccess" class="regForm">
+            <form action="forgetPwdSuccess" class="forgetPwdForm">
                 <div class="forgetPwd">
                     <label for="name">姓名</label>
                     <input type="text" id="name">
                 </div>
                 <button>註冊</button>
-                <div class="registerGender">
+                <div class="forgetPwdGender">
                     <label for="gender">性別</label>
                     <select>
                         <option value="">男</option>
