@@ -44,7 +44,7 @@ export default {
     return {
       userId: "",
       userPwd: "",
-      userIdTrue: "qaq@gmail.com",
+      userIdTrue: "111",
       userPwdTrue: 111,
     };
   },
@@ -124,6 +124,7 @@ export default {
       // border: 1px solid red;
       position: relative;
       margin-top: 50px;
+      text-align: center;
       // display: inline-block;
 
       &::before {
@@ -205,7 +206,7 @@ export default {
 
     .loginPic {
       left: 0;
-      top: 20px;
+      top: 50px;
 
       // height: 200px;
       img {
@@ -216,7 +217,7 @@ export default {
 
     .loginText {
       right: 0;
-      bottom: 20px;
+      bottom: 50px;
 
       h1 {
         text-align: center;
@@ -224,6 +225,7 @@ export default {
 
       .loginOther {
         margin-top: 50px;
+        text-align: center;
 
         button {
           margin: 0 20px;

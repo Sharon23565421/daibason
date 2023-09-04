@@ -52,6 +52,7 @@ export default {
         border-radius: $border-radius;
         position: relative;
         right: 50px;
+        text-align: center;
 
         .regsucIcon {
             // border: 1px solid red;
@@ -79,7 +80,7 @@ export default {
 
         .regsucPic {
             left: 0;
-            top: 20px;
+            top: 50px;
 
             // height: 200px;
             img {
@@ -90,7 +91,7 @@ export default {
 
         .regsucText {
             right: 0;
-            bottom: 20px;
+            bottom: 50px;
             width: 100%;
             padding-bottom: 150px;
         }
