@@ -52,17 +52,16 @@
       <p>E-mail : daibason@gmail.com</p>
       <p>本網站為緯育CHD103其展示作品，非商業用途。</p>
     </div>
-
   </footer>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Noto Sans TC, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
-  color: #2c3e50;
+  color: #333;
 }
 
 a {

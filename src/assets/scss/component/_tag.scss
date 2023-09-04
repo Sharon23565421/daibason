@@ -6,3 +6,27 @@
   font-weight: 700;
   text-align: center;
 }
+
+.blue {
+  color: map-get($color, $key: info);
+  border: 2px solid map-get($color, $key: info);
+  margin-left: 0.7rem;
+}
+
+.red {
+  color: map-get($color, $key: danger);
+  border: 2px solid map-get($color, $key: danger);
+  margin-left: 0.7rem;
+}
+
+.orange {
+  color: map-get($color, $key: tangerine);
+  border: 2px solid map-get($color, $key: tangerine);
+  margin-left: 0.7rem;
+}
+
+.green {
+  color: map-get($color, $key: success);
+  border: 2px solid map-get($color, $key: success);
+  margin-left: 0.7rem;
+}

@@ -16,7 +16,7 @@
   <button class="btn_br0_orange">text</button>
   <span class="title-tag">#所有文章</span>
   <br />
-  <div class="card">
+  <div class="card-w">
     <div class="img">
       <img src="https://picsum.photos/200/280/?random=10" />
     </div>
@@ -25,8 +25,49 @@
         <h4>五分埔商圈購物</h4>
         <p class="s_text">台北成衣街｜衣服、飾品、配件、包包、帽子批發</p>
         <p class="s_text time">2020-06-15</p>
+        <span class="title-tag">#景點推薦</span>
+        <span class="title-tag blue">#板南線</span>
       </div>
-      <div class="txt"></div>
+      <div class="txt">
+        　　那天逛完華山KAKAO敗家後，就心血來潮到五分埔去逛逛，真的是久違了好多年，以前學生時期過年領完紅包，一定都是最期待來到五分埔買衣服！如今後來才知道原來這裡除了一般民眾、觀光客買購物衣服的地方以外，原來也有成衣批發商圈，那天去晃晃除了衣服之外，還有包包、飾品、鞋子等等。
+      </div>
+      <img src="https://picsum.photos/80/80/?random=10" class="head" />
+    </div>
+  </div>
+
+  <div class="card-h">
+    <div class="img">
+      <img src="https://picsum.photos/280/200/?random=10" />
+    </div>
+    <div class="text">
+      <div class="title">
+        <h4>原來京站樓上長這樣？</h4>
+        <p class="s_text">開箱五星級行政豪華客房一泊二食</p>
+        <p class="s_text time">2020-06-15</p>
+        <span class="title-tag">#住宿推薦</span>
+        <span class="title-tag blue">#板南線</span>
+        <span class="title-tag red">#淡水信義線</span>
+      </div>
+      <div class="txt">
+        　　那天逛完華山KAKAO敗家後，就心血來潮到五分埔去逛逛，真的是久違了好多年，以前學生時期過年領完紅包，一定都是最期待來到五分埔買衣服！如今後來才知道原來這裡除了一般民眾、觀光客買購物衣服的地方以外，原來也有成衣批發商圈，那天去晃晃除了衣服之外，還有包包、飾品、鞋子等等。
+      </div>
+      <img src="https://picsum.photos/80/80/?random=10" class="head" />
+    </div>
+  </div>
+
+  <div class="s-card-h">
+    <div class="img">
+      <img src="https://picsum.photos/280/200/?random=10" />
+    </div>
+    <div class="text">
+      <div class="title">
+        <h4>五分埔商圈購物</h4>
+        <p class="ss_text">台北成衣街｜衣服、飾品、配件、包包、帽子批發</p>
+        <p class="time ss_text">2020-06-15</p>
+        <span class="title-tag">#景點推薦</span>
+        <span class="title-tag blue">#板南線</span>
+      </div>
+      <img src="https://picsum.photos/50/50/?random=10" class="head" />
     </div>
   </div>
 </template>

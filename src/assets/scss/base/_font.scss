@@ -37,7 +37,6 @@ h3 {
 
 h4 {
   font-size: map-get($fontsizes, h4);
-  font-weight: map-get($fontweight, fw_stitle);
 }
 
 span {
@@ -50,4 +49,8 @@ p {
 
 .s_text {
   font-size: 14px;
+}
+
+.ss_text {
+  font-size: 12px;
 }
