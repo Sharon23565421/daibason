@@ -13,7 +13,9 @@
       "default",
       {
         "ignore": [
-          "scale"
+          "scale",
+          "width: fit-content",
+          "height: fit-content"
         ]
       }
     ]
