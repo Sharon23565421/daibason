@@ -2,24 +2,23 @@
 <template>
     <div class="forgetPwdWrap">
         <div class="forgetPwdPic">
-            <img src="https://picsum.photos/500/800/?random=1">
+            <img src="../img/forgetpwd.png">
         </div>
         <div class="forgetPwdText">
             <h1>忘記密碼</h1>
-            <form action="forgetPwdSuccess" class="forgetPwdForm">
+            <p>請選擇重設方式</p>
+            <form action="pwdSuccess" class="forgetPwdForm">
                 <div class="forgetPwd">
-                    <label for="name">姓名</label>
-                    <input type="text" id="name">
+                    <label for="email">信箱</label>
+                    <input type="email" id="email">
                 </div>
-                <button>註冊</button>
+                <button class="btn_l">取得驗證碼</button>
+                <div class="loginOr">OR</div>
                 <div class="forgetPwdGender">
-                    <label for="gender">性別</label>
-                    <select>
-                        <option value="">男</option>
-                        <option value="">女</option>
-                    </select>
+                    <label for="phone">手機</label>
+                    <input type="tel" maxlength="10" id="phone">
                 </div>
-                <button>註冊</button>
+                <button class="btn_l">取得驗證碼</button>
             </form>
 
         </div>
@@ -31,23 +30,8 @@
 
 export default {
     data() {
-        return {
-            userId: '',
-            userPwd: '',
-            userIdTrue: 'qaq@gmail.com',
-            userPwdTrue: 111
-        }
-    },
-    methods: {
-        register() {
-            if (this.userId == this.userIdTrue && this.userPwd == this.userPwdTrue) {
-                alert('登入成功')
-            }
-            else {
-                alert('登入失敗')
-            }
-        }
-    },
+
+    }
 }
 </script>
   
