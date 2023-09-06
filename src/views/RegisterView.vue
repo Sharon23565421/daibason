@@ -2,7 +2,7 @@
 <template>
   <div class="registerWrap">
     <div class="registerPic">
-      <img src="https://picsum.photos/500/800/?random=1">
+      <img src="../img/register.png">
     </div>
     <div class="registerText">
       <h1>會員註冊</h1>
@@ -28,7 +28,7 @@
         </div>
         <div class="registerEmail">
           <label for="email">信箱</label>
-          <input type="text" id="email">
+          <input type="email" id="email">
         </div>
         <div class="registerPwd">
           <label for="pwd">密碼</label>
@@ -36,9 +36,9 @@
         </div>
         <div class="registerCheck">
           <label for="check">再次輸入</label>
-          <input type="text" id="check">
+          <input type="password" id="check">
         </div>
-        <button>註冊</button>
+        <button class="btn_l">註冊</button>
       </form>
 
     </div>

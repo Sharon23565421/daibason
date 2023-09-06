@@ -87,6 +87,14 @@ const routes = [
   },
 
   {
+    path: "/pwdSuccess",
+    name: "/pwdSuccess",
+    component: () =>
+      import(/* webpackChunkName: "pwdSuccess" */ "@/views/pwdSuccess.vue"),
+  },
+
+
+  {
     path: "/:pathMatch(.*)*",
     name: "/NotFound",
     component: () =>
