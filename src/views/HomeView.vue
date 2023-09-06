@@ -16,7 +16,7 @@
   <button class="btn_br0_orange">text</button>
   <span class="title-tag">#所有文章</span>
   <br />
-  <div class="card-w">
+  <div class="card-w" v-show="showDialog">
     <div class="img">
       <img src="https://picsum.photos/200/280/?random=10" />
     </div>

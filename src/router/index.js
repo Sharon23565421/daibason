@@ -80,11 +80,18 @@ const routes = [
   },
 
   {
+    path: "/cart",
+    name: "/cart",
+    component: () =>
+      import(/* webpackChunkName: "cart" */ "@/views/cartView.vue"),
+  },
+
+  {
     path: "/:pathMatch(.*)*",
     name: "/NotFound",
     component: () =>
       import(/* webpackChunkName: "err" */ "@/views/NotFoundView.vue"),
-  }
+  },
 ];
 
 const router = createRouter({

@@ -15,15 +15,6 @@
         </label>
       </div>
     </div>
-    <div class="icon">
-      <router-link to="" class="">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </router-link>
-
-      <router-link to="" class="">
-        <i class="fa-solid fa-user"></i>
-      </router-link>
-    </div>
     <nav class="navbar">
       <!-- <router-link to="/">Home123</router-link> | -->
       <router-link to="/mrt" class="mrt">捷運推薦</router-link>
@@ -34,6 +25,7 @@
       <router-link to="/store" class="store">精選購物</router-link>
       <router-link to="/newView" class="new">最新消息</router-link>
       <router-link to="/about" class="about">關於我們</router-link>
+      <router-link to="/cart" class="about">購物車</router-link>
     </nav>
   </header>
 
