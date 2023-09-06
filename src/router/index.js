@@ -9,6 +9,9 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+    meta: {
+      useAppLayout: false, // 不使用 App.vue 佈局
+    },
   },
   {
     path: "/about",
