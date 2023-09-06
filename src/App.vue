@@ -1,6 +1,6 @@
 <template>
   <input type="checkbox" name="" id="menu-check" />
-  <header>
+  <header v-if="shouldUseAppLayout" >
     <div class="header">
       <div class="line"></div>
       <router-link to="/">
@@ -34,7 +34,7 @@
     <!-- Main -->
   </main>
 
-  <footer>
+  <footer v-if="shouldUseAppLayout" >
     <div class="footerLogo">
       <router-link to="/">
         <img src="@/img/logo.png" alt="" />
@@ -45,7 +45,20 @@
       <p>本網站為緯育CHD103其展示作品，非商業用途。</p>
     </div>
   </footer>
+  <!-- <router-view v-if="shouldUseAppLayout" /> 根據條件來顯示 App.vue 或自定義佈局 -->
 </template>
+
+<script>
+export default {
+  computed: {
+    shouldUseAppLayout() {  
+      // 根據路由的 meta.useAppLayout 屬性來決定是否使用 App.vue 佈局
+      return this.$route.meta.useAppLayout !== false;
+    },
+  },
+};
+</script>
+
 
 <style lang="scss">
 #app {
@@ -55,23 +68,4 @@
   // text-align: center;
   color: #333;
 }
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-// nav {
-//   padding: 30px;
-
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-//     text-decoration: none;
-
-//     &.router-link-exact-active {
-//       color: map-get($color, $key: success);
-//     }
-//   }
-// }
 </style>

@@ -1,6 +1,6 @@
 .card-w {
   width: 540px;
-  height: 320px;
+  // height: 320px;
   border: 10px solid #eeeeee;
   display: flex;
   align-items: start;
@@ -12,6 +12,7 @@
     width: 45%;
     padding: 0.8rem;
     height: 100%;
+
     img {
       width: 100%;
       height: 100%;
@@ -48,7 +49,11 @@
         position: relative;
         display: block;
         text-align: right;
+<<<<<<< HEAD
         margin: 0.2rem 0;
+=======
+        margin: .2rem 0;
+>>>>>>> PC
       }
 
       .blue {
@@ -80,7 +85,7 @@
 }
 
 .card-h {
-  height: 450px;
+  // height: 450px;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -91,15 +96,32 @@
 
   .img {
     width: 100%;
-    height: 40%;
+    position: relative;
+
+    // height: 40%;
     img {
       width: 100%;
-      height: 100%;
+      border-radius: 0 0 20px 0;
     }
+
+    .head {
+      scale: .8;
+      border-radius: 50%;
+      border: 5px solid #333;
+      width: 35%;
+      position: absolute;
+      bottom: -10%;
+      right: -6.7%;
+    }
+
   }
 
   .text {
+<<<<<<< HEAD
     margin: 0.5rem 0.5rem;
+=======
+    margin: .5rem .5rem;
+>>>>>>> PC
 
     .title {
       line-height: 25px;
@@ -107,8 +129,9 @@
       border-bottom: #999 1px dashed;
 
       .tag {
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
+        min-height: 70px;
       }
 
       h3 {
@@ -125,8 +148,9 @@
 
     .time {
       color: #999999;
-      position: relative;
+      // position: relative;
       display: block;
+<<<<<<< HEAD
       margin-left: 70%;
       margin-top: 0%;
     }
@@ -139,6 +163,13 @@
       left: 75%;
       top: 25%;
     }
+=======
+      text-align: right;
+      margin-top: 5%;
+    }
+
+
+>>>>>>> PC
 
     .txt {
       margin-top: 0.5rem;
@@ -153,7 +184,7 @@
 }
 
 .s-card-h {
-  height: 330px;
+  // height: 330px;
   width: 192px;
   border: 6px solid #ddd;
   position: relative;
@@ -163,16 +194,27 @@
 
   .img {
     width: 100%;
-    height: 50%;
+    position: relative;
+
     img {
       width: 100%;
-      height: 100%;
+    }
+    
+    .head {
+      scale: .8;
+      border-radius: 50%;
+      border: 5px solid #333;
+      width: 40%;
+      position: absolute;
+      bottom: -18%;
+      right: -8.5%;
     }
   }
 
   .text {
     padding-top: 0.2rem;
-    height: 45%;
+    // height: 45%;
+
     .title {
       h4 {
         font-weight: bold;
@@ -189,7 +231,12 @@
       .tag {
         display: flex;
         flex-wrap: wrap;
+<<<<<<< HEAD
         margin: 0.2rem;
+=======
+        margin: .5rem 0 0 .2rem;
+
+>>>>>>> PC
         .title-tag {
           margin-top: 0;
           margin-left: 0;
@@ -209,12 +256,5 @@
       }
     }
 
-    .head {
-      border-radius: 50%;
-      border: 4px solid #333;
-      position: absolute;
-      left: 70%;
-      top: 35%;
-    }
   }
 }
