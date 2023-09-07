@@ -1,12 +1,12 @@
 <template>
-    <div class="regsucWrap">
-        <div class="regsucPic">
-            <img src="../img/registersuc.png">
+    <div class="pwdsucWrap">
+        <div class="pwdsucPic">
+            <img src="../img/pwdsuc.png">
         </div>
-        <div class="regsucText">
-            <div class="regsucIcon">
+        <div class="pwdsucText">
+            <div class="pwdsucIcon">
                 <i class="fa-solid fa-circle-check"></i>
-                <p>會員註冊成功</p>
+                <p>驗證碼已發送，請重新登入</p>
             </div>
         </div>
     </div>

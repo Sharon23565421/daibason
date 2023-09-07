@@ -2,7 +2,7 @@
 <template>
   <div class="registerWrap">
     <div class="registerPic">
-      <img src="https://picsum.photos/500/800/?random=1">
+      <img src="../img/register.png">
     </div>
     <div class="registerText">
       <h1>會員註冊</h1>
@@ -28,7 +28,7 @@
         </div>
         <div class="registerEmail">
           <label for="email">信箱</label>
-          <input type="text" id="email">
+          <input type="email" id="email">
         </div>
         <div class="registerPwd">
           <label for="pwd">密碼</label>
@@ -36,9 +36,9 @@
         </div>
         <div class="registerCheck">
           <label for="check">再次輸入</label>
-          <input type="text" id="check">
+          <input type="password" id="check">
         </div>
-        <button>註冊</button>
+        <button class="btn_l">註冊</button>
       </form>
 
     </div>
@@ -71,124 +71,5 @@ export default {
 </script>
 
 <style lang="scss">
-.registerWrap {
-  // border: 1px solid red;
-  // width: 1200px;
-  width: 60%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-
-  .registerPic {
-    border: 1px solid #aaa;
-    position: relative;
-    left: 50px;
-    border-radius: $border-radius;
-
-    img {
-      border-radius: $border-radius;
-      width: 100%;
-      vertical-align: bottom;
-    }
-  }
-
-  .registerText {
-    border: 1px solid #aaa;
-    border-radius: $border-radius;
-    position: relative;
-    right: 50px;
-    background-color: #fff;
-
-    button {
-      cursor: pointer;
-    }
-
-    h1 {
-      width: 80%;
-      margin: auto;
-      text-align: left;
-      font-size: map-get($map: $fontsizes, $key: h1);
-      margin-top: 100px;
-    }
-
-    .regForm {
-      // border: 1px solid red;
-      // width: 80%;
-      // margin: auto;
-      margin-top: 100px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(6, 50px);
-      align-items: center;
-      justify-items: left;
-      gap: 50px;
-      padding: 0 50px;
-
-
-      label {
-        display: block;
-        text-align: left;
-        margin-bottom: 10px;
-      }
-
-      input {
-        // border-radius: 20px;
-        border: transparent;
-        border-bottom: 1px solid #000;
-        width: 100%;
-      }
-
-      .registerBir {
-        width: 100%;
-      }
-
-
-      .registerEmail {
-        // border: 1px solid red;
-        width: 100%;
-        grid-area: 3/1/4/3;
-      }
-
-      .registerPwd {
-        width: 100%;
-        grid-area: 4/1/5/3;
-      }
-
-      .registerCheck {
-        width: 100%;
-        grid-area: 5/1/6/3;
-      }
-
-      button {
-        width: 100%;
-        grid-area: 6/1/7/3;
-        border-radius: $border-radius;
-        padding: 5px 20px;
-        border: transparent;
-        // background-color: #ddd;
-
-      }
-    }
-  }
-}
-
-@media screen and (max-width:414px) {
-  .registerWrap {
-    width: 100%;
-
-    .registerPic {
-      // border: 1px solid red;
-      display: none;
-    }
-
-    .registerText {
-      right: 0;
-
-      h1 {
-        text-align: center;
-      }
-    }
-  }
-}
 </style>
 

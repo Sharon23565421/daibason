@@ -2,10 +2,10 @@
 /*css 註解*/
 
 //共用變數
+@import "base/reset";
 @import "base/color";
 @import "base/font";
 @import "base/var";
-@import "base/reset";
 @import "base/style";
 
 // function
@@ -19,6 +19,8 @@
 @import "component/title";
 @import "component/spacing";
 @import "component/grid";
+@import "component/tag";
+@import "component/slider";
 
 // layout
 @import "layout/header";
@@ -29,5 +31,10 @@
 @import "page/index";
 @import "page/about";
 @import "page/product";
+@import "page/Login";
+@import "page/Register";
+@import "page/RegSuccess";
+@import "page/forgetPwd";
+@import "page/pwdSuccess";
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+TC:wght@100;400&family=Roboto&display=swap");

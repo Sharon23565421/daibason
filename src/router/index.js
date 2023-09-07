@@ -9,6 +9,9 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+    meta: {
+      useAppLayout: false, // 不使用 App.vue 佈局
+    },
   },
   {
     path: "/about",
@@ -71,6 +74,28 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "newView" */ "@/views/newView.vue"),
   },
+
+  {
+    path: "/forgetPwd",
+    name: "/forgetPwd",
+    component: () =>
+      import(/* webpackChunkName: "forgetPwd" */ "@/views/forgetPwd.vue"),
+  },
+
+  {
+    path: "/cart",
+    name: "/cart",
+    component: () =>
+      import(/* webpackChunkName: "cart" */ "@/views/cartView.vue"),
+  },
+
+  {
+    path: "/pwdSuccess",
+    name: "/pwdSuccess",
+    component: () =>
+      import(/* webpackChunkName: "pwdSuccess" */ "@/views/pwdSuccess.vue"),
+  },
+
 
   {
     path: "/:pathMatch(.*)*",
