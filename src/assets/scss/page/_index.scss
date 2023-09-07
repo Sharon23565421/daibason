@@ -1,7 +1,12 @@
+// main {
+//     height: 100vh;
+//     overflow: hidden;
+// }
+
 .homeNav {
     width: 1200px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 1%;
 
     ul {
         display: flex;
@@ -17,22 +22,33 @@
         }
 
         :hover .pic img {
-            transform: scale(1.1);
-            box-shadow: 4px 6px 20px black;
+            transform: scaleX(1.1);
+            box-shadow: 6px 6px 20px black;
 
         }
 
+        :hover .pic {
+            position: relative;
+            z-index: 5;
+        }
+
+        :hover a {
+            position: absolute;
+            z-index: 6;
+        }
+
+
         li {
             // border: 3px solid red;
-            width: 200px;
+            width: 16.2%;
             writing-mode: vertical-rl;
-            height: 700px;
+            height: 65%;
             // padding: 0.5rem;
             position: relative;
 
 
             .pic {
-                width: 90%;
+                width: 98%;
                 transform: skew(-5deg);
                 // border: 5px solid blue;
                 // overflow: hidden;
@@ -52,7 +68,7 @@
                 z-index: 2;
 
                 p {
-                    font-size: 60px;
+                    font-size: 64px;
                     text-align: end;
                     padding-bottom: 1rem;
                     padding-right: 1.5rem;
@@ -69,16 +85,17 @@
 
 .homeBanner {
     width: 1200px;
-    margin: auto;
-    margin-top: 5%;
+    margin: 3% auto;
+    // margin-top: 2%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    justify-self: center;
+    align-items: center;
 
     .logo {
-        width: 200px;
+        width: 60%;
         margin: auto;
-        margin-top: 5%;
+        // margin-top: 5%;
 
         img {
             margin: auto;
@@ -88,12 +105,15 @@
     }
 
     .swiper {
-        width: 450px;
+        width: 100%;
+        // width: 450px;
         // height: 300px;
         margin: 0;
+        overflow: hidden;
 
         img {
             width: 100%;
+            vertical-align: top;
         }
 
         .swiper-wrapper {
