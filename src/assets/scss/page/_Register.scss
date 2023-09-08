@@ -79,6 +79,8 @@
           select{
             font-size: 18px;
             margin: 0 1rem;
+            width: 100px;
+            height: 100%;
           }
         } 
 
@@ -99,13 +101,9 @@
         }
   
         button {
+          inset: 0;
+          margin: auto;
           grid-area: 6/1/7/3;
-          // width: 100%;
-          // border-radius: $border-radius;
-          // padding: 5px 20px;
-          // border: transparent;
-          // background-color: #ddd;
-  
         }
       }
     }
