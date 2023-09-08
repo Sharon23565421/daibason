@@ -9,9 +9,9 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
-    meta: {
-      useAppLayout: false, // 不使用 App.vue 佈局
-    },
+    // meta: {
+    //   useAppLayout: false, // 不使用 App.vue 佈局
+    // },
   },
   {
     path: "/about",
@@ -95,7 +95,6 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "pwdSuccess" */ "@/views/pwdSuccess.vue"),
   },
-
 
   {
     path: "/:pathMatch(.*)*",

@@ -85,7 +85,7 @@
         </div>
       </div>
       <div class="logo">
-        <img src="@/img/logo.png" alt="logo" />
+        <img src="../../public/img/logo.png" alt="logo" />
       </div>
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -110,33 +110,8 @@
         </div>
       </div>
     </div>
-
-    <!-- 元件展示 -->
-
-    <div class="ChangAC">
-      <i class="fa-solid fa-lock"></i>
-      <p>更改帳號/密碼</p>
-    </div>
-
-    <div class="SliderAC">
-      <div class="pic">
-        <img src="https://steam.oxxostudio.tw/webp/gimp/example/simple-keyer-mask-16.webp" />
-      </div>
-      <h3>NAME</h3>
-      <button>登出</button>
-      <nav>
-        <ul>
-          <li><a href="">會員資料</a></li>
-          <li><a href="">投稿文章</a></li>
-          <li><a href="">文章收藏</a></li>
-          <li><a href="">商品收藏</a></li>
-          <li><a href="">訂單查詢</a></li>
-        </ul>
-      </nav>
-    </div>
   </div>
 </template>
-
 
 <script>
 import Swiper from "swiper/bundle";
@@ -155,14 +130,6 @@ export default {
         disableOnInteraction: false,
       },
     });
-
   },
 };
-
-
-
-
-
-
-
 </script>
