@@ -1,6 +1,6 @@
 <template>
   <input type="checkbox" name="" id="menu-check" />
-  <header v-if="shouldUseAppLayout">
+  <header>
     <div class="header">
       <div class="line"></div>
       <router-link to="/">
@@ -34,7 +34,7 @@
     <!-- Main -->
   </main>
 
-  <footer v-if="shouldUseAppLayout">
+  <footer>
     <div class="footerLogo">
       <router-link to="/">
         <img src="../public/img/logo.png" alt="" />
@@ -48,7 +48,7 @@
   <!-- <router-view v-if="shouldUseAppLayout" /> 根據條件來顯示 App.vue 或自定義佈局 -->
 </template>
 
-<script>
+<!-- <script>
 export default {
   computed: {
     shouldUseAppLayout() {
@@ -57,7 +57,7 @@ export default {
     },
   },
 };
-</script>
+</script> -->
 
 <style lang="scss">
 #app {

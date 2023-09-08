@@ -6,57 +6,45 @@
           <div class="pic">
             <img src="https://picsum.photos/300/700/?random=1" alt="" />
           </div>
-          <router-link to="/mrt" class="mrt">
-            <p>捷運推薦</p>
-          </router-link>
+          <router-link to="/mrt" class="mrt"> 捷運推薦 </router-link>
         </li>
         <li>
           <div class="pic">
             <img src="https://picsum.photos/300/700/?random=1" alt="" />
           </div>
-          <router-link to="/game" class="game">
-            <p>捷運冒險</p>
-          </router-link>
+          <router-link to="/game" class="game"> 捷運冒險 </router-link>
         </li>
         <li>
           <div class="pic">
             <img src="https://picsum.photos/300/700/?random=1" alt="" />
           </div>
           <router-link to="/contribute" class="contribute">
-            <p>投稿專欄</p>
+            投稿專欄
           </router-link>
         </li>
         <li>
           <div class="pic">
             <img src="https://picsum.photos/300/700/?random=1" alt="" />
           </div>
-          <router-link to="/Login" class="login">
-            <p>會員中心</p>
-          </router-link>
+          <router-link to="/Login" class="login"> 會員中心 </router-link>
         </li>
         <li>
           <div class="pic">
             <img src="https://picsum.photos/300/700/?random=1" alt="" />
           </div>
-          <router-link to="/store" class="store">
-            <p>精選購物</p>
-          </router-link>
+          <router-link to="/store" class="store"> 精選購物 </router-link>
         </li>
         <li>
           <div class="pic">
             <img src="https://picsum.photos/300/700/?random=1" alt="" />
           </div>
-          <router-link to="/newView" class="new">
-            <p>最新消息</p>
-          </router-link>
+          <router-link to="/newView" class="new"> 最新消息 </router-link>
         </li>
         <li>
           <div class="pic">
             <img src="https://picsum.photos/300/700/?random=1" alt="" />
           </div>
-          <router-link to="/about" class="about">
-            <p>關於我們</p>
-          </router-link>
+          <router-link to="/about" class="about"> 關於我們 </router-link>
         </li>
       </ul>
     </nav>
