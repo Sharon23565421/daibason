@@ -1,5 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an new page</h1>
+  <div class="newsWrap">
+    <h1>最新消息</h1>
   </div>
 </template>
+

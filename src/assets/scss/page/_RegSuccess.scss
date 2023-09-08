@@ -14,7 +14,7 @@
         border-radius: $border-radius;
 
         img {
-            width: 100%;
+            height: 100%;
             vertical-align: bottom;
             border-radius: $border-radius;
         }
@@ -22,7 +22,7 @@
 
     .regsucText {
         border: 1px solid #aaa;
-        width: 500px;
+        min-width: 500px;
         background-color: #fff;
         border-radius: $border-radius;
         position: relative;
@@ -56,22 +56,26 @@
         flex-direction: column;
 
         .regsucPic {
-            height: 300px;
-            overflow: hidden;
-            border-radius: 0;
+            height: 250px;
+            border-radius: 0px;
             left: 0;
-
-            // height: 200px;
             img {
+                border-radius: 0px;
                 width: 100%;
+                object-fit: cover;
             }
         }
 
         .regsucText {
             right: 0;
             bottom: 50px;
-            width: 100%;
+            min-width: 100%;
             padding-bottom: 150px;
+
+            .regsucIcon {
+                margin-top: 45%;
+            }
         }
+        
     }
 }
