@@ -4,7 +4,7 @@
       <ul>
         <li>
           <div class="pic">
-            <img src="https://picsum.photos/300/700/?random=1" alt="" />
+            <img src="https://picsum.photos/1200/1000/?random=1" alt="" />
           </div>
           <router-link to="/mrt" class="mrt">
             <p>捷運推薦</p>
@@ -12,7 +12,7 @@
         </li>
         <li>
           <div class="pic">
-            <img src="https://picsum.photos/300/700/?random=1" alt="" />
+            <img src="https://picsum.photos/1200/1000/?random=1" alt="" />
           </div>
           <router-link to="/game" class="game">
             <p>捷運冒險</p>
@@ -20,7 +20,7 @@
         </li>
         <li>
           <div class="pic">
-            <img src="https://picsum.photos/300/700/?random=1" alt="" />
+            <img src="https://picsum.photos/1200/1000/?random=1" alt="" />
           </div>
           <router-link to="/contribute" class="contribute">
             <p>投稿專欄</p>
@@ -28,7 +28,7 @@
         </li>
         <li>
           <div class="pic">
-            <img src="https://picsum.photos/300/700/?random=1" alt="" />
+            <img src="https://picsum.photos/1200/1000/?random=1" alt="" />
           </div>
           <router-link to="/Login" class="login">
             <p>會員中心</p>
@@ -36,7 +36,7 @@
         </li>
         <li>
           <div class="pic">
-            <img src="https://picsum.photos/300/700/?random=1" alt="" />
+            <img src="https://picsum.photos/1200/1000/?random=1" alt="" />
           </div>
           <router-link to="/store" class="store">
             <p>精選購物</p>
@@ -44,7 +44,7 @@
         </li>
         <li>
           <div class="pic">
-            <img src="https://picsum.photos/300/700/?random=1" alt="" />
+            <img src="https://picsum.photos/1200/1000/?random=1" alt="" />
           </div>
           <router-link to="/newView" class="new">
             <p>最新消息</p>
@@ -52,7 +52,7 @@
         </li>
         <li>
           <div class="pic">
-            <img src="https://picsum.photos/300/700/?random=1" alt="" />
+            <img src="https://picsum.photos/1200/1000/?random=1" alt="" />
           </div>
           <router-link to="/about" class="about">
             <p>關於我們</p>
@@ -139,8 +139,8 @@
 
 <style lang="scss" scoped>
 .container {
-  height: 100vh;
-  overflow: hidden;
+  // height: 100vh;
+  // overflow: hidden;
 }
 </style>
 
