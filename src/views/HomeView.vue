@@ -85,7 +85,7 @@
         </div>
       </div>
       <div class="logo">
-        <img src="@/img/logo.png" alt="logo" />
+        <img src="../../public/img/logo.png" alt="logo" />
       </div>
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -120,7 +120,9 @@
 
     <div class="SliderAC">
       <div class="pic">
-        <img src="https://steam.oxxostudio.tw/webp/gimp/example/simple-keyer-mask-16.webp" />
+        <img
+          src="https://steam.oxxostudio.tw/webp/gimp/example/simple-keyer-mask-16.webp"
+        />
       </div>
       <h3>NAME</h3>
       <button>登出</button>
@@ -161,14 +163,15 @@ export default {
         disableOnInteraction: false,
       },
     });
-
   },
 };
 
+window.addEventListener("load", function () {
+  // 获取当前视口宽度和高度
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+  console.log(viewportWidth);
 
-
-
-
-
-
+  // 根据需要进行调整页面元素的大小和布局
+});
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="loginWrap">
     <div class="loginPic">
-      <img src="../img/login.png" />
+      <img src="../../public/img/login.png" />
     </div>
     <div class="loginText">
       <h1>會員登入</h1>
@@ -48,14 +48,12 @@ export default {
       userPwdTrue: 111,
       toggle: true,
       formAction: "",
-    }
+    };
   },
   methods: {
     login() {
       if (this.userId == this.userIdTrue && this.userPwd == this.userPwdTrue) {
-        alert("登入成功"),
-          this.formAction = "/mrt"
-
+        alert("登入成功"), (this.formAction = "/mrt");
       } else {
         alert("登入失敗");
       }

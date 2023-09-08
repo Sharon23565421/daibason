@@ -1,10 +1,10 @@
 <template>
   <input type="checkbox" name="" id="menu-check" />
-  <header v-if="shouldUseAppLayout" >
+  <header v-if="shouldUseAppLayout">
     <div class="header">
       <div class="line"></div>
       <router-link to="/">
-        <img src="@/img/logo.png" alt="" />
+        <img src="../public/img/logo.png" alt="" />
       </router-link>
       <div class="line"></div>
       <div class="hb">
@@ -34,10 +34,10 @@
     <!-- Main -->
   </main>
 
-  <footer v-if="shouldUseAppLayout" >
+  <footer v-if="shouldUseAppLayout">
     <div class="footerLogo">
       <router-link to="/">
-        <img src="@/img/logo.png" alt="" />
+        <img src="../public/img/logo.png" alt="" />
       </router-link>
     </div>
     <div class="footerTxt">
@@ -51,7 +51,7 @@
 <script>
 export default {
   computed: {
-    shouldUseAppLayout() {  
+    shouldUseAppLayout() {
       // 根據路由的 meta.useAppLayout 屬性來決定是否使用 App.vue 佈局
       return this.$route.meta.useAppLayout !== false;
     },
@@ -59,10 +59,10 @@ export default {
 };
 </script>
 
-
 <style lang="scss">
 #app {
-  font-family: Noto Sans TC, "Brown Medium", Avenir, Helvetica, Arial, sans-serif;
+  font-family: Noto Sans TC, "Brown Medium", Avenir, Helvetica, Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
