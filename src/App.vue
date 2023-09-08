@@ -1,6 +1,9 @@
 <template>
   <input type="checkbox" name="" id="menu-check" />
-  <header :class="{ '--close': shouldheaderclose }">
+  <header
+    :class="{ '--close': shouldHeaderClose }"
+    :style="{ display: closeWidth }"
+  >
     <div class="header">
       <div class="line"></div>
       <router-link to="/">
@@ -34,7 +37,7 @@
     <!-- Main -->
   </main>
 
-  <footer>
+  <footer :class="{ '--closeFooter': closeFooter }">
     <div class="footerLogo">
       <router-link to="/">
         <img src="../public/img/logo.png" alt="" />
@@ -53,7 +56,26 @@ export default {
   computed: {
     shouldheaderclose() {
       // 根據路由的 meta.useAppLayout 屬性來決定是否使用 App.vue 佈局
+      return this.$route.path === "/" && window.innerWidth >= 415;
+    },
+
+    closeFooter() {
       return this.$route.path === "/";
+    },
+  },
+
+  created() {
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("resize", this.handleResize);
+  },
+
+  methods: {
+    handleResize() {
+      this.closeWidth = window.innerWidth >= 414 ? "none" : "block";
     },
   },
 };
@@ -67,5 +89,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
   color: #333;
+}
+
+.--closeFooter {
+  display: none;
 }
 </style>
