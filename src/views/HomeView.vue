@@ -116,6 +116,7 @@
 <script>
 import Swiper from "swiper/bundle";
 export default {
+
   mounted() {
     const swiper = new Swiper(".swiper", {
       // Optional parameters

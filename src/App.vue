@@ -1,9 +1,6 @@
 <template>
   <input type="checkbox" name="" id="menu-check" />
-  <header
-    :class="{ '--close': shouldHeaderClose }"
-    :style="{ display: closeWidth }"
-  >
+  <header :class="{ '--close': shouldheaderclose }">
     <div class="header">
       <div class="line"></div>
       <router-link to="/">
@@ -56,7 +53,7 @@ export default {
   computed: {
     shouldheaderclose() {
       // 根據路由的 meta.useAppLayout 屬性來決定是否使用 App.vue 佈局
-      return this.$route.path === "/" && window.innerWidth >= 415;
+      return this.$route.path === "/"
     },
 
     closeFooter() {
