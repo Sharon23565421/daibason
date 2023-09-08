@@ -1,6 +1,6 @@
 <template>
   <input type="checkbox" name="" id="menu-check" />
-  <header>
+  <header :class="{ '--close': shouldheaderclose }">
     <div class="header">
       <div class="line"></div>
       <router-link to="/">
@@ -48,16 +48,16 @@
   <!-- <router-view v-if="shouldUseAppLayout" /> 根據條件來顯示 App.vue 或自定義佈局 -->
 </template>
 
-<!-- <script>
+<script>
 export default {
   computed: {
-    shouldUseAppLayout() {
+    shouldheaderclose() {
       // 根據路由的 meta.useAppLayout 屬性來決定是否使用 App.vue 佈局
-      return this.$route.meta.useAppLayout !== false;
+      return this.$route.path === "/";
     },
   },
 };
-</script> -->
+</script>
 
 <style lang="scss">
 #app {

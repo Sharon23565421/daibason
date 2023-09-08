@@ -87,7 +87,7 @@
       <div class="logo">
         <img src="../../public/img/logo.png" alt="logo" />
       </div>
-      <div class="swiper">
+      <div class="swiper mb-none">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="https://picsum.photos/200/300/?random=1" alt="" />
