@@ -158,17 +158,10 @@ export default {
         disableOnInteraction: false,
       },
     });
+    
   },
 };
 
-window.addEventListener('load', function () {
-  // 获取当前视口宽度和高度
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
-  console.log(viewportWidth)
-
-  // 根据需要进行调整页面元素的大小和布局
-});
 
 
 
