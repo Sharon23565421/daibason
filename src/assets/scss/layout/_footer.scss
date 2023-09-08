@@ -8,7 +8,7 @@
 
 
 footer {
-    width: 1200px;
+    max-width: 1200px;
     padding: 0.5rem;
     border-radius: $border-radius *2;
     border: 3px solid #7d7d7d;
@@ -16,7 +16,7 @@ footer {
     margin-block: 20px;
 
     .footerLogo {
-        width: 60px;
+        width: 50px;
         margin: auto;
 
         img {
