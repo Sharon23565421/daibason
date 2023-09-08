@@ -42,7 +42,7 @@
     </div>
     <div class="footerTxt">
       <p>E-mail : daibason@gmail.com</p>
-      <p>本網站為緯育CHD103其展示作品，非商業用途。</p>
+      <p>本網站為緯育CHD103期展示作品，非商業用途。</p>
     </div>
   </footer>
   <!-- <router-view v-if="shouldUseAppLayout" /> 根據條件來顯示 App.vue 或自定義佈局 -->
@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Noto Sans TC, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Noto Sans TC, "Brown Medium", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
