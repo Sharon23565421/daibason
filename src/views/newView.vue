@@ -13,6 +13,8 @@
             <div class="newsBackpic">
               <img :src="news.image" alt="">
             </div>
+
+
             <div class="newsBox">
               <div class="newsCtxTxt">
                 <div class="newsTag">
@@ -34,6 +36,7 @@
           </div>
 
         </div>
+        <div class="swiper-scrollbar"></div>
 
       </div>
 
@@ -60,17 +63,37 @@ export default {
         title: '植感生活',
         title2: '－植物郵票與押花特展',
         image: '../img/newsbackimg2.png'
-      }]
+      },
+      {
+        tag: '活動消息3',
+        date: '2023-07-04~2024-01-07',
+        title: '植感生活',
+        title2: '－植物郵票與押花特展',
+        image: '../img/newsbackimg.png'
+      }
+      ]
     }
-  }, 
+  },
   mounted() {
     const swiper = new Swiper(".swiper", {
       // Optional parameters
       direction: "horizontal",
-      speed: 3000,
+      speed: 1500,
       loop: true,
       slidesPerView: 1,
       spaceBetween: 0,
+      scrollbar: {
+        // dragcClass:'.swiper-scrollbar'
+        el: '.swiper-scrollbar'
+      },
+      initialSlide: 0, //第一個顯示的畫面,
+      grabCursor: true,
+      breakpoints: { //width:414px顯示一個
+        414: {
+          slidesPerView: 1
+        }
+      }
+      //改變游標
       // autoplay: {
       //   delay: 0,
       //   pauseOnMouseEnter: true,
