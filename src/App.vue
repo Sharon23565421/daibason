@@ -33,7 +33,7 @@
     <router-view />
     <!-- Main -->
   </main>
-
+                <!-- 這是自己取名的嗎? -->
   <footer :class="{ '--closeFooter': closeFooter }">
     <div class="footerLogo">
       <router-link to="/">
@@ -68,6 +68,7 @@ export default {
 
   beforeDestroy() {
     window.removeEventListener("resize", this.handleResize);
+    //為何不用呼叫this.handleResize();
   },
 
   methods: {
