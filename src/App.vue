@@ -53,26 +53,11 @@ export default {
   computed: {
     shouldheaderclose() {
       // 根據路由的 meta.useAppLayout 屬性來決定是否使用 App.vue 佈局
-      return this.$route.path === "/"
+      return this.$route.path === "/";
     },
 
     closeFooter() {
       return this.$route.path === "/";
-    },
-  },
-
-  created() {
-    window.addEventListener("resize", this.handleResize);
-    this.handleResize();
-  },
-
-  beforeDestroy() {
-    window.removeEventListener("resize", this.handleResize);
-  },
-
-  methods: {
-    handleResize() {
-      this.closeWidth = window.innerWidth >= 414 ? "none" : "block";
     },
   },
 };
