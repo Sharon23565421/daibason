@@ -3,10 +3,10 @@
 }
 
 .homeNav {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
   margin-top: 1%;
-  padding-inline: 1%;
+  padding-inline: 5%;
 
   ul {
     display: flex;
@@ -44,10 +44,7 @@
 
       .pic {
         width: 98%;
-        // height: 100%;
         transform: skew(-5deg);
-        // border: 5px solid blue;
-        // overflow: hidden;
 
         img {
           width: 100%;
@@ -78,7 +75,7 @@
 }
 
 .homeBanner {
-  width: 1200px;
+  max-width: 1100px;
   margin: 3% auto;
   // margin-top: 2%;
   display: grid;
@@ -134,73 +131,85 @@
   }
 }
 
-@media screen and (max-width: 414px) {
-
-  .--close {
-    display: block;
-  }
-
-
+@media screen and (max-width: 768px) {
   .homeNav {
-    width: 100%;
-    margin: auto;
-    margin-top: 0%;
-    padding-inline: 1%;
-
-
     ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 5px;
-
-      // gap: 0.1rem
       :hover p {
-        font-size: 36px;
+        font-size: 40px;
       }
 
       li {
-        width: 100%;
-        writing-mode: inherit;
-        height: 90px;
-        position: relative;
-
-
-
-        .pic {
-          width: 100%;
-          height: 100%;
-          transform: skewX(-20deg);
-          // border: 5px solid blue;
-          // overflow: hidden;
-          margin-left: -5%;
-
-          img {
-            width: 100%;
+        a {
+          p {
+            font-size: 36px;
           }
         }
+      }
+    }
+  }
+}
 
-        a {
-          position: absolute;
-          inset: 0;
+@media screen and (max-width: 414px) {
+  .--close {
+    display: block;
+
+    .header {
+      .hb {
+        display: none;
+      }
+    }
+  }
+
+  #app {
+    border-left: 2rem solid #333;
+    overflow: hidden;
+  }
+
+  header {
+    margin-bottom: 0;
+  }
+
+  .container {
+    position: relative;
+    padding-left: 0;
+    padding-block: 5%;
+
+    .homeNav {
+      width: 100%;
+      margin-top: 0%;
+      padding-left: 0;
+
+      ul {
+        flex-direction: column;
+        gap: 5px;
+
+        :hover p {
+          font-size: 36px;
+        }
+
+        li {
           width: 100%;
-          height: 100%;
-          z-index: 2;
+          writing-mode: inherit;
+          height: 90px;
+          left: 0;
 
+          .pic {
+            width: 100%;
+            height: 100%;
+            transform: skewX(-20deg);
+            margin-left: -5%;
+          }
 
-          p {
-            // line-height: 90px;
-            margin-top: 13%;
-            margin-right: 2%;
-            font-size: 28px;
-            text-align: end;
-            padding-bottom: 0;
-            padding-right: 0;
-            color: #fff;
-            text-shadow: 2px 2px 5px #333, 2px 2px 5px #333, 2px 2px 5px #333,
-              2px 2px 5px #333;
-            transition: all 0.2s;
+          a {
+            height: 100%;
+
+            p {
+              margin-top: 13%;
+              margin-right: 2%;
+              font-size: 28px;
+              padding-bottom: 0;
+              padding-right: 0;
+            }
           }
         }
       }
@@ -210,20 +219,17 @@
   .homeBanner {
     width: 100%;
     display: inline;
+    padding-inline: 5%;
 
     .swiper {
       width: 250px;
-      overflow: initial;
-      margin: 0 auto;
-
+      inset: 0;
+      margin: auto;
     }
 
     .mb-none,
     .logo {
       display: none;
     }
-
-
-
   }
 }
