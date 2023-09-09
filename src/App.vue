@@ -1,10 +1,10 @@
 <template>
   <input type="checkbox" name="" id="menu-check" />
-  <header v-if="shouldUseAppLayout" >
+  <header :class="{ '--close': shouldheaderclose }">
     <div class="header">
       <div class="line"></div>
       <router-link to="/">
-        <img src="@/img/logo.png" alt="" />
+        <img src="../public/img/logo.png" alt="" />
       </router-link>
       <div class="line"></div>
       <div class="hb">
@@ -34,10 +34,10 @@
     <!-- Main -->
   </main>
 
-  <footer v-if="shouldUseAppLayout" >
+  <footer :class="{ '--closeFooter': closeFooter }">
     <div class="footerLogo">
       <router-link to="/">
-        <img src="@/img/logo.png" alt="" />
+        <img src="../public/img/logo.png" alt="" />
       </router-link>
     </div>
     <div class="footerTxt">
@@ -51,21 +51,44 @@
 <script>
 export default {
   computed: {
-    shouldUseAppLayout() {  
+    shouldheaderclose() {
       // 根據路由的 meta.useAppLayout 屬性來決定是否使用 App.vue 佈局
-      return this.$route.meta.useAppLayout !== false;
+      return this.$route.path === "/"
+    },
+
+    closeFooter() {
+      return this.$route.path === "/";
+    },
+  },
+
+  created() {
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("resize", this.handleResize);
+  },
+
+  methods: {
+    handleResize() {
+      this.closeWidth = window.innerWidth >= 414 ? "none" : "block";
     },
   },
 };
 </script>
 
-
 <style lang="scss">
 #app {
-  font-family: Noto Sans TC, "Brown Medium", Avenir, Helvetica, Arial, sans-serif;
+  font-family: Noto Sans TC, "Brown Medium", Avenir, Helvetica, Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
   color: #333;
+}
+
+.--closeFooter {
+  display: none;
 }
 </style>
