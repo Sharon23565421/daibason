@@ -134,8 +134,6 @@ export default {
     }
     .storeSearchBt {
       width: 100px;
-      font-size: map-get($map: $fontsizes, $key: h4);
-      border-radius: $border-radius;
     }
   }
   .storecardbox {
@@ -161,7 +159,7 @@ export default {
         justify-content: space-between;
 
         .storeCardText {
-          width: 50%;
+          width: 30%;
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
@@ -176,12 +174,13 @@ export default {
         .storeButton {
           display: flex;
           align-items: end;
-          width: 50%;
-          font-size: map-get($map: $fontsizes, $key: h3);
-          font-size: 35px;
+          width: 70%;
+          font-size: 30px;
+          justify-content: end;
 
           button {
             margin-left: 1rem;
+            width: 60%;
           }
         }
       }
