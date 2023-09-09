@@ -83,6 +83,8 @@ export default {
     align-items: center;
     font-size: map-get($map: $fontsizes, $key: h2);
     .storeSearchMrt{
+      border: 3px solid black;
+      
       margin-right: 50px;
       span{
         font-size: map-get($map: $fontsizes, $key: h2);
@@ -96,7 +98,7 @@ export default {
         position: absolute;
         background-color: white;
         border: 1px solid #ccc;
-        min-width: 200px;
+        width: 200px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         li{
           padding: 12px 16px;
@@ -132,8 +134,7 @@ export default {
     .storeCard{
       display: flex;
       flex-wrap: wrap;
-      width: 400px;
-      box-sizing: border-box;
+      width: 300px;
       overflow: hidden;
       padding: 10px 30px;
       .storeCardimg{
@@ -141,15 +142,16 @@ export default {
       }
       .storeCardText{
         width: 50%;
+        display: flex;
+        flex-wrap: wrap;
         .CardDes{
           font-weight: map-get($fontweight, fw_stitle); 
           font-weight: map-get($fontweight, fw_bold);  
-          font-size: map-get($map: $fontsizes, $key: h3);
+          font-size: map-get($map: $fontsizes, $key: h4);
           margin: 10px ;
         }
         .CardPri{
-          font-size: map-get($map: $fontsizes, $key: h4);
-          margin: 10px ;
+          font-size: map-get($map: $fontsizes, $key: h5);
         }
       }
       .storeButton{
@@ -158,10 +160,10 @@ export default {
         width: 50%;
         font-size: map-get($map: $fontsizes, $key: h3);
         .getStoreBt{
-          margin-left: 30px;
-          font-size: map-get($map: $fontsizes, $key: h4);
+          width: 80px;
+          margin-left: 20px;
+          font-size: map-get($map: $fontsizes, $key: h5);
           border-radius: $border-radius;
-          width: 100px;
         }
       }
     }
