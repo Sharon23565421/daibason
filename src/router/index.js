@@ -41,59 +41,59 @@ const routes = [
       import(/* webpackChunkName: "RegSuccess" */ "@/views/RegSuccess.vue"),
   },
   {
-    path: "/store",
-    name: "/store",
+    path: "/Store",
+    name: "/Store",
     component: () =>
-      import(/* webpackChunkName: "store" */ "@/views/storeView.vue"),
+      import(/* webpackChunkName: "store" */ "@/views/StoreView.vue"),
   },
   {
-    path: "/mrt",
-    name: "/mrt",
+    path: "/Mrt",
+    name: "/Mrt",
     // component: LoginView,
     component: () =>
-      import(/* webpackChunkName: "mrt" */ "@/views/mrtView.vue"),
+      import(/* webpackChunkName: "mrt" */ "@/views/MrtView.vue"),
   },
   {
-    path: "/game",
-    name: "/game",
+    path: "/Game",
+    name: "/Game",
     // component: LoginView,
     component: () =>
-      import(/* webpackChunkName: "game" */ "@/views/gameView.vue"),
+      import(/* webpackChunkName: "game" */ "@/views/GameView.vue"),
   },
   {
-    path: "/contribute",
-    name: "/contribute",
+    path: "/Contribute",
+    name: "/Contribute",
     // component: LoginView,
     component: () =>
-      import(/* webpackChunkName: "contribute" */ "@/views/contributeView.vue"),
+      import(/* webpackChunkName: "contribute" */ "@/views/ContributeView.vue"),
   },
   {
-    path: "/newView",
-    name: "/newView",
+    path: "/New",
+    name: "/New",
     // component: LoginView,
     component: () =>
-      import(/* webpackChunkName: "newView" */ "@/views/newView.vue"),
+      import(/* webpackChunkName: "newView" */ "@/views/NewView.vue"),
   },
 
   {
-    path: "/forgetPwd",
-    name: "/forgetPwd",
+    path: "/ForgetPwd",
+    name: "/ForgetPwd",
     component: () =>
-      import(/* webpackChunkName: "forgetPwd" */ "@/views/forgetPwd.vue"),
+      import(/* webpackChunkName: "forgetPwd" */ "@/views/ForgetPwd.vue"),
   },
 
   {
-    path: "/cart",
-    name: "/cart",
+    path: "/Cart",
+    name: "/Cart",
     component: () =>
-      import(/* webpackChunkName: "cart" */ "@/views/cartView.vue"),
+      import(/* webpackChunkName: "cart" */ "@/views/CartView.vue"),
   },
 
   {
-    path: "/pwdSuccess",
-    name: "/pwdSuccess",
+    path: "/PwdSuccess",
+    name: "/PwdSuccess",
     component: () =>
-      import(/* webpackChunkName: "pwdSuccess" */ "@/views/pwdSuccess.vue"),
+      import(/* webpackChunkName: "pwdSuccess" */ "@/views/PwdSuccess.vue"),
   },
 
   {
