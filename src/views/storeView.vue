@@ -9,18 +9,20 @@
           <li v-for="(i) in 5">選項1</li>
         </ul>
       </div>
-      捷運站:
-    <select class="storeSearchSta" name="" id="">
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-    </select>
-    特色分類:
-    <select class="storeSearchSp" name="" id="">
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-    </select>
+      <div class="storeSearchSta" >
+        <span>捷運線選擇</span>
+        <i class="fa-solid fa-play fa-rotate-90"></i>
+        <ul class="SearchStaBox"  >
+          <li v-for="(i) in 5">選項1</li>
+        </ul>
+      </div>
+      <div class="storeSearchSP" >
+        <span>特色選擇</span>
+        <i class="fa-solid fa-play fa-rotate-90"></i>
+        <ul class="SearchSPBox"  >
+          <li v-for="(i) in 5">選項1</li>
+        </ul>
+      </div>
     <button class="storeSearchBt">搜尋</button>
    </div>
    <div class="storecardbox">
@@ -112,14 +114,62 @@ export default {
       }
     }
     .storeSearchSta{
-      height: 5vh;
-      width: 10%;
-      margin-right: 30px;
+      border: 3px solid black;
+      
+      margin-right: 50px;
+      span{
+        font-size: map-get($map: $fontsizes, $key: h2);
+        margin-right: 20px;
+      }
+      &:hover .SearchStaBox{
+        display: block;
+      }
+      .SearchStaBox{
+        display: none;   
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        li{
+          padding: 12px 16px;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover{
+            background-color:rgb(108, 108, 108);
+            color: #fffcfc;
+          }
+        }
+      }
     }
-    .storeSearchSp{
-      height: 5vh;
-      width: 10%;
-      margin-right: 30px;
+    .storeSearchSP{
+      border: 3px solid black;
+      
+      margin-right: 50px;
+      span{
+        font-size: map-get($map: $fontsizes, $key: h2);
+        margin-right: 20px;
+      }
+      &:hover .SearchSPBox{
+        display: block;
+      }
+      .SearchSPBox{
+        display: none;   
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        li{
+          padding: 12px 16px;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover{
+            background-color:rgb(108, 108, 108);
+            color: #fffcfc;
+          }
+        }
+      }
     }
     .storeSearchBt{
       width: 100px;
