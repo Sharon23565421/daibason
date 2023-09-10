@@ -3,14 +3,14 @@
     <div class="storeTitle">精選購物</div>
     <div class="storeSearch">
       <div class="storeSearchMrt">
-        <span>捷運線</span>
+        <span>捷運線選擇</span>
         <i class="fa-solid fa-play fa-rotate-90"></i>
         <ul class="SearchMrtBox">
           <li v-for="i in 5">選項1</li>
         </ul>
       </div>
       <div class="storeSearchSta" >
-        <span>捷運線選擇</span>
+        <span>捷運站選擇</span>
         <i class="fa-solid fa-play fa-rotate-90"></i>
         <ul class="SearchStaBox"  >
           <li v-for="(i) in 5">選項1</li>
@@ -27,7 +27,7 @@
    </div>
    <div class="storecardbox">
       <!-- <div v-for="(item) in testitem" :key="item.id" class="storeCard"> -->
-      <div v-for="item in 30" class="storeCard">
+      <div v-for="item in 10" class="storeCard">
         <img
           class="storeCardimg"
           src="https://s.yimg.com/ny/api/res/1.2/47Kriq370oo5npvk5nr.6Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/ftvn.com.tw/5ada7e3c01073aac8a607bfa5aaecd3b"
@@ -39,7 +39,7 @@
             <h4 class="CardPri">{{ testitem.sta_name }}NT.12345</h4>
           </div>
           <div class="storeButton">
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart" style="cursor: pointer;"></i>
             <button class="btn_s">加入購物車</button>
           </div>
         </div>
@@ -92,12 +92,10 @@ export default {
     display: flex;
     align-items: center;
     font-size: map-get($map: $fontsizes, $key: h4);
-    // margin-bottom: 3%;
 
     .storeSearchMrt {
       border: 3px solid black;
       padding: 0 0.5rem;
-
       margin-right: 50px;
       span {
         font-size: map-get($map: $fontsizes, $key: h4);
@@ -111,7 +109,7 @@ export default {
         position: absolute;
         background-color: white;
         border: 1px solid #ccc;
-        width: 200px;
+        width: 150px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         li {
           padding: 12px 16px;
@@ -126,10 +124,10 @@ export default {
     }
     .storeSearchSta{
       border: 3px solid black;
-      
+      padding: 0 0.5rem;
       margin-right: 50px;
       span{
-        font-size: map-get($map: $fontsizes, $key: h2);
+        font-size: map-get($map: $fontsizes, $key: h4);
         margin-right: 20px;
       }
       &:hover .SearchStaBox{
@@ -140,7 +138,7 @@ export default {
         position: absolute;
         background-color: white;
         border: 1px solid #ccc;
-        width: 200px;
+        width: 150px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         li{
           padding: 12px 16px;
@@ -155,10 +153,10 @@ export default {
     }
     .storeSearchSP{
       border: 3px solid black;
-      
+      padding: 0 0.5rem;
       margin-right: 50px;
       span{
-        font-size: map-get($map: $fontsizes, $key: h2);
+        font-size: map-get($map: $fontsizes, $key: h4);
         margin-right: 20px;
       }
       &:hover .SearchSPBox{
@@ -169,7 +167,7 @@ export default {
         position: absolute;
         background-color: white;
         border: 1px solid #ccc;
-        width: 200px;
+        width: 150px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         li{
           padding: 12px 16px;
@@ -227,7 +225,6 @@ export default {
           width: 70%;
           font-size: 30px;
           justify-content: end;
-
           button {
             margin-left: 1rem;
             width: 60%;
