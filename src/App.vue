@@ -16,11 +16,9 @@
       </div>
     </div>
     <nav class="navbar">
-      <!-- <router-link to="/">Home123</router-link> | -->
       <router-link to="/mrt" class="mrt">捷運推薦</router-link>
       <router-link to="/game" class="game">捷運冒險</router-link>
       <router-link to="/contribute" class="contribute">投稿專欄</router-link>
-      <!-- <router-link to="/RegisterView">register</router-link> -->
       <router-link to="/Login" class="login">會員中心</router-link>
       <router-link to="/store" class="store">精選購物</router-link>
       <router-link to="/newView" class="new">最新消息</router-link>
@@ -33,8 +31,7 @@
     <router-view />
     <!-- Main -->
   </main>
-  <!-- 這是自己取名的嗎? -->
-  <footer :class="{ '--closeFooter': closeFooter }">
+  <footer :class="{ '--closeFooter': shouldheaderclose }">
     <div class="footerLogo">
       <router-link to="/">
         <img src="../public/img/logo.png" alt="" />
@@ -53,10 +50,6 @@ export default {
   computed: {
     shouldheaderclose() {
       // 根據路由的 meta.useAppLayout 屬性來決定是否使用 App.vue 佈局
-      return this.$route.path === "/";
-    },
-
-    closeFooter() {
       return this.$route.path === "/";
     },
   },
