@@ -1,4 +1,8 @@
-.--close {
+.--closeHeader {
+  display: none;
+}
+
+.--closeFooter {
   display: none;
 }
 
@@ -39,7 +43,7 @@
     li {
       width: 16.2%;
       writing-mode: vertical-rl;
-      height: 65%;
+      height: 600px;
       position: relative;
 
       .pic {
@@ -117,6 +121,13 @@
       li {
         width: 14%;
         height: 60%;
+
+        a {
+          p {
+            font-size: 50px;
+          }
+        }
+
       }
     }
   }
