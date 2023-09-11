@@ -2,11 +2,15 @@
     <div class="DetailWrap" >
       <div class="DetailBox">
         <div class="DetailPicBox">
-            <img class="DetailMainPic" src="https://img.shoplineapp.com/media/image_clips/5f7ecf347257270029e5c2dc/original.jpg?1602146100" alt="">
-            <img class="DetailPic" src="https://img.shoplineapp.com/media/image_clips/5f7ecf347257270029e5c2dc/original.jpg?1602146100" alt="">
-            <img class="DetailPic" src="https://img.shoplineapp.com/media/image_clips/5f7ecf347257270029e5c2dc/original.jpg?1602146100" alt="">
-            <img class="DetailPic" src="https://img.shoplineapp.com/media/image_clips/5f7ecf347257270029e5c2dc/original.jpg?1602146100" alt="">
-            <img class="DetailPic" src="https://img.shoplineapp.com/media/image_clips/5f7ecf347257270029e5c2dc/original.jpg?1602146100" alt="">    
+            <div class="DetailMainPic"><img :src="selectedImage" alt=""></div>
+            <div class="DetailPic" v-for="(item, index) in images" :key="index" @click="selectImage(item.src)">
+            <img :src="item.src" alt="">
+            </div>
+            <!-- <div class="DetailPic"><img  src="https://img.shoplineapp.com/media/image_clips/5f7ecf347257270029e5c2dc/original.jpg?1602146100" alt=""></div>
+            <div class="DetailPic"><img  src="https://cc.tvbs.com.tw/img/program/upload/2023/02/08/20230208173312-e7d780c5.jpg" alt=""  ></div>
+            <div class="DetailPic"><img src="https://i2.wp.com/gwan.tw/wp-content/uploads/2022/10/20221020004311_53.jpg" alt="" ></div>
+            <div class="DetailPic"><img class="DetailPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlsDygW5l6-urgSirZ28w1yJgNOy7sF4VJqQ&usqp=CAU" alt="" ></div> 
+            -->
         </div>
         <div class="DetailDigBox">
             <h2 class="Digtitle">阿罵復古袋子</h2>
@@ -14,9 +18,9 @@
             <div class="DigDes">說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明</div>
             <div class="DigCountBox">
                 數量
-                <button>-</button>
-                {{  }}
-                <button>+</button>  
+                <button @click="decrementCount">-</button>
+                {{ count }}
+                <button  @click="incrementCount">+</button>  
             </div>
             <div class="DigLikeBox">
                 <i class="fa-regular fa-heart" style="cursor: pointer;"></i>
@@ -38,6 +42,34 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      selectedImage: 'https://img.shoplineapp.com/media/image_clips/5f7ecf347257270029e5c2dc/original.jpg?1602146100', 
+      images: [
+        { src: 'https://img.shoplineapp.com/media/image_clips/5f7ecf347257270029e5c2dc/original.jpg?1602146100' },
+        { src: 'https://cc.tvbs.com.tw/img/program/upload/2023/02/08/20230208173312-e7d780c5.jpg' },
+        { src: 'https://i2.wp.com/gwan.tw/wp-content/uploads/2022/10/20221020004311_53.jpg' },
+        { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlsDygW5l6-urgSirZ28w1yJgNOy7sF4VJqQ&usqp=CAU' },
+      ],
+      count: 1,
+    };
+  },
+  methods: {
+    decrementCount() {
+      if (this.count > 1) {
+        this.count -= 1;
+      }
+    },
+    // 点击增加按钮时增加 count
+    incrementCount() {
+      this.count += 1;
+    },
+    selectImage(imageSrc) {
+      this.selectedImage = imageSrc;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -55,11 +87,20 @@
      width: 50%;
      margin: 5%;
      .DetailMainPic{
+        height:500PX;
         width:100%;
+        img{
+            width: 100%;
+        }
      }
      .DetailPic{
+        cursor: pointer;
         margin: 5%;
         width: 15%;
+        img{
+            height: 100%;
+            width: 100%;
+        }
      }
     }
     .DetailDigBox{
