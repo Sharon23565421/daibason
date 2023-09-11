@@ -45,7 +45,7 @@
         <div class="pic">
           <img src="https://picsum.photos/1200/1000/?random=1" alt="" />
         </div>
-        <router-link to="/newView" class="new">
+        <router-link to="/New" class="new">
           <p>最新消息</p>
         </router-link>
       </li>
