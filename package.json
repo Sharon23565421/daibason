@@ -14,6 +14,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "core-js": "^3.8.3",
     "gsap": "^3.12.2",
+    "iview": "^3.5.4",
     "swiper": "^10.2.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
