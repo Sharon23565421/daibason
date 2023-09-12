@@ -64,31 +64,16 @@
         </p>
       </article>
     </div>
-    <div class="banner">
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/200/300/?random=1" alt="" />
+          <div class="swiper-slide" v-for="(path, index) in imagePaths" :key="index" alt="Image" >
+            <img :src="path" alt="Image" />
           </div>
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/200/300/?random=1" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/200/300/?random=1" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/200/300/?random=2" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/200/300/?random=2" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/200/300/?random=2" alt="" />
-          </div>
+          <!-- <div class="swiper-slide" v-for="(path, index) in imagePaths" :key="index" alt="Image" >
+            <img :src="path" alt="Image" />
+          </div> -->
         </div>
-      </div>
-    </div>
-    
+      </div>    
   </div>
 </template>
 
@@ -102,18 +87,30 @@ export default {
     return {
       background1,
       background2,
-      background3
+      background3,
+      imagePaths: []
+    }
+  },
+  created() {
+    this.importImages();
+  },
+  methods: {
+    importImages() {
+      const imageContext = require.context('@/assets/images/aboutSlider', false, /\.(png|jpe?g|gif|svg)$/);
+
+      this.imagePaths = imageContext.keys().map(key => imageContext(key));
     }
   },
   mounted() {
     const swiper = new Swiper(".swiper", {
       direction: "horizontal",
-      speed: 4000,
+      speed: 2000,
       loop: true,
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 2,
+      spaceBetween: -1000,
       autoplay: {
       delay: 0,
+        // disableOnInteraction:false;
       pauseOnMouseEnter: true,
       disableOnInteraction: false,
       },
