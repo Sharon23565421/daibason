@@ -109,13 +109,20 @@ const routes = [
       import(/* webpackChunkName: "Newinside" */ "@/views/Newinside.vue"),
   },
   {
+    path: "/User",
+    name: "/User",
+    component: () =>
+      import(/* webpackChunkName: "User" */ "@/views/User.vue"),
+  },
+
+  {
     path: "/:pathMatch(.*)*",
     name: "/NotFound",
     component: () =>
       import(/* webpackChunkName: "err" */ "@/views/NotFoundView.vue"),
   },
-  
-  
+
+
 ];
 
 const router = createRouter({
