@@ -4,16 +4,16 @@
     <div class="pageFeature">
       <img src="../../src/assets/images/page_feature.jpg" alt="pageFeature">
     </div>
-    <div class="greetingArea" 
-    :style="{	backgroundImage: `url(${ background1 })`
+    <div class="greetingArea" :style="{
+      backgroundImage: `url(${background1})`
     }">
       <div class="pic">
         <img src="../../src/assets/images/greeting.jpg" alt="goodMorning">
       </div>
       <article>
         <h2>早安台北</h2>
-        <p> 
-          
+        <p>
+
           台北是一個新舊交錯、時尚和復古相互碰撞的城市，<br>
           一早在大稻埕吃著古早味早餐，<br>
           走進百年街坊與新興文創的迪化街，<br>
@@ -25,12 +25,12 @@
         </p>
       </article>
     </div>
-    <div class="aboutUs" 
-    :style="{	backgroundImage: `url(${ background2 })`
+    <div class="aboutUs" :style="{
+      backgroundImage: `url(${background2})`
     }">
       <article>
         <h2>歹霸俗</h2>
-        <p> 
+        <p>
           是一群從出生、就學、出社會，從來沒有離開過台北的人，<br>
           我們熱愛台北，沒有人能比我們更了解台北，<br>
           而台北的美好不能只有我們知道，<br>
@@ -48,32 +48,35 @@
         <img src="../../src/assets/images/101.jpg" alt="taipei101">
       </div>
     </div>
-    <div class="noName greetingArea " 
-    :style="{	backgroundImage: `url(${ background3 })`
+    <div class="noName greetingArea " :style="{
+      backgroundImage: `url(${background3})`
     }">
       <div class="pic">
         <img src="../../src/assets/images/ab3.jpg" alt="goodVight">
       </div>
       <article>
         <h2>Title</h2>
-        <p> 
+        <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
-           Odio magni ipsam vel illo ipsum quisquam iste,<br>
-           ratione corporis debitis accusantium,<br>
-           animi molestiae nulla quasi architecto culpa eum minus asperiores iusto?
+          Odio magni ipsam vel illo ipsum quisquam iste,<br>
+          ratione corporis debitis accusantium,<br>x
+          animi molestiae nulla quasi architecto culpa eum minus asperiores iusto?
         </p>
       </article>
     </div>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="(path, index) in imagePaths" :key="index" alt="Image" >
-            <img :src="path" alt="Image" />
-          </div>
-          <!-- <div class="swiper-slide" v-for="(path, index) in imagePaths" :key="index" alt="Image" >
-            <img :src="path" alt="Image" />
-          </div> -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="(path, index) in imagePaths" :key="index" alt="Image">
+          <img :src="path" alt="Image" />
         </div>
-      </div>    
+        <div class="swiper-slide" v-for="(path, index) in imagePaths" :key="index" alt="Image">
+          <img :src="path" alt="Image" />
+        </div>
+        <div class="swiper-slide" v-for="(path, index) in imagePaths" :key="index" alt="Image">
+          <img :src="path" alt="Image" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -83,7 +86,7 @@ import background2 from '@/assets/images/about_bgc2.svg';
 import background3 from '@/assets/images/about_bgc3.svg';
 import Swiper from "swiper/bundle";
 export default {
-  data () {
+  data() {
     return {
       background1,
       background2,
@@ -104,15 +107,17 @@ export default {
   mounted() {
     const swiper = new Swiper(".swiper", {
       direction: "horizontal",
-      speed: 2000,
+      speed: 1000,
       loop: true,
-      slidesPerView: 2,
-      spaceBetween: -1000,
+      loopedSlides: 10,
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      freeMode: true,
       autoplay: {
-      delay: 0,
+        delay: 0,
         // disableOnInteraction:false;
-      pauseOnMouseEnter: true,
-      disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
       },
     });
   },

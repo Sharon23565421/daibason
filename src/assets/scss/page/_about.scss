@@ -1,20 +1,24 @@
-.aboutWrapper{
+.aboutWrapper {
     overflow: hidden;
-    h1{
+
+    h1 {
         margin: 3rem 0;
         text-align: center;
-      }
-    .pageFeature{
+    }
+
+    .pageFeature {
         margin: 2rem 0;
-        height: 60vh;//450px
+        height: 60vh; //450px
         box-shadow: 0 10px 10px #5556;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-      }
-    .greetingArea{
+    }
+
+    .greetingArea {
         width: 100%;
         height: 360px;
         margin: 3rem 0;
@@ -22,21 +26,22 @@
         justify-content: flex-start;
         align-items: center;
 
-        .pic{
+        .pic {
             width: 55%;
             height: 310px;
-            border-radius:0 155px 155px 0;
+            border-radius: 0 155px 155px 0;
             z-index: 1;
             box-shadow: 0 10px 10px #5556;
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
-                border-radius:0 155px 155px 0;
+                border-radius: 0 155px 155px 0;
                 object-fit: cover;
             }
         }
-        
-        article{
+
+        article {
             z-index: 0;
             display: flex;
             flex-direction: column;
@@ -46,21 +51,22 @@
             margin: 0 0 0 5rem;
             padding: 0 8rem 0 10rem;
             transform: skew(-33deg);
-            h2{
-                transform: skew(33deg) 
-                           translateX(-7.5rem);
+
+            h2 {
+                transform: skew(33deg) translateX(-7.5rem);
                 width: 40%;
-                   
+
             }
-            p{
+
+            p {
                 transform: skew(33deg);
                 width: 120%;
- 
+
             }
         }
     }
 
-    .aboutUs{
+    .aboutUs {
         width: 100%;
         height: 360px;
         margin: 3rem 0;
@@ -68,21 +74,22 @@
         justify-content: flex-end;
         align-items: center;
 
-        .pic{
+        .pic {
             width: 55%;
             height: 310px;
-            border-radius:155px 0 0 155px;
+            border-radius: 155px 0 0 155px;
             z-index: 1;
             box-shadow: 0 10px 10px #5556;
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
-                border-radius:155px 0 0 155px;
+                border-radius: 155px 0 0 155px;
                 object-fit: cover;
             }
         }
-        
-        article{
+
+        article {
             z-index: 0;
             display: flex;
             flex-direction: column;
@@ -92,54 +99,58 @@
             margin: 0 0 0 5rem;
             padding: 0 8rem 0 10rem;
             transform: skew(-33deg);
-            h2{
-                transform: skew(33deg) 
-                           translateX(-7.5rem);
+
+            h2 {
+                transform: skew(33deg) translateX(-7.5rem);
                 width: 70%;
-                   
+
             }
-            p{
+
+            p {
                 transform: skew(33deg);
                 width: 100%;
                 margin-left: 2.2rem;
- 
+
             }
         }
     }
-    .noName{
-        article{
+
+    .noName {
+        article {
             transform: skew(0);
-            margin: 0 ;
+            margin: 0;
             padding: 0 0rem 0 5rem;
-            h2{
-                transform: skew(0)                    
+
+            h2 {
+                transform: skew(0)
             }
-            p{
+
+            p {
                 transform: skew(0);
             }
-    }
-  }
-  .swiper{
-    width: 100%;
-    height: 104px;
-    .swiper-wrapper {
-      transition-timing-function: linear;
-      .swiper-slide{
-        // margin: 0;
-        width: 100px;
-        height: 100px;
-        // padding: 0;
-        overflow: hidden;
-        // background-position: center;
-        
-        img{
-            border: 2px solid #2A2E98;
-            width: 100px;
-            height: 100px;   
-            object-fit: cover;
         }
-      }
     }
-  }
+
+    .swiper {
+        width: 100%;
+        height: 104px;
+
+        .swiper-wrapper {
+            transition-timing-function: linear;
+
+            .swiper-slide {
+                width: 100px;
+                overflow: hidden;
+
+
+                img {
+                    border: 2px solid #2A2E98;
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 
 }
