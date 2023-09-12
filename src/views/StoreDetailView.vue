@@ -37,7 +37,20 @@
       </div>
       <div class="OtherDetailBox">
       </div>
-      
+      <Carousel v-model="value" loop>
+        <CarouselItem>
+            <div class="demo-carousel">1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="demo-carousel">2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="demo-carousel">3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="demo-carousel">4</div>
+        </CarouselItem>
+    </Carousel>
     </div>
 </template>
 
@@ -53,6 +66,7 @@ export default {
         { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlsDygW5l6-urgSirZ28w1yJgNOy7sF4VJqQ&usqp=CAU' },
       ],
       count: 1,
+      value: 0,
     };
   },
   methods: {
@@ -61,7 +75,6 @@ export default {
         this.count -= 1;
       }
     },
-    // 点击增加按钮时增加 count
     incrementCount() {
       this.count += 1;
     },
