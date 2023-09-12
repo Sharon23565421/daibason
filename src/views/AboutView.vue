@@ -55,12 +55,18 @@
         <img src="../../src/assets/images/ab3.jpg" alt="goodVight">
       </div>
       <article>
-        <h2>Title</h2>
+        <h2>車廂　<span><h3>陳雋弘</h3></span></h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
-          Odio magni ipsam vel illo ipsum quisquam iste,<br>
-          ratione corporis debitis accusantium,<br>x
-          animi molestiae nulla quasi architecto culpa eum minus asperiores iusto?
+          不過三分鐘<br>
+          我們睡過頭了<br>
+          不知道這是哪一節車廂第幾節課<br>
+          尷尬的年代裡，我在後座<br>
+          喜歡拉妳的肩帶與頭髮<br>
+          人生說好考上第一志願<br>
+          與那麼多拉環往同一方向搖曳<br>
+          直到所有人都離開了<br>
+          唯我們靜止<br>
+          醒來在一個陌生的城市<br>
         </p>
       </article>
     </div>
