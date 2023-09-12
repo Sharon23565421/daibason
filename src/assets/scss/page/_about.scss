@@ -68,7 +68,9 @@
             }
         }
     }
-
+    .mbGreetingArt{
+        display: none;
+    }
     .aboutUs {
         width: 100%;
         height: 360px;
@@ -162,4 +164,64 @@
         }
     }
 
+}
+@media screen and (max-width:414px) {
+    .aboutWrapper {
+        h1 {
+            margin: 2rem 0;
+        }
+    
+        .pageFeature {
+            height: 27.12vh;
+            box-shadow: 0 10px 10px #0003;
+        }
+    
+        .greetingArea {
+            height: 133px;
+            background-size: auto;
+            background-position: 24% center ;
+    
+            .pic {
+                width: 80%;
+                height: 110px;
+            }
+    
+            article {
+                display: none;
+            }
+        }
+
+        .aboutUs {
+            height: 133px;
+            background-size: auto;
+            background-position: -37% center ;
+    
+            .pic {
+                width: 80%;
+                height: 110px;
+            }
+    
+            article {
+                display: none;
+            }
+        }
+
+        .noName {
+            background-size: cover;
+            background-position: -43% center ;
+        }
+        .mbArt{
+            display: block;
+            text-align: center;
+            h3{
+                margin-bottom: 1.5rem;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+        .swiper{
+            margin-top: 3.5rem;
+        }
+    }
 }
