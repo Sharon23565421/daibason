@@ -162,4 +162,38 @@ export default {
         margin-top: -50px;
     }
 }
+
+@media screen and (max-width:414px) {
+    .userInfo {
+        border: none;
+        margin: 0;
+
+        h1 {
+            margin: 25px 0;
+        }
+
+        .userBtn {
+            // display: block;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            // text-align: center;
+
+            button {
+                margin: 10px 0;
+            }
+
+
+        }
+
+        .userChange {
+            display: none;
+        }
+        .userSubmit{
+            display: none;
+        }
+    }
+
+}
 </style>

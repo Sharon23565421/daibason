@@ -14,5 +14,25 @@
                 <li><router-link to="">訂單查詢</router-link></li>
             </ul>
         </nav>
+        <div class="userback" @click="backAC">
+            <span>返回</span>
+        </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+        backAC() {
+            console.log(111)
+            document.querySelector('.SliderAC').style.left = '-100%'
+        }
+    }
+}
+</script>
+<style></style>
