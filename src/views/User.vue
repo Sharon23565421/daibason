@@ -16,17 +16,20 @@
         <SliderAC class="userSlider" />
         <!-- 右邊選單 -->
         <UserInfo />
+        <ArticleInfo id="ArticleInfo" />
     </div>
 </template>
 
 <script>
 import SliderAC from '@/components/SliderAC.vue';
 import UserInfo from '@/components/UserInfo.vue';
+import ArticleInfo from '@/components/ArticleInfo.vue';
 
 export default {
     components: {
         SliderAC,
-        UserInfo
+        UserInfo,
+        ArticleInfo
     },
     data() {
         return {
@@ -65,7 +68,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+#ArticleInfo {
+    display: none;
+}
+
 @media screen and (max-width:414px) {
 
     #col1,

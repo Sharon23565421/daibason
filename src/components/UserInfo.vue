@@ -1,5 +1,5 @@
 <template>
-    <div class="userInfo">
+    <div class="userInfo" id="userInfo">
         <h1>會員資料</h1>
         <div class="userBtn">
             <button class="ChangAC">
