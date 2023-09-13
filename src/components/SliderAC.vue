@@ -7,13 +7,14 @@
         <button>登出</button>
         <nav>
             <ul>
-                <li><router-link to="">會員資料</router-link></li>
+                <li><router-link to="/User">會員資料</router-link></li>
                 <li><router-link to="">投稿文章</router-link></li>
                 <li><router-link to="">文章收藏</router-link></li>
                 <li><router-link to="">商品收藏</router-link></li>
                 <li><router-link to="">訂單查詢</router-link></li>
             </ul>
         </nav>
+        <!-- RWD用鍵 -->
         <div class="userback" @click="backAC">
             <span>返回</span>
         </div>
@@ -29,7 +30,7 @@ export default {
     },
     methods: {
         backAC() {
-            console.log(111)
+            // console.log(111)
             document.querySelector('.SliderAC').style.left = '-100%'
         }
     }

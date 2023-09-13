@@ -10,11 +10,11 @@
                 <i class="fa-solid fa-lock"></i>
                 更改帳號/密碼
             </button>
-            <button class="ChangAC" @click="Tophone">
+            <button class="ChangAC">
                 <i class="fa-solid fa-phone"></i>
                 更改手機號碼
             </button>
-            <button class="ChangAC" @click="Tomail">
+            <button class="ChangAC">
                 <i class="fa-solid fa-envelope"></i>
                 更改信箱
             </button>
@@ -44,23 +44,13 @@
         </div>
         <button class="userSubmit btn_s">送出</button>
     </div>
-    <!-- 更改帳號密碼 -->
-    <PwdChange id="PwdChange" />
-    <!-- 更改手機 -->
-    <PhoneChange id="PhoneChange" />
-    <!-- 更改信箱 -->
-    <MailChange id="MailChange" />
 </template>
 
 <script>
-import PwdChange from '@/components/PwdChange.vue'
-import PhoneChange from '@/components/PhoneChange.vue'
-import MailChange from '@/components/MailChange.vue'
+
 export default {
     components: {
-        PwdChange,
-        PhoneChange,
-        MailChange
+        // PwdChange,
     },
     data() {
         return {
@@ -74,15 +64,6 @@ export default {
             // console.log(11)
             document.querySelector('.userInfo').style.display = 'none'
             document.getElementById('PwdChange').style.display = 'block'
-        },
-        Tophone() {
-            document.querySelector('.userInfo').style.display = 'none'
-            document.getElementById('PhoneChange').style.display = 'block'
-
-        },
-        Tomail() {
-            document.querySelector('.userInfo').style.display = 'none'
-            document.getElementById('MailChange').style.display = 'block'
         }
     },
 }
@@ -193,48 +174,37 @@ export default {
     }
 }
 
-#PwdChange {
-    display: none;
-}
-
-#PhoneChange {
-    display: none;
-}
-
-#MailChange {
-    display: none;
-}
-
 @media screen and (max-width:414px) {
     .userInfo {
         border: none;
         margin: 0;
 
         h1 {
-            margin: 25px 0;
+            // margin: 25px 0;
+            display: none;
         }
 
         .userBtn {
-            // display: block;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            // text-align: center;
+            display: none;
+            // flex-direction: column;
+            // align-items: center;
+            // margin: 0;
+            // padding: 0;
+            // // text-align: center;
 
-            button {
-                margin: 10px 0;
-            }
+            // button {
+            //     margin: 10px 0;
+            // }
 
 
         }
 
         .userChange {
-            display: none;
+            // display: none;
         }
 
         .userSubmit {
-            display: none;
+            // display: none;
         }
     }
 
