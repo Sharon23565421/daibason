@@ -72,8 +72,7 @@ export default {
   },
   methods: {
     goToStoreDetail() {
-      // 在这里使用路由导航
-      this.$router.push("/StoreDetail"); // 这里的路径应该匹配你的路由配置
+      this.$router.push("/StoreDetail"); 
     },
   },
 };
