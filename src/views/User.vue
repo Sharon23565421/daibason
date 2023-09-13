@@ -1,17 +1,21 @@
 <template>
+    <!-- 背景色塊 -->
     <div id="col1"></div>
     <div id="col2"></div>
     <div id="col3"></div>
     <div id="row1"></div>
     <div id="row2"></div>
     <div id="row3"></div>
-    <div id="circle"></div>
+    <!-- <div id="circle"></div> -->
     <div class="userWrap">
+        <!-- Rwd返回鍵 -->
         <div class="userHam" @click="sliderAC">
             <span>會員自訂</span>
         </div>
+        <!-- 左邊選單 -->
         <SliderAC class="userSlider" />
-        <UserInfo class="userInfo" />
+        <!-- 右邊選單 -->
+        <UserInfo />
     </div>
 </template>
 
