@@ -40,7 +40,7 @@ export default {
     background-color: #fff;
     border-radius: 20px;
     width: 900px;
-    margin-left: 10px;
+    // margin-left: 10px;
     // display: none;
 
     h1 {
@@ -52,7 +52,7 @@ export default {
         margin-top: 50px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         justify-items: center;
         gap: 30px;
 

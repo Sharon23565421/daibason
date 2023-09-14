@@ -36,6 +36,10 @@ export default {
         Toacc() {
             document.getElementById('userInfo').style.display = 'block'
             document.getElementById('ArticleInfo').style.display = 'none'
+            document.getElementById('AccChange').style.display = 'none'
+            document.getElementById('PwdChange').style.display = 'none'
+            document.getElementById('PhoneChange').style.display = 'none'
+            document.getElementById('MailChange').style.display = 'none'
         },
         Toart() {
             // console.log(111)
