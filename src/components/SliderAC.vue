@@ -25,7 +25,7 @@
 export default {
     data() {
         return {
-
+            // toggle:''
         }
     },
     methods: {
@@ -33,18 +33,29 @@ export default {
             // console.log(111)
             document.querySelector('.SliderAC').style.left = '-100%'
         },
-        Toacc() {
-            document.getElementById('userInfo').style.display = 'block'
-            document.getElementById('ArticleInfo').style.display = 'none'
-            document.getElementById('AccChange').style.display = 'none'
-            document.getElementById('PwdChange').style.display = 'none'
-            document.getElementById('PhoneChange').style.display = 'none'
-            document.getElementById('MailChange').style.display = 'none'
+        Toacc(e) {
+            // console.log(11)
+            // console.log(e.target.innerText)
+            this.togglee = e.target.innerText
+            console.log(this.togglee)
+            this.$emit('togglee-change', this.togglee)
+
+            // document.getElementById('userInfo').style.display = 'block'
+            // document.getElementById('ArticleInfo').style.display = 'none'
+            // document.getElementById('AccChange').style.display = 'none'
+            // document.getElementById('PwdChange').style.display = 'none'
+            // document.getElementById('PhoneChange').style.display = 'none'
+            // document.getElementById('MailChange').style.display = 'none'
         },
-        Toart() {
+        Toart(e) {
+            // console.log(e.target.innerText)
+            this.togglee = e.target.innerText
+            console.log(this.togglee)
+            this.$emit('togglee-change', this.togglee)
+            
             // console.log(111)
-            document.getElementById('userInfo').style.display = 'none'
-            document.getElementById('ArticleInfo').style.display = 'block'
+            // document.getElementById('userInfo').style.display = 'none'
+            // document.getElementById('ArticleInfo').style.display = 'block'
         }
     }
 }
