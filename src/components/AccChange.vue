@@ -1,81 +1,61 @@
 <template>
-    <div class="userInfo">
-        <h1>會員資料</h1>
-        <div class="userBtn">
-            <button class="ChangAC">
-                <i class="fa-solid fa-face-laugh"></i>
-                更改基本資料
-            </button>
-            <button class="ChangAC" @click="Topwd">
-                <i class="fa-solid fa-lock"></i>
-                更改帳號/密碼
-            </button>
-            <button class="ChangAC">
-                <i class="fa-solid fa-phone"></i>
-                更改手機號碼
-            </button>
-            <button class="ChangAC">
-                <i class="fa-solid fa-envelope"></i>
-                更改信箱
-            </button>
-        </div>
-        <div class="userChange">
-            <div class="userPic">
+    <div class="accchange">
+        <h1>更改基本資料</h1>
+        <div class="changebox">
+            <div class="accPic">
                 <img src="https://steam.oxxostudio.tw/webp/gimp/example/simple-keyer-mask-16.webp" />
             </div>
-            <div class="userTxt">
-                <h2>更改基本資料</h2>
-                <div class="userName">
-                    <label for="name">名稱：</label>
-                    <input type="text" v-model="username" id="name">
-                </div>
-                <div class="userBir">
-                    <label for="Bir">生日：</label>
-                    <input type="date" v-model="userbir" id="Bir">
-                </div>
-                <div class="userSex">
-                    <label for="sex">性別：</label>
-                    <select name="" id="sex" v-model="usersex">
-                        <option value="男">男</option>
-                        <option value="女">女</option>
-                    </select>
-                </div>
+            <button class="btn_s">上傳圖片</button>
+            <div class="changeName">
+                <label for="">名稱：</label>
+                <input type="text" v-model="changeName">
             </div>
+            <div class="changeBir">
+                <label for="">生日：</label>
+                <input type="date" v-model="changeBir">
+            </div>
+            <div class="changeSex">
+                <label for="sex">性別：</label>
+                <select name="" id="sex" v-model="changeSex">
+                    <option value="男" >男</option>
+                    <option value="女" >女</option>
+                </select>
+            </div>
+            <button class="btn_l">確認更改</button>
+            <button class="btn_s" @click="menu">返回</button>
         </div>
-        <button class="userSubmit btn_s">送出</button>
     </div>
 </template>
 
 <script>
-
 export default {
-    components: {
-        // PwdChange,
-    },
     data() {
         return {
-            username: '',
-            userbir: '',
-            usersex: '男'
+            // toggle: ''
+            changeName:'',
+            changeBir:'',
+            changeSex:'男'
         }
     },
     methods: {
-        Topwd() {
+        menu() {
             // console.log(11)
-            document.querySelector('.userInfo').style.display = 'none'
-            document.getElementById('PwdChange').style.display = 'block'
+            // this.toggle = '會員資料'
+            // this.$emit('toggle-change', this.toggle)
+            document.getElementById('AccChange').style.display = 'none'
+            document.querySelector('.userInfo').style.display = 'block'
         }
-    },
+    }
 }
 </script>
 
 <style lang="scss">
-.userInfo {
+.accchange {
     border: 1px solid #aaa;
     background-color: #fff;
     border-radius: 20px;
     width: 900px;
-    margin-left: 10px;
+    // margin-left: 10px;
     // display: none;
 
     h1 {
@@ -83,32 +63,18 @@ export default {
         margin-top: 50px;
     }
 
-    .userBtn {
+    .changebox {
         // border: 1px solid red;
-        margin-top: 50px;
-        display: flex;
-        padding: 0 50px;
+        // margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 180px repeat(6, 1fr);
+        justify-items: center;
+        align-items: center;
+        gap: 30px;
 
-        // text-align: center;
-        button {
-            height: 100px;
-            margin: 0 10px;
-            // background-color: #fff;
-        }
-    }
-
-    .userChange {
-        // border: 1px solid red;
-        background-color: #eee;
-        height: 400px;
-        border-radius: $border-radius;
-        display: flex;
-        // align-items: center;
-        margin: 0 50px;
-        margin-top: 50px;
-
-        .userPic {
-
+        .accPic {
+            // border: 1px solid red;
             width: 180px;
             height: 180px;
             margin: auto;
@@ -120,93 +86,70 @@ export default {
                 border-radius: 100px;
                 vertical-align: top;
                 border: 8px solid black;
-
             }
-        }
 
-        .userTxt {
-            width: 60%;
-
-            // border: 1px solid red;
-            h2 {
-                // border: 1px solid red;
-                width: 80%;
-                margin: auto;
-                margin-top: 50px;
+            button {
                 // text-align: center;
-            }
-
-            .userName {
-                width: 80%;
-                margin: auto;
-                margin-top: 50px;
-                display: flex;
-                align-items: center;
-
-                input {
-                    width: 80%;
-                }
-            }
-
-            .userBir {
-                width: 80%;
-                margin: auto;
-                margin-top: 30px;
-
-                input {
-                    width: 80%;
-                }
-            }
-
-            .userSex {
-                width: 80%;
-                margin: auto;
-                margin-top: 30px;
+                margin-top: 10px;
             }
         }
-    }
 
-    .userSubmit {
-        border: solid #333;
-        display: block;
-        margin: auto;
-        margin-top: -50px;
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            border: transparent;
+            border-bottom: 1px solid #aaa;
+        }
+
+        .changeName {
+            // border: 1px solid red;
+            width: 50%;
+
+        }
+
+        .changeBir {
+            width: 50%;
+        }
+
+        .changeSex {
+            width: 50%;
+        }
     }
 }
 
 @media screen and (max-width:414px) {
-    .userInfo {
-        border: none;
-        margin: 0;
+    .accchange {
+        // width: 100%;
+        .changebox {
+            .accPic {
+                // width: 80%;
 
-        h1 {
-            // margin: 25px 0;
-            display: none;
-        }
+                label {
+                    width: 20%;
+                }
 
-        .userBtn {
-            display: none;
-            // flex-direction: column;
-            // align-items: center;
-            // margin: 0;
-            // padding: 0;
-            // // text-align: center;
+                span {
+                    width: 80%;
+                }
+            }
 
-            // button {
-            //     margin: 10px 0;
-            // }
+            .changeName {
+                // border: 1px solid red;
+                width: 80%;
+            }
 
+            .changeBir {
+                width: 80%;
+            }
 
-        }
-
-        .userChange {
-            // display: none;
-        }
-
-        .userSubmit {
-            // display: none;
+            .changeSex {
+                width: 80%;
+            }
         }
     }
-
 }
 </style>

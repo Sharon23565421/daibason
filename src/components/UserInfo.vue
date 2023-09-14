@@ -1,8 +1,9 @@
 <template>
-    <div class="userInfo" id="userInfo">
+     <div class="userInfo" id="userInfo">
+
         <h1>會員資料</h1>
-        <div class="userBtn">
-            <button class="ChangAC">
+            <div class="userBtn">
+            <button class="ChangAC" @click="Toacc">
                 <i class="fa-solid fa-face-laugh"></i>
                 更改基本資料
             </button>
@@ -19,7 +20,7 @@
                 更改信箱
             </button>
         </div>
-        <div class="userChange">
+        <!-- <div class="userChange">
             <div class="userPic">
                 <img src="https://steam.oxxostudio.tw/webp/gimp/example/simple-keyer-mask-16.webp" />
             </div>
@@ -41,9 +42,11 @@
                     </select>
                 </div>
             </div>
-        </div>
-        <button class="userSubmit btn_s">送出</button>
+        </div> -->
+        <!-- <button class="userSubmit btn_s">送出</button> -->
     </div>
+    <!-- 更改基本資料 -->
+    <AccChange id="AccChange"/>
     <!-- 更改帳號密碼 -->
     <PwdChange id="PwdChange" />
     <!-- 更改手機 -->
@@ -53,11 +56,13 @@
 </template>
 
 <script>
+import AccChange from '@/components/AccChange.vue'
 import PwdChange from '@/components/PwdChange.vue'
 import PhoneChange from '@/components/PhoneChange.vue'
 import MailChange from '@/components/MailChange.vue'
 export default {
     components: {
+        AccChange,
         PwdChange,
         PhoneChange,
         MailChange
@@ -66,10 +71,22 @@ export default {
         return {
             username: '',
             userbir: '',
-            usersex: '男'
+            usersex: '男',
+            toggle: '會員資料'
         }
     },
     methods: {
+        handleToggleChange(newToggleValue) {
+            // 在這裡處理新的 toggle 值
+            console.log('新的 toggle 值:', newToggleValue);
+            console.log(111)
+        },
+        Toacc(e) {
+            // console.log(e.target.innerText)
+            // this.toggle = e.target.innerText
+            document.querySelector('.userInfo').style.display = 'none'
+            document.getElementById('AccChange').style.display = 'block'
+        },
         Topwd() {
             // console.log(11)
             document.querySelector('.userInfo').style.display = 'none'
@@ -94,103 +111,110 @@ export default {
     background-color: #fff;
     border-radius: 20px;
     width: 900px;
-    margin-left: 10px;
+    // margin-left: 10px;
     // display: none;
 
     h1 {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 100px;
     }
 
     .userBtn {
         // border: 1px solid red;
-        margin-top: 50px;
+        margin-top: 100px;
+        // width: 500px;
         display: flex;
-        padding: 0 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 100px;
 
         // text-align: center;
         button {
             height: 100px;
-            margin: 0 10px;
+            margin: 50px;
             // background-color: #fff;
         }
     }
 
-    .userChange {
-        // border: 1px solid red;
-        background-color: #eee;
-        height: 400px;
-        border-radius: $border-radius;
-        display: flex;
-        // align-items: center;
-        margin: 0 50px;
-        margin-top: 50px;
+    // .userChange {
+    //     // border: 1px solid red;
+    //     background-color: #eee;
+    //     height: 400px;
+    //     border-radius: $border-radius;
+    //     display: flex;
+    //     // align-items: center;
+    //     margin: 0 50px;
+    //     margin-top: 50px;
 
-        .userPic {
+    //     .userPic {
 
-            width: 180px;
-            height: 180px;
-            margin: auto;
-            // margin-top: 10px;
+    //         width: 180px;
+    //         height: 180px;
+    //         margin: auto;
+    //         // margin-top: 10px;
 
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 100px;
-                vertical-align: top;
-                border: 8px solid black;
+    //         img {
+    //             width: 100%;
+    //             height: 100%;
+    //             border-radius: 100px;
+    //             vertical-align: top;
+    //             border: 8px solid black;
 
-            }
-        }
+    //         }
+    //     }
 
-        .userTxt {
-            width: 60%;
+    //     .userTxt {
+    //         width: 60%;
 
-            // border: 1px solid red;
-            h2 {
-                // border: 1px solid red;
-                width: 80%;
-                margin: auto;
-                margin-top: 50px;
-                // text-align: center;
-            }
+    //         // border: 1px solid red;
+    //         h2 {
+    //             // border: 1px solid red;
+    //             width: 80%;
+    //             margin: auto;
+    //             margin-top: 50px;
+    //             // text-align: center;
+    //         }
 
-            .userName {
-                width: 80%;
-                margin: auto;
-                margin-top: 50px;
-                display: flex;
-                align-items: center;
+    //         .userName {
+    //             width: 80%;
+    //             margin: auto;
+    //             margin-top: 50px;
+    //             display: flex;
+    //             align-items: center;
 
-                input {
-                    width: 80%;
-                }
-            }
+    //             input {
+    //                 width: 80%;
+    //             }
+    //         }
 
-            .userBir {
-                width: 80%;
-                margin: auto;
-                margin-top: 30px;
+    //         .userBir {
+    //             width: 80%;
+    //             margin: auto;
+    //             margin-top: 30px;
 
-                input {
-                    width: 80%;
-                }
-            }
+    //             input {
+    //                 width: 80%;
+    //             }
+    //         }
 
-            .userSex {
-                width: 80%;
-                margin: auto;
-                margin-top: 30px;
-            }
-        }
-    }
+    //         .userSex {
+    //             width: 80%;
+    //             margin: auto;
+    //             margin-top: 30px;
+    //         }
+    //     }
+    // }
 
-    .userSubmit {
-        border: solid #333;
-        display: block;
-        margin: auto;
-        margin-top: -50px;
-    }
+    // .userSubmit {
+    //     border: solid #333;
+    //     display: block;
+    //     margin: auto;
+    //     margin-top: -50px;
+    // }
+}
+
+#AccChange {
+    display: none;
 }
 
 #PwdChange {
@@ -229,13 +253,13 @@ export default {
 
         }
 
-        .userChange {
-            display: none;
-        }
+        // .userChange {
+        //     display: none;
+        // }
 
-        .userSubmit {
-            display: none;
-        }
+        // .userSubmit {
+        //     display: none;
+        // }
     }
 
 }
