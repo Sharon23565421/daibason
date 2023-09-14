@@ -15,7 +15,7 @@
         <!-- 左邊選單 -->
         <SliderAC class="userSlider" />
         <!-- 右邊選單 -->
-        <UserInfo />
+        <!-- <UserInfo /> -->
         <ArticleInfo id="ArticleInfo" />
     </div>
 </template>
@@ -70,7 +70,7 @@ export default {
 
 <style lang="scss">
 #ArticleInfo {
-    display: none;
+    // display: none;
 }
 
 @media screen and (max-width:414px) {
