@@ -15,8 +15,10 @@
         <!-- 左邊選單 -->
         <SliderAC class="userSlider" />
         <!-- 右邊選單 -->
-        <!-- <UserInfo /> -->
-        <ArticleInfo id="ArticleInfo" />
+        <!--會員資料 -->
+        <UserInfo v-if="'會員資料' == toggle" @togglee-change="toggleUpdatee(e)" />
+        <!-- 投稿文章 -->
+        <ArticleInfo id="ArticleInfo" v-else-if="'投稿文章' == toggle" @togglee-change="toggleUpdatee(e)" />
     </div>
 </template>
 
@@ -33,7 +35,7 @@ export default {
     },
     data() {
         return {
-
+            toggle: '會員資料'
         }
     },
     computed: {
@@ -43,6 +45,10 @@ export default {
         sliderAC() {
             // console.log(111)
             document.querySelector('.userSlider').style.left = '0'
+        },
+        toggleUpdatee(e) {
+            console.log(e)
+            this.toggle = '投稿文章'
         }
     },
     mounted() {

@@ -31,7 +31,7 @@
 export default {
     data() {
         return {
-            // toggle: ''
+            toggle: '',
             changeName:'',
             changeBir:'',
             changeSex:'男'
@@ -40,10 +40,10 @@ export default {
     methods: {
         menu() {
             // console.log(11)
-            // this.toggle = '會員資料'
-            // this.$emit('toggle-change', this.toggle)
-            document.getElementById('AccChange').style.display = 'none'
-            document.querySelector('.userInfo').style.display = 'block'
+            this.toggle = '會員資料'
+            this.$emit('toggle-change', this.toggle)
+            // document.getElementById('AccChange').style.display = 'none'
+            // document.querySelector('.userInfo').style.display = 'block'
         }
     }
 }

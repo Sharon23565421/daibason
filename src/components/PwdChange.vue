@@ -42,9 +42,11 @@ export default {
     },
     methods: {
         menu() {
+            this.toggle = '會員資料'
+            this.$emit('toggle-change', this.toggle)
             // console.log(11)
-            document.getElementById('PwdChange').style.display = 'none'
-            document.querySelector('.userInfo').style.display = 'block'
+            // document.getElementById('PwdChange').style.display = 'none'
+            // document.querySelector('.userInfo').style.display = 'block'
         }
     }
 }
