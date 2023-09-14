@@ -5,6 +5,9 @@
   <div class="box">
     <img class="boximg" src="https://img.lovepik.com/free-png/20210919/lovepik-cute-pig-image-png-image_400807463_wh1200.png" alt="">
   </div>
+  <div class="Test1">
+
+  </div>
 </template>
 
 <style lang="scss">
@@ -14,11 +17,15 @@
   background-color: #3498db;
   .boximg{
     position: absolute;
-      width: 100%; /* 设置图像的宽度 */
-      height: auto; /* 让高度自动适应宽度变化 */
+      width: 100%; 
+      height: auto; 
   }
 }
-
+.Test1 {
+  width: 900px;
+  height: 900px;
+  background-image: url('../../public/img/register.png');
+}
 </style>
 
 <script>
