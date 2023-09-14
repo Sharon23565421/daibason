@@ -201,9 +201,9 @@ export default {
       width: 31%;
       overflow: hidden;
       margin-block: 3.5rem;
-
       .storeCardimg {
         width: 100%;
+        cursor: pointer;
       }
 
       .storeBottom {
