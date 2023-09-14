@@ -205,14 +205,12 @@ export default {
         }
         .DetailCardDes{
           width: 100%;
-          display: flex;
           .CardDesTitle{
             width: 50%;
             font-size:map-get($map: $fontsizes, $key: h4);
           }
           .CardDesPrice{
             width: 50%;
-            text-align: right;
           }
         }
       }
