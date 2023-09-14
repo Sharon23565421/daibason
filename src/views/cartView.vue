@@ -1,18 +1,16 @@
 <template>
   <div class="CartWrap">
     <div class="CartSpeedBox">
-      <div class="CartSpeedStart">
-        <p>1</p>
-        購物車
+      <div class="SpeedNo">
+      <span class="SpeedNoF">1</span>
+      <span>2</span>
+      <span>3</span>
       </div>
-      <div class="CartSpeedCommit">
-        <p>2</p>
-        付款運送
-      </div>
-      <div class="CartSpeedDone">
-        <p>3</p>
-        訂單完成
-      </div>
+      <div class="SpeedText">
+      <div>購物車</div>
+      <div>付款運送</div>
+      <div>訂單完成</div>
+    </div>
     </div>
     <div class="CartProBOX">
       <div class="CartProTitle">購物車</div>
@@ -77,53 +75,49 @@ export default {
 
 <style lang="scss">
 .CartWrap{
+  position: relative;
   max-width: 1200px;
   padding: 2.5rem 1.5rem;
   margin: auto;
   width: 100%;
   .CartSpeedBox{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    div{
+    flex-wrap: wrap;
+    .SpeedNo{
+      position: relative;
+      width: 100%;
       display: flex;
-      width: 33%;
-      line-height: 3;
-    }
-    .CartSpeedStart{
-      text-align: center;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 50px;
-      margin: 20px;
-      p{
+      justify-content: space-evenly;
+      align-items: center;
+      span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size:map-get($map: $fontsizes, $key: h3);
-        width: 100%;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: gray;
       }
     }
-    .CartSpeedCommit{
-      text-align: center;
+    .SpeedText{
+      position: relative;
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 50px;
-      margin: 20px;
-      p{
+      justify-content: space-evenly;
+      align-items: center;
+      margin: auto;
+      div{
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size:map-get($map: $fontsizes, $key: h3);
-        width: 100%;
-      }
-    }
-    .CartSpeedDone{
-      text-align: center;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 50px;
-      margin: 20px;
-      p{
-        font-size:map-get($map: $fontsizes, $key: h3);
-        width: 100%;
+        text-align: center;
       }
     }
 
