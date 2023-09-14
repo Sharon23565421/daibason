@@ -32,3 +32,13 @@
   color: map-get($color, $key: success);
   border: 2px solid map-get($color, $key: success);
 }
+
+.Broun {
+  color: map-get($color, $key: choco);
+  border: 2px solid map-get($color, $key: choco);
+}
+
+.Yellow {
+  color: map-get($color, $key: warning);
+  border: 2px solid map-get($color, $key: warning);
+}
