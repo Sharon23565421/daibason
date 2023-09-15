@@ -44,19 +44,16 @@
         width: 16.6666%;
         transform: skew(0deg);
         z-index: 5;
-        img{
-          transform: skew(5deg) 
-                     translateX(-18px);
+        img {
+          transform: skew(5deg) translateX(-18px);
         }
       }
     }
-    .pic.mrtGrayStyle{
+    .pic.mrtGrayStyle {
       transform: skew(-5deg);
       filter: grayscale(100%);
-       img{
-        transform: skew(5deg) 
-        translateX(-18px);
-        
+      img {
+        transform: skew(5deg) translateX(-18px);
       }
     }
   }
@@ -67,8 +64,7 @@
     width: 62.5%;
     margin: auto;
     padding-inline: 2%;
-
-    
+    font-size: 24px;
 
     .red {
       &::after {
@@ -173,10 +169,10 @@
     }
 
     .title-tag {
-      font-size: 1.8rem;
+      font-size: 18px;
       padding: 1rem 0;
       width: 12%;
-      margin: 3rem auto 2rem ;
+      margin: 3rem auto 2rem;
       inset: 0;
       position: relative;
       background: #fff;
@@ -213,6 +209,92 @@
   }
 }
 
+// --------------------------------------------
+.dottedLineBox {
+  margin-top: 5%;
+  .dottedLine {
+    background: #e8e7ee;
+    /* width: 1200px; */
+    height: 6px;
+    margin: auto;
+  }
+}
+/* 站點板塊 */
+.mrtWrap {
+  .mrtSta {
+    background-image: url(/public/img/mrt_smallarr.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2% 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2% 2% 0 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 站點文字介紹 */
+    .mrtStaTxt {
+      width: 34.5%;
+    }
+    /* 站點圖跟捷運圖 */
+    .mrtStaBox {
+      width: 48.5%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      .mrtStaMaruBox {
+        width: 20%;
+        cursor: pointer;
+        .mrtStaMaru {
+          width: 100%;
+        }
+      }
+      .mrtStaPicBox {
+        width: 70%;
+        .mrtStaPic {
+          width: 100%;
+          border-radius: 50%;
+          border: 5px solid #999999;
+        }
+      }
+    }
+  }
+}
+/* 站點板塊左右對調 */
+.mrtWrap:nth-of-type(even) {
+  .mrtSta {
+    flex-direction: row-reverse;
+
+    .mrtStaBox {
+      flex-direction: row-reverse;
+      justify-content: start;
+
+      .mrtStaMaruBox {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+/* 美食住宿景點卡片動態 */
+.mrtCardWrap {
+  display: flex;
+  justify-content: center;
+}
+.cardSliFade-enter-active,
+.cardSliFade-leave-active {
+  transition: 0.8s ease;
+}
+
+.cardSliFade-enter-from,
+.cardSliFade-leave-to {
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.cardSliFade-leave-from .cardSliFade-enter-to {
+  opacity: 1;
+}
+// --------------------------------------------
+
 @media screen and (max-width: 1279px) {
   .mrtLineCheck {
     .mrtPic {
@@ -227,7 +309,7 @@
 
     .mrtTag {
       .title-tag {
-        font-size: 24px;
+        font-size: 16px;
         width: 15%;
       }
     }
@@ -263,8 +345,7 @@
       max-width: 100vw;
       padding: 0%;
       .title-tag {
-        font-size: 18px;
-        margin: 2rem .5rem;
+        margin: 2rem 0.5rem;
       }
 
       .red {
@@ -317,9 +398,9 @@
         min-width: 100%;
         height: 200px;
       }
-      .mrtTag {  
+      .mrtTag {
         .title-tag {
-          font-size: 18px;
+          font-size: 14px;
           width: 30%;
           margin: 2rem 2px;
           transform: translateX(-20%);
