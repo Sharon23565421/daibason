@@ -1,8 +1,8 @@
 <template>
-     <div class="userInfo" id="userInfo">
+    <div class="userInfo" id="userInfo" v-if="'會員資料' == toggle">
 
         <h1>會員資料</h1>
-            <div class="userBtn">
+        <div class="userBtn">
             <button class="ChangAC" @click="Toacc">
                 <i class="fa-solid fa-face-laugh"></i>
                 更改基本資料
@@ -46,13 +46,13 @@
         <!-- <button class="userSubmit btn_s">送出</button> -->
     </div>
     <!-- 更改基本資料 -->
-    <AccChange id="AccChange"/>
-    <!-- 更改帳號密碼 -->
-    <PwdChange id="PwdChange" />
-    <!-- 更改手機 -->
-    <PhoneChange id="PhoneChange" />
+    <AccChange id="AccChange" v-else-if="'更改基本資料' == toggle" @toggle-change="toggleUpdate"/>
+    <!-- 更改帳號/密碼 -->
+    <PwdChange id="PwdChange" v-else-if="'更改帳號/密碼' == toggle" @toggle-change="toggleUpdate"/>
+    <!-- 更改手機號碼 -->
+    <PhoneChange id="PhoneChange" v-else-if="'更改手機號碼' == toggle" @toggle-change="toggleUpdate"/>
     <!-- 更改信箱 -->
-    <MailChange id="MailChange" />
+    <MailChange id="MailChange" v-else-if="'更改信箱' == toggle" @toggle-change="toggleUpdate"/>
 </template>
 
 <script>
@@ -76,30 +76,37 @@ export default {
         }
     },
     methods: {
-        handleToggleChange(newToggleValue) {
+        toggleUpdate() {
             // 在這裡處理新的 toggle 值
-            console.log('新的 toggle 值:', newToggleValue);
-            console.log(111)
+            this.toggle = '會員資料'
+            // console.log('新的 toggle 值:', newToggleValue);
+            // console.log(111)
         },
         Toacc(e) {
-            // console.log(e.target.innerText)
-            // this.toggle = e.target.innerText
-            document.querySelector('.userInfo').style.display = 'none'
-            document.getElementById('AccChange').style.display = 'block'
+            console.log(e.target.innerText)
+            this.toggle = e.target.innerText
+            // document.querySelector('.userInfo').style.display = 'none'
+            // document.getElementById('AccChange').style.display = 'block'
         },
-        Topwd() {
+        Topwd(e) {
             // console.log(11)
-            document.querySelector('.userInfo').style.display = 'none'
-            document.getElementById('PwdChange').style.display = 'block'
+            console.log(e.target.innerText)
+            this.toggle = e.target.innerText
+            // document.querySelector('.userInfo').style.display = 'none'
+            // document.getElementById('PwdChange').style.display = 'block'
         },
-        Tophone() {
-            document.querySelector('.userInfo').style.display = 'none'
-            document.getElementById('PhoneChange').style.display = 'block'
+        Tophone(e) {
+            console.log(e.target.innerText)
+            this.toggle = e.target.innerText
+            // document.querySelector('.userInfo').style.display = 'none'
+            // document.getElementById('PhoneChange').style.display = 'block'
 
         },
-        Tomail() {
-            document.querySelector('.userInfo').style.display = 'none'
-            document.getElementById('MailChange').style.display = 'block'
+        Tomail(e) {
+            console.log(e.target.innerText)
+            this.toggle = e.target.innerText
+            // document.querySelector('.userInfo').style.display = 'none'
+            // document.getElementById('MailChange').style.display = 'block'
         }
     },
 }
@@ -214,19 +221,19 @@ export default {
 }
 
 #AccChange {
-    display: none;
+    // display: none;
 }
 
 #PwdChange {
-    display: none;
+    // display: none;
 }
 
 #PhoneChange {
-    display: none;
+    // display: none;
 }
 
 #MailChange {
-    display: none;
+    // display: none;
 }
 
 @media screen and (max-width:414px) {
