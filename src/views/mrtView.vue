@@ -5,18 +5,16 @@
 
   <section class="mrtLineCheck">
     <div class="mrtPic">
-      <div class="pic">
+      <div class="pic mrtGrayStyle border-brownline">
         <img
           src="../../public/img/brown.jpeg"
           alt="brownline"
-          class="mrtGrayStyle border-brownline"
         />
       </div>
-      <div class="pic">
+      <div class="pic mrtGrayStyle border-yellowline">
         <img
           src="../../public/img/yellow.jpeg"
           alt="yellowline"
-          class="mrtGrayStyle border-yellowline"
         />
       </div>
 
@@ -40,18 +38,16 @@
           <img src="../../public/img/yellow.jpeg" alt="yellowline" />
         </a>
       </div>
-      <div class="pic">
+      <div class="pic mrtGrayStyle border-redline">
         <img
           src="../../public/img/red.jpeg"
           alt="redline"
-          class="mrtGrayStyle border-redline"
         />
       </div>
-      <div class="pic">
+      <div class="pic mrtGrayStyle border-blueline">
         <img
           src="../../public/img/blue.jpeg"
           alt="blueline"
-          class="mrtGrayStyle border-blueline"
         />
       </div>
     </div>
