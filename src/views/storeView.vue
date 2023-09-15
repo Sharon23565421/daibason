@@ -9,26 +9,27 @@
           <li v-for="i in 5">選項1</li>
         </ul>
       </div>
-      <div class="storeSearchSta" >
+      <div class="storeSearchSta">
         <span>捷運站選擇</span>
         <i class="fa-solid fa-play fa-rotate-90"></i>
-        <ul class="SearchStaBox"  >
-          <li v-for="(i) in 5">選項1</li>
+        <ul class="SearchStaBox">
+          <li v-for="i in 5">選項1</li>
         </ul>
       </div>
-      <div class="storeSearchSP" >
+      <div class="storeSearchSP">
         <span>特色選擇</span>
         <i class="fa-solid fa-play fa-rotate-90"></i>
-        <ul class="SearchSPBox"  >
-          <li v-for="(i) in 5">選項1</li>
+        <ul class="SearchSPBox">
+          <li v-for="i in 5">選項1</li>
         </ul>
       </div>
-    <button class="storeSearchBt">搜尋</button>
-   </div>
-   <div class="storecardbox">
+      <button class="storeSearchBt">搜尋</button>
+    </div>
+    <div class="storecardbox">
       <!-- <div v-for="(item) in testitem" :key="item.id" class="storeCard"> -->
-      <div v-for="item in 10" class="storeCard" @click="goToStoreDetail">
+      <div v-for="item in 10" class="storeCard" >
         <img
+        @click="goToStoreDetail"
           class="storeCardimg"
           src="https://s.yimg.com/ny/api/res/1.2/47Kriq370oo5npvk5nr.6Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/ftvn.com.tw/5ada7e3c01073aac8a607bfa5aaecd3b"
           alt=""
@@ -39,7 +40,7 @@
             <h4 class="CardPri">{{ testitem.sta_name }}NT.12345</h4>
           </div>
           <div class="storeButton">
-            <i class="fa-regular fa-heart" style="cursor: pointer;"></i>
+            <i class="fa-regular fa-heart" style="cursor: pointer"></i>
             <button class="btn_s">加入購物車</button>
           </div>
         </div>
@@ -49,7 +50,7 @@
 </template>
 
 <script>
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 export default {
   data() {
     return {
@@ -72,10 +73,8 @@ export default {
   },
   methods: {
     goToStoreDetail() {
-    // 在这里使用路由导航
-    this.$router.push('/StoreDetail'); // 这里的路径应该匹配你的路由配置
-  }
-
+      this.$router.push("/StoreDetail"); 
+    },
   },
 };
 </script>
@@ -129,59 +128,59 @@ export default {
         }
       }
     }
-    .storeSearchSta{
+    .storeSearchSta {
       border: 3px solid black;
       padding: 0 0.5rem;
       margin-right: 50px;
-      span{
+      span {
         font-size: map-get($map: $fontsizes, $key: h4);
         margin-right: 20px;
       }
-      &:hover .SearchStaBox{
+      &:hover .SearchStaBox {
         display: block;
       }
-      .SearchStaBox{
-        display: none;   
+      .SearchStaBox {
+        display: none;
         position: absolute;
         background-color: white;
         border: 1px solid #ccc;
         width: 150px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        li{
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        li {
           padding: 12px 16px;
           text-decoration: none;
           cursor: pointer;
-          &:hover{
-            background-color:rgb(108, 108, 108);
+          &:hover {
+            background-color: rgb(108, 108, 108);
             color: #fffcfc;
           }
         }
       }
     }
-    .storeSearchSP{
+    .storeSearchSP {
       border: 3px solid black;
       padding: 0 0.5rem;
       margin-right: 50px;
-      span{
+      span {
         font-size: map-get($map: $fontsizes, $key: h4);
         margin-right: 20px;
       }
-      &:hover .SearchSPBox{
+      &:hover .SearchSPBox {
         display: block;
       }
-      .SearchSPBox{
-        display: none;   
+      .SearchSPBox {
+        display: none;
         position: absolute;
         background-color: white;
         border: 1px solid #ccc;
         width: 150px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        li{
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        li {
           padding: 12px 16px;
           text-decoration: none;
           cursor: pointer;
-          &:hover{
-            background-color:rgb(108, 108, 108);
+          &:hover {
+            background-color: rgb(108, 108, 108);
             color: #fffcfc;
           }
         }
@@ -203,9 +202,9 @@ export default {
       width: 31%;
       overflow: hidden;
       margin-block: 3.5rem;
-
       .storeCardimg {
         width: 100%;
+        cursor: pointer;
       }
 
       .storeBottom {

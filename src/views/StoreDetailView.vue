@@ -36,21 +36,21 @@
         </div>
       </div>
       <div class="OtherDetailBox">
+        <div class="OtherDetailTitle">
+          <p>你可能會喜歡</p>
+        </div>
+        <div class="OtherDetailCardbox">
+          <div v-for="(item) in 4" class="OtherDetailCard">
+            <div class="DetailCardImg">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlsDygW5l6-urgSirZ28w1yJgNOy7sF4VJqQ&usqp=CAU" alt="">
+            </div>
+            <div class="DetailCardDes">
+              <h4 class="CardDesTitle">謝謝明信片</h4>
+              <p class="CardDesPrice">NT$150</p>
+            </div>
+          </div>
+        </div>  
       </div>
-      <Carousel v-model="value" loop>
-        <CarouselItem>
-            <div class="demo-carousel">1</div>
-        </CarouselItem>
-        <CarouselItem>
-            <div class="demo-carousel">2</div>
-        </CarouselItem>
-        <CarouselItem>
-            <div class="demo-carousel">3</div>
-        </CarouselItem>
-        <CarouselItem>
-            <div class="demo-carousel">4</div>
-        </CarouselItem>
-    </Carousel>
     </div>
 </template>
 
@@ -174,8 +174,47 @@ export default {
         line-height: 2;
      }
     }
+    
   }
+  .OtherDetailBox{
+      width: 100%;
+      .OtherDetailTitle{
+        text-align: center;
+        letter-spacing: 5px;
+        padding-bottom: 25px;
+        border-bottom: 3px solid black;
+        p{
+          font-size:map-get($map: $fontsizes, $key: h3);
+        }
+      }
+      .OtherDetailCardbox{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        .OtherDetailCard{
+          padding: 10px;
+          width: 25%;
+          .DetailCardImg{
+            width: 100%;
+            img{
+              width: 100%;
+            }
+          }
 
+        }
+        .DetailCardDes{
+          width: 100%;
+          .CardDesTitle{
+            width: 50%;
+            font-size:map-get($map: $fontsizes, $key: h4);
+          }
+          .CardDesPrice{
+            width: 50%;
+          }
+        }
+      }
+    }
 }
 
 </style>  

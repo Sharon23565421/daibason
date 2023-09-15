@@ -12,8 +12,8 @@ footer {
     padding: 0.5rem;
     border-radius: $border-radius *2;
     border: 3px solid #7d7d7d;
-    margin: auto;
-    margin-block: 20px;
+    margin: 20px auto !important;
+    background-color: #fff;
 
     .footerLogo {
         width: 50px;
@@ -41,7 +41,7 @@ footer {
 @media screen and (max-width: 767px) {
     footer {
         width: 100%;
-        display: flex;
+        display: flex !important;
         padding-inline: 1rem;
         box-sizing: border-box;
         white-space: nowrap;

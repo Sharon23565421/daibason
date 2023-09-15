@@ -14,17 +14,17 @@ const routes = [
     // },
   },
   {
-    path: "/about",
-    name: "about",
+    path: "/About",
+    name: "About",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(/* webpackChunkName: "About" */ "../views/AboutView.vue"),
   },
   {
     path: "/Login",
-    name: "login",
+    name: "Login",
     component: () =>
       import(/* webpackChunkName: "Login" */ "@/views/LoginView.vue"),
   },
@@ -44,78 +44,99 @@ const routes = [
     path: "/Store",
     name: "Store",
     component: () =>
-      import(/* webpackChunkName: "store" */ "@/views/StoreView.vue"),
+      import(/* webpackChunkName: "Store" */ "@/views/StoreView.vue"),
   },
   {
     path: "/StoreDetail",
-    // path: "/StoreDetail/:id",
     name: "StoreDetail",
     component: () =>
-      import(/* webpackChunkName: "store" */ "@/views/StoreDetailView.vue"),
+      import(/* webpackChunkName: "Store" */ "@/views/StoreDetailView.vue"),
   },
   {
     path: "/Mrt",
-    name: "/Mrt",
+    name: "Mrt",
     // component: LoginView,
     component: () =>
-      import(/* webpackChunkName: "mrt" */ "@/views/MrtView.vue"),
+      import(/* webpackChunkName: "Mrt" */ "@/views/MrtView.vue"),
   },
   {
     path: "/Game",
-    name: "/Game",
+    name: "Game",
     // component: LoginView,
     component: () =>
-      import(/* webpackChunkName: "game" */ "@/views/GameView.vue"),
+      import(/* webpackChunkName: "Game" */ "@/views/GameView.vue"),
   },
   {
     path: "/Contribute",
-    name: "/Contribute",
+    name: "Contribute",
     // component: LoginView,
     component: () =>
-      import(/* webpackChunkName: "contribute" */ "@/views/ContributeView.vue"),
+      import(/* webpackChunkName: "Contribute" */ "@/views/ContributeView.vue"),
   },
   {
     path: "/New",
-    name: "/New",
+    name: "New",
     // component: LoginView,
     component: () =>
-      import(/* webpackChunkName: "newView" */ "@/views/NewView.vue"),
+      import(/* webpackChunkName: "New" */ "@/views/NewView.vue"),
   },
 
   {
     path: "/ForgetPwd",
-    name: "/ForgetPwd",
+    name: "ForgetPwd",
     component: () =>
-      import(/* webpackChunkName: "forgetPwd" */ "@/views/ForgetPwd.vue"),
+      import(/* webpackChunkName: "ForgetPwd" */ "@/views/ForgetPwd.vue"),
   },
 
   {
     path: "/Cart",
-    name: "/Cart",
+    name: "Cart",
     component: () =>
-      import(/* webpackChunkName: "cart" */ "@/views/CartView.vue"),
+      import(/* webpackChunkName: "Cart" */ "@/views/CartView.vue"),
   },
-
+  {
+    path: "/Shopping",
+    name: "Shopping",
+    component: () =>
+      import(/* webpackChunkName: "Cart" */ "@/views/Shopping.vue"),
+  },
+  {
+    path: "/ShoppingDone",
+    name: "ShoppingDone",
+    component: () =>
+      import(/* webpackChunkName: "Cart" */ "@/views/ShoppingDone.vue"),
+  },
   {
     path: "/PwdSuccess",
-    name: "/PwdSuccess",
+    name: "PwdSuccess",
     component: () =>
-      import(/* webpackChunkName: "pwdSuccess" */ "@/views/PwdSuccess.vue"),
+      import(/* webpackChunkName: "PwdSuccess" */ "@/views/PwdSuccess.vue"),
   },
   {
     path: "/Newinside",
-    name: "/Newinside",
+    name: "Newinside",
     component: () =>
       import(/* webpackChunkName: "Newinside" */ "@/views/Newinside.vue"),
   },
+  // {
+  //   path: "/MemberPagesBgc",
+  //   name: "MemberPagesBgc",
+  //   component: () =>
+  //     import(/* webpackChunkName: "MemberPagesBgc" */ "@/views/MemberPagesBgc.vue"),
+  // },
+  {
+    path: "/User",
+    name: "/User",
+    component: () =>
+      import(/* webpackChunkName: "User" */ "@/views/User.vue"),
+  },
+
   {
     path: "/:pathMatch(.*)*",
-    name: "/NotFound",
+    name: "NotFound",
     component: () =>
       import(/* webpackChunkName: "err" */ "@/views/NotFoundView.vue"),
   },
-  
-  
 ];
 
 const router = createRouter({

@@ -53,7 +53,7 @@ export default {
   methods: {
     login() {
       if (this.userId == this.userIdTrue && this.userPwd == this.userPwdTrue) {
-        alert("登入成功"), (this.formAction = "/mrt");
+        alert("登入成功"), (this.formAction = "/User");
       } else {
         alert("登入失敗");
       }

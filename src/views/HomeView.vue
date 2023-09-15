@@ -123,6 +123,7 @@ export default {
       loop: true,
       slidesPerView: 3,
       spaceBetween: 30,
+      allowTouchMove: false,
       autoplay: {
         delay: 0,
         pauseOnMouseEnter: true,
