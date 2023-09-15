@@ -217,6 +217,92 @@
   }
 }
 
+// --------------------------------------------
+.dottedLineBox {
+  margin-top: 5%;
+  .dottedLine {
+    background: #e8e7ee;
+    /* width: 1200px; */
+    height: 6px;
+    margin: auto;
+  }
+}
+/* 站點板塊 */
+.mrtWrap {
+  .mrtSta {
+    background-image: url(/public/img/mrt_smallarr.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2% 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2% 2% 0 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 站點文字介紹 */
+    .mrtStaTxt {
+      width: 34.5%;
+    }
+    /* 站點圖跟捷運圖 */
+    .mrtStaBox {
+      width: 48.5%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      .mrtStaMaruBox {
+        width: 20%;
+        cursor: pointer;
+        .mrtStaMaru {
+          width: 100%;
+        }
+      }
+      .mrtStaPicBox {
+        width: 70%;
+        .mrtStaPic {
+          width: 100%;
+          border-radius: 50%;
+          border: 5px solid #999999;
+        }
+      }
+    }
+  }
+}
+/* 站點板塊左右對調 */
+.mrtWrap:nth-of-type(even) {
+  .mrtSta {
+    flex-direction: row-reverse;
+
+    .mrtStaBox {
+      flex-direction: row-reverse;
+      justify-content: start;
+
+      .mrtStaMaruBox {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+/* 美食住宿景點卡片動態 */
+.mrtCardWrap {
+  display: flex;
+  justify-content: center;
+}
+.cardSliFade-enter-active,
+.cardSliFade-leave-active {
+  transition: 0.8s ease;
+}
+
+.cardSliFade-enter-from,
+.cardSliFade-leave-to {
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.cardSliFade-leave-from .cardSliFade-enter-to {
+  opacity: 1;
+}
+// --------------------------------------------
+
 @media screen and (max-width: 1279px) {
   .mrtLineCheck {
     .mrtPic {
