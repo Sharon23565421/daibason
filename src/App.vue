@@ -1,7 +1,9 @@
 <template>
   <header-area />
 
-  <main>
+<!-- <div :class="{'body': poke }" > </div> -->
+
+  <main >
     <router-view />
     <!-- Main -->
   </main>
@@ -20,6 +22,15 @@ export default {
     HeaderArea,
     FooterArea,
   },
+
+  computed: {
+        // poke() {
+        //     // 根據路由的 meta.useAppLayout 屬性來決定是否使用 App.vue 佈局
+        //     return this.$route.path === "/MemberPagesBgc";
+        // },
+    },
+
+
 }
 
 

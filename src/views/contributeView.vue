@@ -3,46 +3,66 @@
     <h1>投稿熱門</h1>
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="(taipeis, taipeisIndex) in swipers" :key="taipeisIndex"
-          :class="{ 'even': evenPic(taipeisIndex) }">
+        <div
+          class="swiper-slide"
+          v-for="(taipeis, taipeisIndex) in swipers"
+          :key="taipeisIndex"
+          :class="{ even: evenPic(taipeisIndex) }"
+        >
           <div class="pic">
             <img :src="taipeis.image" :alt="taipeis.CTName" />
             <div class="info">
               <div class="tag">
-                <span v-for="(MRTline, lineIndex) in taipeis.station" :key="lineIndex"
-                  :class="getClassObject(taipeis.line, lineIndex)">{{ MRTline }}</span>
+                <span
+                  v-for="(MRTline, lineIndex) in taipeis.station"
+                  :key="lineIndex"
+                  :class="getClassObject(taipeis.line, lineIndex)"
+                  >{{ MRTline }}</span
+                >
               </div>
               <p>{{ taipeis.CTName }}</p>
               <p class="en">{{ taipeis.ENName }}</p>
             </div>
           </div>
         </div>
-        <div class="swiper-slide" v-for="(taipeis, taipeisIndex) in swipers" :key="taipeisIndex"
-          :class="{ 'even': evenPic(taipeisIndex) }">
+        <div
+          class="swiper-slide"
+          v-for="(taipeis, taipeisIndex) in swipers"
+          :key="taipeisIndex"
+          :class="{ even: evenPic(taipeisIndex) }"
+        >
           <div class="pic">
             <img :src="taipeis.image" :alt="taipeis.CTName" />
             <div class="info">
               <div class="tag">
-                <span v-for="(MRTline, lineIndex) in taipeis.station" :key="lineIndex"
-                  :class="getClassObject(taipeis.line, lineIndex)">{{
-                    MRTline
-                  }}</span>
+                <span
+                  v-for="(MRTline, lineIndex) in taipeis.station"
+                  :key="lineIndex"
+                  :class="getClassObject(taipeis.line, lineIndex)"
+                  >{{ MRTline }}</span
+                >
               </div>
               <p>{{ taipeis.CTName }}</p>
               <p class="en">{{ taipeis.ENName }}</p>
             </div>
           </div>
         </div>
-        <div class="swiper-slide" v-for="(taipeis, taipeisIndex) in swipers" :key="taipeisIndex"
-          :class="{ 'even': evenPic(taipeisIndex) }">
+        <div
+          class="swiper-slide"
+          v-for="(taipeis, taipeisIndex) in swipers"
+          :key="taipeisIndex"
+          :class="{ even: evenPic(taipeisIndex) }"
+        >
           <div class="pic">
             <img :src="taipeis.image" :alt="taipeis.CTName" />
             <div class="info">
               <div class="tag">
-                <span v-for="(MRTline, lineIndex) in taipeis.station" :key="lineIndex"
-                  :class="getClassObject(taipeis.line, lineIndex)">{{
-                    MRTline
-                  }}</span>
+                <span
+                  v-for="(MRTline, lineIndex) in taipeis.station"
+                  :key="lineIndex"
+                  :class="getClassObject(taipeis.line, lineIndex)"
+                  >{{ MRTline }}</span
+                >
               </div>
               <p>{{ taipeis.CTName }}</p>
               <p class="en">{{ taipeis.ENName }}</p>
@@ -52,8 +72,10 @@
       </div>
     </div>
     <div v-show="closeTxt" class="talk">
-      <p>還有其他推薦的捷運美食、景點與住宿嗎？<br>
-        來與大家分享你私心推薦的站點吧！</p>
+      <p>
+        還有其他推薦的捷運美食、景點與住宿嗎？<br />
+        來與大家分享你私心推薦的站點吧！
+      </p>
       <span @click="closeTxt = !closeTxt">✖</span>
     </div>
     <div class="toCB">
@@ -62,16 +84,20 @@
   </section>
 
   <section class="CBarea">
-
     <div class="CBtitle">
       <h2>投稿專欄</h2>
       <div>
-        <span v-for="(CBtag, tagindex) in CBtag " :key="tagindex" class="gray">#{{ CBtag }}</span>
+        <span v-for="(CBtag, tagindex) in CBtag" :key="tagindex" class="gray"
+          >#{{ CBtag }}</span
+        >
       </div>
       <div>
-        <span v-for="(MRTLine, MRTLineindex) in MRTLine" :key="MRTLineindex"
-          :class="getClassObject(MRTLine, MRTLineindex)">#{{
-            MRTLine }}</span>
+        <span
+          v-for="(MRTLine, MRTLineindex) in MRTLine"
+          :key="MRTLineindex"
+          :class="getClassObject(MRTLine, MRTLineindex)"
+          >#{{ MRTLine }}</span
+        >
       </div>
     </div>
     <div class="CBlist">
@@ -96,13 +122,8 @@
         </div>
       </div>
     </div>
-
-
   </section>
 </template>
-
-
-
 
 <script>
 import { faL } from "@fortawesome/free-solid-svg-icons";
@@ -112,98 +133,104 @@ export default {
     return {
       swipers: [
         {
-          image: '../img/Grand Hyatt Taipei.jpg',
-          station: ['BL12', 'R10'],
-          line: ['板南線', '淡水信義線'],
-          tag: '住宿',
-          ENName: 'Palais de Chine Hotel Taipei',
-          CTName: '君品酒店'
+          image: "../img/Grand Hyatt Taipei.jpg",
+          station: ["BL12", "R10"],
+          line: ["板南線", "淡水信義線"],
+          tag: "住宿",
+          ENName: "Palais de Chine Hotel Taipei",
+          CTName: "君品酒店",
         },
         {
-          image: '../img/Humble Boutique Hotel.jpg',
-          station: ['G15', 'O08'],
-          line: ['松山新店線', '中和新蘆線'],
-          tag: '住宿',
-          ENName: 'Humble Boutique Hotel',
-          CTName: '寒居酒店'
+          image: "../img/Humble Boutique Hotel.jpg",
+          station: ["G15", "O08"],
+          line: ["松山新店線", "中和新蘆線"],
+          tag: "住宿",
+          ENName: "Humble Boutique Hotel",
+          CTName: "寒居酒店",
         },
         {
-          image: '../img/Xiangshan.png',
-          station: ['R02'],
-          line: ['淡水信義線'],
-          tag: '景點',
-          ENName: 'Xiangshan',
-          CTName: '象山'
+          image: "../img/Xiangshan.png",
+          station: ["R02"],
+          line: ["淡水信義線"],
+          tag: "景點",
+          ENName: "Xiangshan",
+          CTName: "象山",
         },
         {
-          image: '../img/Gui.jpg',
-          station: ['R12'],
-          line: ['淡水信義線'],
-          tag: '美食',
-          ENName: 'Cheng Zong The Canned Rice Cake',
-          CTName: '正宗筒仔米糕'
+          image: "../img/Gui.jpg",
+          station: ["R12"],
+          line: ["淡水信義線"],
+          tag: "美食",
+          ENName: "Cheng Zong The Canned Rice Cake",
+          CTName: "正宗筒仔米糕",
         },
         {
-          image: '../img/National monument.jpg',
-          station: ['G10', 'R08'],
-          line: ['松山新店線', '淡水信義線'],
-          tag: '景點',
-          ENName: 'National monument',
-          CTName: '中正紀念堂'
+          image: "../img/National monument.jpg",
+          station: ["G10", "R08"],
+          line: ["松山新店線", "淡水信義線"],
+          tag: "景點",
+          ENName: "National monument",
+          CTName: "中正紀念堂",
         },
         {
-          image: '../img/Wagui.jpg',
-          station: ['G19'],
-          line: ['松山新店線'],
-          tag: '美食',
-          ENName: 'Raohe St. Night Market Savory Rice Pudding',
-          CTName: '饒河碗糕關東煮'
+          image: "../img/Wagui.jpg",
+          station: ["G19"],
+          line: ["松山新店線"],
+          tag: "美食",
+          ENName: "Raohe St. Night Market Savory Rice Pudding",
+          CTName: "饒河碗糕關東煮",
         },
         {
-          image: '../img/Taipei Park.jpg',
-          station: ['R18'],
-          line: ['淡水信義線'],
-          tag: '景點',
-          ENName: 'Taipei Park',
-          CTName: '台北兒童新樂園'
+          image: "../img/Taipei Park.jpg",
+          station: ["R18"],
+          line: ["淡水信義線"],
+          tag: "景點",
+          ENName: "Taipei Park",
+          CTName: "台北兒童新樂園",
         },
       ],
       colorClassMap: {
-        板南線: 'blue',
-        淡水信義線: 'red',
-        松山新店線: 'green',
-        中和新蘆線: 'orange',
-        文湖線: 'broun',
-        環狀線: 'yellow',
+        板南線: "blue",
+        淡水信義線: "red",
+        松山新店線: "green",
+        中和新蘆線: "orange",
+        文湖線: "broun",
+        環狀線: "yellow",
       },
-      CBtag: ['所有文章', '美食推薦', '景點推薦', '住宿推薦'],
-      MRTLine: ['中和新蘆線', '淡水信義線', '松山新店線', '板南線', '文湖線', '環狀線'],
-      closeTxt: true
-    }
+      CBtag: ["所有文章", "美食推薦", "景點推薦", "住宿推薦"],
+      MRTLine: [
+        "中和新蘆線",
+        "淡水信義線",
+        "松山新店線",
+        "板南線",
+        "文湖線",
+        "環狀線",
+      ],
+      closeTxt: true,
+    };
   },
   methods: {
     evenPic(taipeisIndex) {
-      return taipeisIndex % 2 === 0
+      return taipeisIndex % 2 === 0;
     },
     getClassObject(colors, lineIndex) {
       const color = colors[lineIndex];
       const lineColor = this.colorClassMap[color];
       const lineColorTag = this.colorClassMap[colors];
       if (Array.isArray(colors)) {
-        return lineColor
+        return lineColor;
       } else {
-        return lineColorTag
+        return lineColorTag;
       }
     },
   },
-
 
   mounted() {
     const swiper = new Swiper(".swiper", {
       direction: "horizontal",
       speed: 2000,
       loop: true,
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       spaceBetween: -1,
       allowTouchMove: false,
       loopedSlides: 5,
@@ -214,8 +241,5 @@ export default {
       },
     });
   },
-}
-
-
+};
 </script>
-
