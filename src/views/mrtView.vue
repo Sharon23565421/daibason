@@ -51,44 +51,24 @@
         />
       </div>
     </div>
+    <div v-if="MB" class="mrtTag">
+      <a class="title-tag "
+         v-for="(color,index) in selectColor" :key="color"
+         :class="{active: selectColor === color } , color "
+         v-show="showAll || selectColor == color"
+         >
+      {{ upperCaseColorsMB[index] }}
+      </a>
+    </div>
 
-    <div class="mrtTag">
-      <a
-        class="title-tag red"
-        :class="{ active: selectColor === 'red' }"
-        v-show="showAll || selectColor == 'red'"
-        >RED</a
-      >
-      <a
-        class="title-tag blue info"
-        :class="{ active: selectColor === 'blue' }"
-        v-show="showAll || selectColor == 'blue'"
-        >BLUE</a
-      >
-      <a
-        class="title-tag green"
-        :class="{ active: selectColor === 'green' }"
-        v-show="showAll || selectColor == 'green'"
-        >GREEN</a
-      >
-      <a
-        class="title-tag orange"
-        :class="{ active: selectColor === 'orange' }"
-        v-show="showAll || selectColor == 'orange'"
-        >ORANGE</a
-      >
-      <a
-        class="title-tag brown"
-        :class="{ active: selectColor === 'brown' }"
-        v-show="showAll || selectColor == 'brown'"
-        >BROWN</a
-      >
-      <a
-        class="title-tag yellow"
-        :class="{ active: selectColor === 'yellow' }"
-        v-show="showAll || selectColor == 'yellow'"
-        >YELLOW</a
-      >
+    <div v-if="PC" class="mrtTag">
+      <a class="title-tag "
+         v-for="(color,index) in selectColor" :key="color"
+         :class="{active: selectColor === color } , color "
+         v-show="showAll || selectColor == color"
+         >
+      {{ upperCaseColorsPC[index] }}
+      </a>
     </div>
   </section>
 
@@ -214,6 +194,7 @@
 
 <script>
 import Swiper from "swiper/bundle";
+import { pushScopeId } from "vue";
 export default {
   data() {
     return {
@@ -240,7 +221,18 @@ export default {
           isShow: false,
         },
       ],
+      PC:false,
+      MB:false,
+      
     };
+  },
+  computed:{
+    upperCaseColorsMB() {
+      return this.selectColor.map(color => color.toUpperCase().substring(0,2));
+    },
+    upperCaseColorsPC() {
+      return this.selectColor.map(color => color.toUpperCase());
+    }
   },
 
   mounted() {
@@ -259,12 +251,17 @@ export default {
         disableOnInteraction: false,
       },
     });
+    this.WindowWidth();
+    window.addEventListener('resize', this.WindowWidth);
+
   },
   methods: {
-    showTag(color) {
+    showTag(color,) {
       if (window.innerWidth <= 768) {
         this.selectColor = color;
         this.showAll = false;
+        tagElements = tagshortVal;
+        console.log(tagElements);
       } else {
         this.selectColor = [
           "red",
@@ -277,6 +274,25 @@ export default {
         this.showAll = true;
       }
     },
+    WindowWidth(){
+      
+      if(window.innerWidth <= 768){
+        this.MB = true;
+        this.PC = false;
+      }else{
+        this.PC = true
+        this.MB = false;
+      }
+    },
+    // upperLineName(){
+    //   const upperCaseColors = []
+    //   for (let color of this.selectColor){
+    //     let tagVal = color.toUpperCase().substring(0,1)
+    //     upperCaseColors.pushScopeId(tagVal)
+    //   }
+    //   return upperCaseColors;
+    // }
+    
   },
 };
 </script>

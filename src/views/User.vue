@@ -75,9 +75,9 @@ export default {
 </script>
 
 <style lang="scss">
-#ArticleInfo {
-    // display: none;
-}
+// #ArticleInfo {
+//     // display: none;
+// }
 
 @media screen and (max-width:414px) {
 
