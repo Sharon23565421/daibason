@@ -1,11 +1,16 @@
 <template>
-  <MrtmainArea />
+  <MrtTop />
+  <MrtMain />
 </template>
 <script>
-import MrtmainArea from "@/components/MrtMain.vue";
+import MrtTop from "@/components/MrtTop.vue";
+import MrtMain from "@/components/MrtMain.vue";
+import Swiper from "swiper/bundle";
+
 export default {
   components: {
-    MrtmainArea,
+    MrtTop,
+    MrtMain,
   },
 };
 </script>
