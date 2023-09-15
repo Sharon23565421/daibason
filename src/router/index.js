@@ -101,6 +101,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "Newinside" */ "@/views/Newinside.vue"),
   },
+  // {
+  //   path: "/MemberPagesBgc",
+  //   name: "MemberPagesBgc",
+  //   component: () =>
+  //     import(/* webpackChunkName: "MemberPagesBgc" */ "@/views/MemberPagesBgc.vue"),
+  // },
   {
     path: "/User",
     name: "/User",
