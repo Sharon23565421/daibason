@@ -173,6 +173,7 @@ export default {
                     // overflow:auto;
                     // margin: 5px 0;
                     height: 520px;
+                    margin: 0;
 
                 }
             }
