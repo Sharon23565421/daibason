@@ -36,7 +36,6 @@
 
     .mrtMainLine {
       transform: skew(-5deg);
-      // box-shadow: 30px 30px 0 10px #333;
       display: flex;
       flex-wrap: nowrap;
       justify-content: center;
@@ -199,13 +198,10 @@
   position: fixed;
   top: 0;
   z-index: -1;
-  // padding-inline: 5%;
 
   .swiper {
     width: 100%;
     height: 100%;
-    // inset: 0;
-    // margin: auto;
 
     .swiper-wrapper {
       transition-timing-function: linear !important;
