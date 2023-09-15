@@ -13,9 +13,9 @@
     </div>
     </div>
     <div class="ShopProBOX">
-      <div class="ShopProTitle" @click="toggleCardBox">合計:NT:2300</div>
-      <transition name="fade">
-      <div v-if="showCardBox"  class="ShopProCardBox">
+      <div class="ShopProTitle" @click="">合計:NT:2300</div>
+
+      <div class="ShopProCardBox">
         <div class="ShopProCardTitle">
           <div>商品資料</div>
           <div>單價</div>
@@ -35,7 +35,51 @@
           <div class="CardDetailDelet"></div>
         </div>
       </div>
-    </transition>
+    </div>
+    <div class="ShopPayBox">
+      <div class="PayTItle">付款方式</div>
+      <div class="PayCredit"><input  type="radio" name="Pay" value="信用卡付款"  v-model="selectedPayment">信用卡付款</div>
+      <div class="PayCash"><input  type="radio" name="Pay" value="貨到付款"  v-model="selectedPayment">貨到付款</div>
+      <transition name="slide-fade">
+      <form class="ShopCredCard" v-if="selectedPayment === '信用卡付款'" >
+      <div class="form-group" >
+        <label for="creditCardNumber">信用卡號碼</label>
+        <input
+          type="text"
+          id="creditCardNumber"
+          name="creditCardNumber"
+          placeholder="信用卡號碼"
+          v-model="creditCardNumber"
+        />
+      </div>
+      <div class="form-group">
+        <label for="expirationDate">有效日期</label>
+        <input
+          type="text"
+          id="expirationDate"
+          name="expirationDate"
+          placeholder="MM/YY"
+          v-model="expirationDate"
+        />
+      </div>
+      <div class="form-group">
+        <label for="securityCode">安全碼</label>
+        <input
+          type="text"
+          id="securityCode"
+          name="securityCode"
+          placeholder="卡片安全碼"
+          v-model="securityCode"
+        />
+      </div>
+    </form>
+  </transition>
+    </div>
+    <div class="ShopDelBox">
+
+    </div>
+    <div class="ShopSumBox">
+
     </div>
     <div class="ShopBtmBox">
       <div class="ShopBtnBack" @click="gotoCart">上一頁</div>
@@ -49,13 +93,13 @@
 export default {
   data() {
     return {
-      showCardBox: false, // 初始状态为隐藏
+      selectedPayment: '' ,
+      creditCardNumber: '',
+      expirationDate: '',
+      securityCode: '',
     };
   },
   methods: {
-    toggleCardBox() {
-      this.showCardBox = !this.showCardBox; // 切换状态
-    },
     gotoCart(){
       this.$router.push("/Cart"); 
     },
@@ -69,13 +113,13 @@ export default {
 
 
 <style lang="scss">
-.fade-enter-active, .fade-leave-active {
-  transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: all 0.5s ease; 
 }
-.fade-enter, .fade-leave-to  {
-  max-height: 0;
-  opacity: 0;
-  overflow-y: hidden;
+.slide-fade-enter, .slide-fade-leave-to  {
+  height: 0; 
+  opacity: 0; 
+  transform: translateY(20px);
 }
 .ShopWrap{
   position: relative;
@@ -198,6 +242,30 @@ export default {
     }
 
   }
+  .ShopPayBox{
+    margin: 20px 0;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    div{
+      padding: 30px 10px;
+    }
+    .PayTItle{
+      background-color: rgb(234, 233, 233); ;
+    }
+    label {
+    display: block;
+    font-weight: bold;
+    input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    }
+  }
+  }
+  .ShopDelBox{}
+  .ShopSumBox{}  
   .ShopBtmBox{
     width: 100%;
     display: flex;
