@@ -47,6 +47,12 @@ const routes = [
       import(/* webpackChunkName: "Store" */ "@/views/StoreView.vue"),
   },
   {
+    path: "/StoreDetail",
+    name: "StoreDetail",
+    component: () =>
+      import(/* webpackChunkName: "Store" */ "@/views/StoreDetailView.vue"),
+  },
+  {
     path: "/Mrt",
     name: "Mrt",
     // component: LoginView,
@@ -88,7 +94,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "Cart" */ "@/views/CartView.vue"),
   },
-
+  {
+    path: "/Shopping",
+    name: "Shopping",
+    component: () =>
+      import(/* webpackChunkName: "Cart" */ "@/views/Shopping.vue"),
+  },
+  {
+    path: "/ShoppingDone",
+    name: "ShoppingDone",
+    component: () =>
+      import(/* webpackChunkName: "Cart" */ "@/views/ShoppingDone.vue"),
+  },
   {
     path: "/PwdSuccess",
     name: "PwdSuccess",

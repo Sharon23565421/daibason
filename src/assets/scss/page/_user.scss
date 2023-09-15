@@ -74,12 +74,18 @@ body {
     border-radius: 50%;
 }
 
+.userHam {
+    display: none;
+}
+
 .userWrap {
     // border: 1px solid red;
     width: 1200px;
     margin: auto;
     margin-top: 5%;
     display: flex;
+
+
 
     // .userSlider {
     //     // border: 1px solid red;

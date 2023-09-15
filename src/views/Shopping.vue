@@ -1,6 +1,6 @@
 <template>
-  <div class="CartWrap">
-    <div class="CartSpeedBox">
+  <div class="ShopWrap">
+    <div class="ShopSpeedBox">
       <div class="SpeedNo">
       <span class="SpeedNoF">1</span>
       <span>2</span>
@@ -12,40 +12,78 @@
       <div>訂單完成</div>
     </div>
     </div>
-    <div class="CartProBOX">
-      <div class="CartProTitle">購物車</div>
-      <div class="CartProCardBox">
-        <div class="CartProCardTitle">
+    <div class="ShopProBOX">
+      <div class="ShopProTitle" @click="">合計:NT:2300</div>
+
+      <div class="ShopProCardBox">
+        <div class="ShopProCardTitle">
           <div>商品資料</div>
-          <div></div>
           <div>單價</div>
           <div>數量</div>
           <div>小計</div>
-          <div></div>
         </div>
-        <div v-for="card in 3" class="CartProCardDetail">
+        <div v-for="card in 3" class="ShopProCardDetail">
           <div class="CardDetailImg">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlsDygW5l6-urgSirZ28w1yJgNOy7sF4VJqQ&usqp=CAU" alt="">
           </div>
           <div class="CardDetailTitle">吃的蛋糕</div>
           <div class="CardDetailPrice">NT$320</div>
           <div class="CardDetailCount">
-            <div  @click="decrementCount">-</div>
-            <p>{{ count }}</p>
-            <div  @click="incrementCount">+</div>  
+            <p>{{ 1 }}</p>
           </div>
           <div class="CardDetailTotal">NT$320</div>
-          <div class="CardDetailDelet">x</div>
+          <div class="CardDetailDelet"></div>
         </div>
       </div>
-      <div class="CartProTotalBox">
-        <p class="CartProTotalTitle">商品金額小記:</p>
-        <p class="CartProTotalPrice">NT$320</p>
-      </div>
     </div>
-    <div class="CartBtmBox">
-      <div class="CartBtnBack" @click="goToStore">返回購物</div>
-      <div class="CartBtnBackNex" @click="gotoShopping">前往結帳</div>
+    <div class="ShopPayBox">
+      <div class="PayTItle">付款方式</div>
+      <div class="PayCredit"><input  type="radio" name="Pay" value="信用卡付款"  v-model="selectedPayment">信用卡付款</div>
+      <div class="PayCash"><input  type="radio" name="Pay" value="貨到付款"  v-model="selectedPayment">貨到付款</div>
+      <transition name="slide-fade">
+      <form class="ShopCredCard" v-if="selectedPayment === '信用卡付款'" >
+      <div class="form-group" >
+        <label for="creditCardNumber">信用卡號碼</label>
+        <input
+          type="text"
+          id="creditCardNumber"
+          name="creditCardNumber"
+          placeholder="信用卡號碼"
+          v-model="creditCardNumber"
+        />
+      </div>
+      <div class="form-group">
+        <label for="expirationDate">有效日期</label>
+        <input
+          type="text"
+          id="expirationDate"
+          name="expirationDate"
+          placeholder="MM/YY"
+          v-model="expirationDate"
+        />
+      </div>
+      <div class="form-group">
+        <label for="securityCode">安全碼</label>
+        <input
+          type="text"
+          id="securityCode"
+          name="securityCode"
+          placeholder="卡片安全碼"
+          v-model="securityCode"
+        />
+      </div>
+    </form>
+  </transition>
+    </div>
+    <div class="ShopDelBox">
+
+    </div>
+    <div class="ShopSumBox">
+
+    </div>
+    <div class="ShopBtmBox">
+      <div class="ShopBtnBack" @click="gotoCart">上一頁</div>
+      <div class="ShopBtnBackNex" @click="gotoShoppingDone">訂單確認</div>
     </div>
   </div>
 </template>
@@ -55,23 +93,18 @@
 export default {
   data() {
     return {
-      count: 1,
+      selectedPayment: '' ,
+      creditCardNumber: '',
+      expirationDate: '',
+      securityCode: '',
     };
   },
   methods: {
-    decrementCount() {
-      if (this.count > 1) {
-        this.count -= 1;
-      }
+    gotoCart(){
+      this.$router.push("/Cart"); 
     },
-    incrementCount() {
-      this.count += 1;
-    },
-    goToStore() {
-      this.$router.push("/Store"); 
-    },
-    gotoShopping() {
-      this.$router.push("/Shopping"); 
+    gotoShoppingDone(){
+      this.$router.push("/ShoppingDone"); 
     },
   },
 };
@@ -80,13 +113,21 @@ export default {
 
 
 <style lang="scss">
-.CartWrap{
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: all 0.5s ease; 
+}
+.slide-fade-enter, .slide-fade-leave-to  {
+  height: 0; 
+  opacity: 0; 
+  transform: translateY(20px);
+}
+.ShopWrap{
   position: relative;
   max-width: 1200px;
   padding: 2.5rem 1.5rem;
   margin: auto;
   width: 100%;
-  .CartSpeedBox{
+  .ShopSpeedBox{
     position: relative;
     display: flex;
     align-items: center;
@@ -126,17 +167,31 @@ export default {
         text-align: center;
       }
     }
+    
 
   }
-  .CartProBOX{
+  .ShopProBOX{
+    position: relative;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: rgb(234, 233, 233);
     width: 100%;
-    .CartProTitle{
+    .ShopProTitle{
+      position: relative;
       padding: 30px;
       font-size:map-get($map: $fontsizes, $key: h3);
+      text-align: center;
+      &::after{
+        content: ">";
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        transform: rotate(90deg);
+        font-weight:bold;
+        font-size:map-get($map: $fontsizes, $key: h2);
+        cursor: pointer;
+      }
     }
-    .CartProCardBox{
+    .ShopProCardBox{
       display: flex;
       flex-wrap: wrap;
       width: 100%;
@@ -144,7 +199,7 @@ export default {
       background-color: white;
       border-bottom: 1px solid gray;
       margin: auto;
-      .CartProCardTitle{
+      .ShopProCardTitle{
         width: 100%;
         display: flex;
         margin: auto;
@@ -156,8 +211,7 @@ export default {
           width: 16%;
         }
       }
-      .CartProCardDetail{
-        box-sizing: border-box;
+      .ShopProCardDetail{
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         width: 100%;
         display: flex;
@@ -173,7 +227,6 @@ export default {
           img{
             width: 100%;
             height:150px;
-            padding: 10px;
           }
         }
         .CardDetailTitle{}
@@ -181,51 +234,45 @@ export default {
         .CardDetailCount{
           display: flex;
           margin: 0;
-          p{
-            border: 1px solid black;
-            width: 70%;
-          }
-          div{
-            border: 1px solid black;
-            font-size:map-get($map: $fontsizes, $key: h3);
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-          }
+          align-items: center;
+          justify-content: center;
         }
         .CardDetailTotal{}
-        .CardDetailDelet{
-          cursor: pointer;
-          font-weight: bold;
-        }
       }
     }
-    .CartProTotalBox{
-      display: flex;
-      padding: 30px;
-      align-items:center;
-      justify-content: right;
-      .CartProTotalTitle{
-        font-size:map-get($map: $fontsizes, $key: h4);
-      }
-      .CartProTotalPrice{
-        padding-left: 10px;
-        letter-spacing: 5px;
-        color: rgb(236, 85, 112); ;
-        font-size:map-get($map: $fontsizes, $key: h3);
-      }
+
+  }
+  .ShopPayBox{
+    margin: 20px 0;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    div{
+      padding: 30px 10px;
+    }
+    .PayTItle{
+      background-color: rgb(234, 233, 233); ;
+    }
+    label {
+    display: block;
+    font-weight: bold;
+    input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
     }
   }
-  .CartBtmBox{
+  }
+  .ShopDelBox{}
+  .ShopSumBox{}  
+  .ShopBtmBox{
     width: 100%;
     display: flex;
     justify-content: right;
     align-items: end;
     padding: 20px;
-    .CartBtnBack{
+    .ShopBtnBack{
       text-align: center;
       cursor: pointer;
       border: 1px solid red;
@@ -233,7 +280,7 @@ export default {
       font-size:map-get($map: $fontsizes, $key: h3);
       padding: 10px 40px;
     }
-    .CartBtnBackNex{
+    .ShopBtnBackNex{
       margin-left: 10px;
       text-align: center;
       cursor: pointer;

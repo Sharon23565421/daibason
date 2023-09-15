@@ -27,8 +27,9 @@
     </div>
     <div class="storecardbox">
       <!-- <div v-for="(item) in testitem" :key="item.id" class="storeCard"> -->
-      <div v-for="item in 10" class="storeCard" @click="goToStoreDetail">
+      <div v-for="item in 10" class="storeCard" >
         <img
+        @click="goToStoreDetail"
           class="storeCardimg"
           src="https://s.yimg.com/ny/api/res/1.2/47Kriq370oo5npvk5nr.6Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/ftvn.com.tw/5ada7e3c01073aac8a607bfa5aaecd3b"
           alt=""
@@ -72,8 +73,7 @@ export default {
   },
   methods: {
     goToStoreDetail() {
-      // 在这里使用路由导航
-      this.$router.push("/StoreDetail"); // 这里的路径应该匹配你的路由配置
+      this.$router.push("/StoreDetail"); 
     },
   },
 };
@@ -202,9 +202,9 @@ export default {
       width: 31%;
       overflow: hidden;
       margin-block: 3.5rem;
-
       .storeCardimg {
         width: 100%;
+        cursor: pointer;
       }
 
       .storeBottom {
