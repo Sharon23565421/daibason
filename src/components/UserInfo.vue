@@ -3,19 +3,19 @@
 
         <h1>會員資料</h1>
         <div class="userBtn">
-            <button class="ChangAC" @click="Toacc">
+            <button class="ChangAC" @click="To">
                 <i class="fa-solid fa-face-laugh"></i>
                 更改基本資料
             </button>
-            <button class="ChangAC" @click="Topwd">
+            <button class="ChangAC" @click="To">
                 <i class="fa-solid fa-lock"></i>
                 更改帳號/密碼
             </button>
-            <button class="ChangAC" @click="Tophone">
+            <button class="ChangAC" @click="To">
                 <i class="fa-solid fa-phone"></i>
                 更改手機號碼
             </button>
-            <button class="ChangAC" @click="Tomail">
+            <button class="ChangAC" @click="To">
                 <i class="fa-solid fa-envelope"></i>
                 更改信箱
             </button>
@@ -77,37 +77,36 @@ export default {
     },
     methods: {
         toggleUpdate() {
-            // 在這裡處理新的 toggle 值
             this.toggle = '會員資料'
+            // 在這裡處理新的 toggle 值
             // console.log('新的 toggle 值:', newToggleValue);
             // console.log(111)
         },
-        Toacc(e) {
+        To(e) {
             console.log(e.target.innerText)
             this.toggle = e.target.innerText
             // document.querySelector('.userInfo').style.display = 'none'
             // document.getElementById('AccChange').style.display = 'block'
         },
-        Topwd(e) {
-            // console.log(11)
-            console.log(e.target.innerText)
-            this.toggle = e.target.innerText
-            // document.querySelector('.userInfo').style.display = 'none'
-            // document.getElementById('PwdChange').style.display = 'block'
-        },
-        Tophone(e) {
-            console.log(e.target.innerText)
-            this.toggle = e.target.innerText
-            // document.querySelector('.userInfo').style.display = 'none'
-            // document.getElementById('PhoneChange').style.display = 'block'
-
-        },
-        Tomail(e) {
-            console.log(e.target.innerText)
-            this.toggle = e.target.innerText
-            // document.querySelector('.userInfo').style.display = 'none'
-            // document.getElementById('MailChange').style.display = 'block'
-        }
+        // Topwd(e) {
+        //     // console.log(11)
+        //     console.log(e.target.innerText)
+        //     this.toggle = e.target.innerText
+        //     // document.querySelector('.userInfo').style.display = 'none'
+        //     // document.getElementById('PwdChange').style.display = 'block'
+        // },
+        // Tophone(e) {
+        //     console.log(e.target.innerText)
+        //     this.toggle = e.target.innerText
+        //     // document.querySelector('.userInfo').style.display = 'none'
+        //     // document.getElementById('PhoneChange').style.display = 'block'
+        // },
+        // Tomail(e) {
+        //     console.log(e.target.innerText)
+        //     this.toggle = e.target.innerText
+        //     // document.querySelector('.userInfo').style.display = 'none'
+        //     // document.getElementById('MailChange').style.display = 'block'
+        // }
     },
 }
 </script>
@@ -142,98 +141,6 @@ export default {
             // background-color: #fff;
         }
     }
-
-    // .userChange {
-    //     // border: 1px solid red;
-    //     background-color: #eee;
-    //     height: 400px;
-    //     border-radius: $border-radius;
-    //     display: flex;
-    //     // align-items: center;
-    //     margin: 0 50px;
-    //     margin-top: 50px;
-
-    //     .userPic {
-
-    //         width: 180px;
-    //         height: 180px;
-    //         margin: auto;
-    //         // margin-top: 10px;
-
-    //         img {
-    //             width: 100%;
-    //             height: 100%;
-    //             border-radius: 100px;
-    //             vertical-align: top;
-    //             border: 8px solid black;
-
-    //         }
-    //     }
-
-    //     .userTxt {
-    //         width: 60%;
-
-    //         // border: 1px solid red;
-    //         h2 {
-    //             // border: 1px solid red;
-    //             width: 80%;
-    //             margin: auto;
-    //             margin-top: 50px;
-    //             // text-align: center;
-    //         }
-
-    //         .userName {
-    //             width: 80%;
-    //             margin: auto;
-    //             margin-top: 50px;
-    //             display: flex;
-    //             align-items: center;
-
-    //             input {
-    //                 width: 80%;
-    //             }
-    //         }
-
-    //         .userBir {
-    //             width: 80%;
-    //             margin: auto;
-    //             margin-top: 30px;
-
-    //             input {
-    //                 width: 80%;
-    //             }
-    //         }
-
-    //         .userSex {
-    //             width: 80%;
-    //             margin: auto;
-    //             margin-top: 30px;
-    //         }
-    //     }
-    // }
-
-    // .userSubmit {
-    //     border: solid #333;
-    //     display: block;
-    //     margin: auto;
-    //     margin-top: -50px;
-    // }
-}
-
-#AccChange {
-    // display: none;
-}
-
-#PwdChange {
-    // display: none;
-}
-
-#PhoneChange {
-    // display: none;
-}
-
-#MailChange {
-    // display: none;
 }
 
 @media screen and (max-width:414px) {
