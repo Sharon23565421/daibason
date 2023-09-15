@@ -13,12 +13,13 @@
             <span>會員自訂</span>
         </div>
         <!-- 左邊選單 -->
-        <SliderAC class="userSlider" />
+        <SliderAC class="userSlider" @title-change="titleUpdate" />
         <!-- 右邊選單 -->
         <!--會員資料 -->
-        <UserInfo v-if="'會員資料' == toggle" @togglee-change="toggleUpdatee(e)" />
+        <UserInfo v-if="'會員資料' == title" />
         <!-- 投稿文章 -->
-        <ArticleInfo id="ArticleInfo" v-else-if="'投稿文章' == toggle" @togglee-change="toggleUpdatee(e)" />
+        <ArticleInfo id="ArticleInfo" v-else-if="'投稿文章' == title" />
+        <!-- 文章收藏 -->
     </div>
 </template>
 
@@ -35,7 +36,7 @@ export default {
     },
     data() {
         return {
-            toggle: '會員資料'
+            title: '會員資料',
         }
     },
     computed: {
@@ -46,9 +47,9 @@ export default {
             // console.log(111)
             document.querySelector('.userSlider').style.left = '0'
         },
-        toggleUpdatee(e) {
-            console.log(e)
-            this.toggle = '投稿文章'
+        titleUpdate(title) {
+            console.log(title)
+            this.title = title
         }
     },
     mounted() {
@@ -75,9 +76,6 @@ export default {
 </script>
 
 <style lang="scss">
-// #ArticleInfo {
-//     // display: none;
-// }
 
 @media screen and (max-width:414px) {
 
@@ -124,6 +122,7 @@ export default {
             top: 0;
             left: -100%;
             transition: 1s;
+            z-index: 999;
         }
     }
 }

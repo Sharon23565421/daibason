@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    height: 900px;
 
     .pic {
         width: 180px;
@@ -64,6 +65,9 @@
             }
         }
     }
+    .userback{
+        display: none;
+    }
 }
 
 @media screen and (max-width:414px) {
@@ -75,6 +79,7 @@
 
         .userback {
             // border: 1px solid red;
+            display: block;
             writing-mode: vertical-lr;
             position: absolute;
             top: 50px;
