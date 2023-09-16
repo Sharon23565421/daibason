@@ -1,9 +1,7 @@
 <template>
   <header-area />
 
-<!-- <div :class="{'body': poke }" > </div> -->
-
-  <main >
+  <main>
     <router-view />
     <!-- Main -->
   </main>
