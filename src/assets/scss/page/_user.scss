@@ -1,100 +1,78 @@
 body {
-    position: relative;
     // overflow: hidden;
+    position: relative;
 }
 
-.col{
-    pointer-events: none;
-    display: flex;
-    justify-content: space-between;
-    width: 315px;
-    height: 100vh;
+#col1 {
+    // border: 1px solid red;
+    background-color: rgba($color: #32C8E1, $alpha: 0.6);
+    width: 35px;
     position: absolute;
-    top:0;
-    right: 18.75%;
-    #col1 {
-        background-color: rgba($color: #32C8E1, $alpha: 0.6);
-        width: 35px;
-        height: 100vh;
-        top: 0;
-        z-index: -3;
-    }
-    
-    #col2 {
-        background-color: rgba($color: #FFA629, $alpha: 0.6);
-        width: 35px;
-        height: 100vh;
-        top: 0;
-        z-index: -3;
-    }
-    
-    #col3 {
-        background-color: rgba($color: #9164CD, $alpha: 0.6);
-        width: 35px;
-        height: 100vh;
-        top: 0;
-        z-index: -3;
-    }
+    top: 0;
+    right: 25%;
+    z-index: -3;
 }
 
-.row{
-    pointer-events: none;
+#col2 {
+    // border: 1px solid red;
+    background-color: rgba($color: #FFA629, $alpha: 0.6);
+    width: 35px;
     position: absolute;
-    width: 100vw;
-    height: 315px;
+    top: 0;
+    right: 30%;
+    z-index: -3;
+}
+
+#col3 {
+    // border: 1px solid red;
+    background-color: rgba($color: #9164CD, $alpha: 0.6);
+    width: 35px;
+    position: absolute;
+    top: 0;
+    right: 35%;
+    z-index: -3;
+}
+
+#row1 {
+    // border: 1px solid red;
+    background-color: rgba($color: #A67C52, $alpha: 0.6);
+    height: 35px;
+    position: absolute;
+    top: 50%;
     left: 0;
-    bottom: 18.75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    z-index: -3;
+}
 
-    #row1 {
-        // border: 1px solid red;
-        background-color: rgba($color: #A67C52, $alpha: 0.6);
-        width: 100vw;
-        height: 35px;
-        // position: absolute;
-        top: 50%;
-        left: 0;
-        z-index: -3;
-    }
-    #row2 {
-        // border: 1px solid red;
-        background-color: rgba($color: #4BC887, $alpha: 0.6);
-        width: 100vw;
-        height: 35px;
-        // position: absolute;
-        top: 60%;
-        left: 0;
-        z-index: -3;
-    }
-    
-    #row3 {
-        // border: 1px solid red;
-        background-color: rgba($color: #DC4B55, $alpha: 0.6);
-        width: 100vw;
-        height: 35px;
-        top: 70%;
-        left: 0;
-        z-index: -3;
-    }
+#row2 {
+    // border: 1px solid red;
+    background-color: rgba($color: #4BC887, $alpha: 0.6);
+    height: 35px;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    z-index: -3;
+}
 
+#row3 {
+    // border: 1px solid red;
+    background-color: rgba($color: #DC4B55, $alpha: 0.6);
+    height: 35px;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    z-index: -3;
 }
 
 #circle {
-    pointer-events: none;
-    width: 1000px;
-    height: 1000px;
-    right: 0;
-    bottom: 0;
-    z-index: -5;
+    width: 1300px;
+    height: 1300px;
     position: absolute;
+    bottom: 0;
+    right: -20%;
+    z-index: -5;
     border: 30px solid rgba(255, 240, 75, 0.6);
     border-radius: 50%;
 }
-
-
-
 
 .userHam {
     display: none;

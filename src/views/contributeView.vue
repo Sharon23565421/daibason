@@ -1,7 +1,7 @@
 <template>
   <section class="CBWrapper">
     <h1>投稿熱門</h1>
-    <div class="swiperBanner">
+    <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(taipeis, taipeisIndex) in swipers" :key="taipeisIndex"
           :class="{ 'even': evenPic(taipeisIndex) }">
@@ -109,7 +109,7 @@
           <div class="inner">
             <div class="title">
               <h3>萬華無名粉條冰</h3>
-              <span class="closePost" @click="closePost = !closePost, lightBox = !lightBox">✖</span>
+              <span></span>
               <h4>季節限定手工刀削冰口感特別，冰料全自製自煮！</h4>
             </div>
             <div class="info">
@@ -131,33 +131,15 @@
             <img src="https://picsum.photos/200/200/?random=10" class="head" />
           </div>
         </div>
+        <span class="closePost" @click="closePost = !closePost, lightBox = !lightBox">✖</span>
       </div>
     </div>
+
 
 
   </section>
 
   <div class="lightBox" v-show="lightBox"></div>
-
-  <div class="mrtBanner">
-    <div class="swiper" id="mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for=" in 10">
-          <img src="../../public/img/mrtArrow2.png" alt="" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mrtBanner">
-    <div class="swiper" id="mySwiper2">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for=" in 10">
-          <img src="../../public/img/mrtArrow2.png" alt="" />
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 
@@ -268,7 +250,7 @@ export default {
 
 
   mounted() {
-    const swiperBanner = new Swiper(".swiperBanner", {
+    const swiper = new Swiper(".swiper", {
       direction: "horizontal",
       speed: 2000,
       loop: true,
@@ -294,20 +276,7 @@ export default {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       }
-    });
-    const swiper = new Swiper(".swiper", {
-      direction: "vertical",
-      speed: 4500,
-      loop: true,
-      autoHeight: true,
-      slidesPerView: "auto",
-      spaceBetween: 0,
-      autoplay: {
-        delay: 0,
-        pauseOnMouseEnter: false,
-        disableOnInteraction: false,
-      },
-    });
+    })
   }
 }
 

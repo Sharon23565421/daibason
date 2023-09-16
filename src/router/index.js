@@ -14,8 +14,8 @@ const routes = [
     // },
   },
   {
-    path: "/About",
-    name: "About",
+    path: "/about",
+    name: "about",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -23,105 +23,98 @@ const routes = [
       import(/* webpackChunkName: "About" */ "../views/AboutView.vue"),
   },
   {
-    path: "/Login",
-    name: "Login",
+    path: "/login",
+    name: "login",
     component: () =>
       import(/* webpackChunkName: "Login" */ "@/views/LoginView.vue"),
   },
   {
-    path: "/RegisterView",
-    name: "Register",
+    path: "/register",
+    name: "register",
     component: () =>
       import(/* webpackChunkName: "Register" */ "@/views/RegisterView.vue"),
   },
   {
-    path: "/RegSuccess",
-    name: "RegSuccess",
+    path: "/regSuccess",
+    name: "regSuccess",
     component: () =>
       import(/* webpackChunkName: "RegSuccess" */ "@/views/RegSuccess.vue"),
   },
   {
-    path: "/Store",
-    name: "Store",
+    path: "/store",
+    name: "store",
     component: () =>
       import(/* webpackChunkName: "Store" */ "@/views/StoreView.vue"),
   },
   {
-    path: "/StoreDetail",
-    name: "StoreDetail",
+    path: "/storeDetail",
+    name: "storeDetail",
     component: () =>
       import(/* webpackChunkName: "Store" */ "@/views/StoreDetailView.vue"),
   },
   {
-    path: "/Mrt",
-    name: "Mrt",
+    path: "/mrt",
+    name: "mrt",
     // component: LoginView,
     component: () =>
       import(/* webpackChunkName: "Mrt" */ "@/views/MrtView.vue"),
   },
   {
-    path: "/MrtContributeInPage",
-    name: "MrtContributeInPage",
-    // component: MrtContributeInPageView,
-    component: () =>
-      import(/* webpackChunkName: "MrtContributeInPage" */ "@/views/MrtContributeInPageView.vue"),
-  },
-  {
     path: "/Game",
-    name: "Game",
+    name: "game",
     // component: LoginView,
     component: () =>
       import(/* webpackChunkName: "Game" */ "@/views/GameView.vue"),
   },
   {
-    path: "/Contribute",
-    name: "Contribute",
+    path: "/contribute",
+    name: "contribute",
     // component: LoginView,
     component: () =>
       import(/* webpackChunkName: "Contribute" */ "@/views/ContributeView.vue"),
   },
   {
-    path: "/New",
-    name: "New",
+    path: "/new",
+    name: "new",
     // component: LoginView,
     component: () =>
       import(/* webpackChunkName: "New" */ "@/views/NewView.vue"),
   },
 
   {
-    path: "/ForgetPwd",
-    name: "ForgetPwd",
+    path: "/forgetPwd",
+    name: "forgetPwd",
     component: () =>
       import(/* webpackChunkName: "ForgetPwd" */ "@/views/ForgetPwd.vue"),
   },
 
   {
-    path: "/Cart",
-    name: "Cart",
+    path: "/cart",
+    name: "cart",
     component: () =>
       import(/* webpackChunkName: "Cart" */ "@/views/CartView.vue"),
   },
   {
-    path: "/Shopping",
-    name: "Shopping",
+    path: "/shopping",
+    name: "shopping",
     component: () =>
       import(/* webpackChunkName: "Cart" */ "@/views/Shopping.vue"),
   },
   {
-    path: "/ShoppingDone",
-    name: "ShoppingDone",
+    path: "/shoppingDone",
+    name: "shoppingDone",
     component: () =>
       import(/* webpackChunkName: "Cart" */ "@/views/ShoppingDone.vue"),
   },
   {
-    path: "/PwdSuccess",
-    name: "PwdSuccess",
+    path: "/pwdSuccess",
+    name: "pwdSuccess",
     component: () =>
       import(/* webpackChunkName: "PwdSuccess" */ "@/views/PwdSuccess.vue"),
   },
   {
-    path: "/Newinside",
-    name: "Newinside",
+    path: "/newinside",
+    name: "newinside",
     component: () =>
       import(/* webpackChunkName: "Newinside" */ "@/views/Newinside.vue"),
   },
@@ -132,10 +125,9 @@ const routes = [
   //     import(/* webpackChunkName: "MemberPagesBgc" */ "@/views/MemberPagesBgc.vue"),
   // },
   {
-    path: "/User",
-    name: "/User",
-    component: () =>
-      import(/* webpackChunkName: "User" */ "@/views/User.vue"),
+    path: "/user",
+    name: "/user",
+    component: () => import(/* webpackChunkName: "User" */ "@/views/User.vue"),
   },
 
   {
