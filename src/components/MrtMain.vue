@@ -27,26 +27,129 @@
         </div>
       </div>
     </div>
-    <!-- 美食住宿景點卡片 -->
-    <transition name="cardSliFade">
-      <div class="mrtCardWrap" v-show="item.isShow">
-        <img src="../../public/img/news2.png" alt="" />
-        <div class="mrtCard">
-          <div class="mrtCardPic">
-            <img src="" alt="" />
+    <!------------------------美食住宿景點卡片 ------------------------------------->
+
+    <div class="swiperMRTCard" v-show="item.isShow">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="mrtCardWrap">
+            <div class="card-h border-r">
+              <div class="img">
+                <img src="https://picsum.photos/280/200/?random=10" />
+              </div>
+              <div class="text">
+                <div class="title">
+                  <h3>原來京站樓上長這樣？</h3>
+                </div>
+                <div class="txt">
+                  　　那天逛完華山KAKAO敗家後，就心血來潮到五分埔去逛逛，真的是久違了好多年，以前學生時期過年領完紅包，一定都是最期待來到五分埔買衣服！如今後來才知道原來這裡除了一般民眾、觀光客買購物衣服的地方以外，原來也有成衣批發商圈，那天去晃晃除了衣服之外，還有包包、飾品、鞋子等等。
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="mrtCardTxt">
-            <h3></h3>
-            <div></div>
-            <p></p>
+        </div>
+        <div class="swiper-slide">
+          <div class="mrtCardWrap">
+            <div class="card-h border-r">
+              <div class="img">
+                <img src="https://picsum.photos/280/200/?random=10" />
+              </div>
+              <div class="text">
+                <div class="title">
+                  <h3>原來京站樓上長這樣？</h3>
+                </div>
+                <div class="txt">
+                  　　那天逛完華山KAKAO敗家後，就心血來潮到五分埔去逛逛，真的是久違了好多年，以前學生時期過年領完紅包，一定都是最期待來到五分埔買衣服！如今後來才知道原來這裡除了一般民眾、觀光客買購物衣服的地方以外，原來也有成衣批發商圈，那天去晃晃除了衣服之外，還有包包、飾品、鞋子等等。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mrtCardWrap">
+            <div class="card-h border-r">
+              <div class="img">
+                <img src="https://picsum.photos/280/200/?random=10" />
+              </div>
+              <div class="text">
+                <div class="title">
+                  <h3>原來京站樓上長這樣？</h3>
+                </div>
+                <div class="txt">
+                  　　那天逛完華山KAKAO敗家後，就心血來潮到五分埔去逛逛，真的是久違了好多年，以前學生時期過年領完紅包，一定都是最期待來到五分埔買衣服！如今後來才知道原來這裡除了一般民眾、觀光客買購物衣服的地方以外，原來也有成衣批發商圈，那天去晃晃除了衣服之外，還有包包、飾品、鞋子等等。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mrtCardWrap">
+            <div class="card-h border-r">
+              <div class="img">
+                <img src="https://picsum.photos/280/200/?random=10" />
+              </div>
+              <div class="text">
+                <div class="title">
+                  <h3>原來京站樓上長這樣？</h3>
+                </div>
+                <div class="txt">
+                  　　那天逛完華山KAKAO敗家後，就心血來潮到五分埔去逛逛，真的是久違了好多年，以前學生時期過年領完紅包，一定都是最期待來到五分埔買衣服！如今後來才知道原來這裡除了一般民眾、觀光客買購物衣服的地方以外，原來也有成衣批發商圈，那天去晃晃除了衣服之外，還有包包、飾品、鞋子等等。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mrtCardWrap">
+            <div class="card-h border-r">
+              <div class="img">
+                <img src="https://picsum.photos/280/200/?random=10" />
+              </div>
+              <div class="text">
+                <div class="title">
+                  <h3>原來京站樓上長這樣？</h3>
+                </div>
+                <div class="txt">
+                  　　那天逛完華山KAKAO敗家後，就心血來潮到五分埔去逛逛，真的是久違了好多年，以前學生時期過年領完紅包，一定都是最期待來到五分埔買衣服！如今後來才知道原來這裡除了一般民眾、觀光客買購物衣服的地方以外，原來也有成衣批發商圈，那天去晃晃除了衣服之外，還有包包、飾品、鞋子等等。
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </transition>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- <transition name="cardSliFade" v-show="item.isShow">
+      <div class="mrtCardWrap">
+        <div class="card-h border-r">
+          <div class="img">
+            <img src="https://picsum.photos/280/200/?random=10" />
+          </div>
+          <div class="text">
+            <div class="title">
+              <h3>原來京站樓上長這樣？</h3>
+              <p>開箱五星級行政豪華客房一泊二食</p>
+              <div class="tag">
+                <span class="title-tag blue">#板南線</span>
+                <span class="title-tag red">#淡水信義線</span>
+                <span class="title-tag gray">#住宿推薦</span>
+              </div>
+            </div>
+            <div class="txt">
+              　　那天逛完華山KAKAO敗家後，就心血來潮到五分埔去逛逛，真的是久違了好多年，以前學生時期過年領完紅包，一定都是最期待來到五分埔買衣服！如今後來才知道原來這裡除了一般民眾、觀光客買購物衣服的地方以外，原來也有成衣批發商圈，那天去晃晃除了衣服之外，還有包包、飾品、鞋子等等。
+            </div>
+            <span class="s_text time">2020-06-15</span>
+          </div>
+        </div>
+      </div>
+    </transition> -->
   </div>
 </template>
 
 <script>
+import Swiper from "swiper/bundle";
 export default {
   data() {
     return {
@@ -72,6 +175,19 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    const swiperMRTCard = new Swiper(".swiperMRTCard", {
+      direction: "horizontal",
+      effect: "coverflow",
+      speed: 2000,
+      loop: true,
+      slidesPerView: 3,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   },
 };
 </script>

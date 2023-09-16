@@ -114,14 +114,12 @@
 <script>
 import Swiper from "swiper/bundle";
 export default {
-
   mounted() {
     const swiper = new Swiper(".swiper", {
-      // Optional parameters
       direction: "horizontal",
       speed: 2000,
       loop: true,
-      slidesPerView: 3,
+      slidesPerView: "auto",
       spaceBetween: 30,
       allowTouchMove: false,
       autoplay: {
