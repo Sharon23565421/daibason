@@ -13,9 +13,8 @@
       backgroundImage:`url(${background1})`
     }">
         <div class="image">
-                  <img src="../../public/img/ron/ron.jpg" alt="ron1">
+          <img src="../../public/img/ron/ron.jpg" alt="ron1">
         </div>
-
       </div>
       <p>
         榕 RON CAFE BAR 是以音樂與藝文作為核心精神，結合咖啡酒飲與在地人文料理的餐飲酒吧

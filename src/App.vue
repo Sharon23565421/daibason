@@ -16,6 +16,12 @@
 import HeaderArea from '@/components/Header.vue'
 import FooterArea from '@/components/Footer.vue'
 export default {
+  data(){
+    return{
+      apikey: '831993a5339d4b7cadc74621231609',
+      weather: {}
+    }
+  },
   components: {
     HeaderArea,
     FooterArea,
@@ -27,7 +33,14 @@ export default {
         //     return this.$route.path === "/MemberPagesBgc";
         // },
     },
-
+  mounted(){
+    fetch('https://api.weatherapi.com/v1/current.json?q=Taipei&lang=zh_tw&key=831993a5339d4b7cadc74621231609')
+    .then(res=>res.json())
+    .then(json=>{
+      console.log(json.current);
+      // this.weather = json.current
+    })
+  }
 
 }
 
