@@ -39,9 +39,7 @@ export default {
     },
     methods: {
         menu() {
-            // console.log(11)
-            this.toggle = '會員資料'
-            this.$emit('toggle-change', this.toggle)
+            this.$emit('toggle-change')
             // document.getElementById('AccChange').style.display = 'none'
             // document.querySelector('.userInfo').style.display = 'block'
         }
@@ -71,7 +69,7 @@ export default {
         grid-template-rows: 180px repeat(6, 1fr);
         justify-items: center;
         align-items: center;
-        gap: 30px;
+        gap: 40px;
 
         .accPic {
             // border: 1px solid red;

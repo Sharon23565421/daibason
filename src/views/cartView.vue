@@ -73,6 +73,9 @@ export default {
     gotoShopping() {
       this.$router.push("/Shopping"); 
     },
+    cartTotal() {
+      return this.$store.getters.cartTotal;
+    },
   },
 };
 </script>

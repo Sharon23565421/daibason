@@ -7,8 +7,8 @@
         <button>登出</button>
         <nav>
             <ul>
-                <li @click="Toacc"><router-link to="">會員資料</router-link></li>
-                <li @click="Toart"><router-link to="">投稿文章</router-link></li>
+                <li @click="To"><router-link to="">會員資料</router-link></li>
+                <li @click="To"><router-link to="">投稿文章</router-link></li>
                 <li><router-link to="">文章收藏</router-link></li>
                 <li><router-link to="">商品收藏</router-link></li>
                 <li><router-link to="">訂單查詢</router-link></li>
@@ -33,12 +33,12 @@ export default {
             // console.log(111)
             document.querySelector('.SliderAC').style.left = '-100%'
         },
-        Toacc(e) {
+        To(e) {
             // console.log(11)
             // console.log(e.target.innerText)
-            this.togglee = e.target.innerText
-            console.log(this.togglee)
-            this.$emit('togglee-change', this.togglee)
+            let title = e.target.innerText
+            // console.log(title)
+            this.$emit('title-change', title)
 
             // document.getElementById('userInfo').style.display = 'block'
             // document.getElementById('ArticleInfo').style.display = 'none'
@@ -46,17 +46,17 @@ export default {
             // document.getElementById('PwdChange').style.display = 'none'
             // document.getElementById('PhoneChange').style.display = 'none'
             // document.getElementById('MailChange').style.display = 'none'
-        },
-        Toart(e) {
-            // console.log(e.target.innerText)
-            this.togglee = e.target.innerText
-            console.log(this.togglee)
-            this.$emit('togglee-change', this.togglee)
-            
-            // console.log(111)
-            // document.getElementById('userInfo').style.display = 'none'
-            // document.getElementById('ArticleInfo').style.display = 'block'
         }
+        // Toart(e) {
+        //     // console.log(e.target.innerText)
+        //     let title = e.target.innerText
+        //     // console.log(title)
+        //     this.$emit('title-change', title)
+            
+        //     // console.log(111)
+        //     // document.getElementById('userInfo').style.display = 'none'
+        //     // document.getElementById('ArticleInfo').style.display = 'block'
+        // }
     }
 }
 </script>

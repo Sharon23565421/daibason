@@ -1,7 +1,7 @@
 <template>
     <div class="artWrap">
+        <h1>投稿文章</h1>
         <div class="artGrid">
-            <h1>投稿文章</h1>
             <div class="artCard" v-for="card in cardsDisplay">
                 <div class="card-h">
                     <div class="img">
@@ -25,11 +25,11 @@
                     </p>
                 </div>
             </div>
-            <Page 
+            <!-- <Page 
             :total="cards.length" 
             size="small" 
             :page-size="pageSize" 
-            @on-change="updatePage"  id="page"/>
+            @on-change="updatePage"  id="page"/> -->
         </div>
 
     </div>
@@ -40,15 +40,6 @@ export default {
     data() {
         return {
             cards: [{
-                image: '../img/artCard.png',
-                head: '../img/artCard1.png',
-                tag: '住宿推薦',
-                title: '原來京站樓上長這樣？',
-                title2: '開箱五星級行政豪華客房一泊二食',
-                date: '2020-06-15',
-                ctx: '在日本旅行的時候最喜歡住在靠近JR車站或者地鐵站附近的飯店，而到台灣台北旅行，最方便的地點莫過於是住在台北車站或者西門附近的飯店，台北車站是五鐵共構的大車站......。'
-            },
-            {
                 image: '../img/artCard.png',
                 head: '../img/artCard1.png',
                 tag: '住宿推薦',
@@ -130,34 +121,39 @@ export default {
     background-color: #fff;
     border-radius: 20px;
     width: 900px;
-    .artGrid{
+
+    h1 {
+        text-align: center;
+        margin-top: 30px;
+        // grid-area: 1/1/2/3;
+    }
+
+    .artGrid {
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 100px repeat(2, 1fr) ;
-        // gap: 50px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 50px;
         justify-items: center;
-        h1 {
-            text-align: center;
-            margin-top: 30px;
-            grid-area: 1/1/2/3;
-        }
-    
+
+
         .artCard {
-    
-            // align-items: center;
-            // justify-self: center;
             .card-h {
                 border: 1px solid #aaa;
-    
+                width: 100%;
+                height: 350px;
+                overflow: auto;
+
                 .img {
                     .head {
-                        overflow: hidden;
+                        overflow: auto;
                     }
                 }
             }
         }
-        #page{
+
+        #page {
             grid-area: 4/1/5/3;
         }
     }
@@ -165,19 +161,24 @@ export default {
 }
 
 @media screen and (max-width:414px) {
-    .artWrap{
+    .artWrap {
         width: 100%;
-        display: block;
-        .artCard{
-           .card-h{
-            margin:  5px auto;
-            // margin: 5px 0;
-           }
-        }
-        #page{
-            text-align: center;
+
+        .artGrid {
+            grid-template-columns: repeat(1, 1fr);
+
+            .artCard {
+                .card-h {
+                    // margin:  5px auto;
+                    // overflow:auto;
+                    // margin: 5px 0;
+                    height: 520px;
+                    margin: 0;
+
+                }
+            }
         }
     }
-    
+
 }
 </style>
