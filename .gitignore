@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
 
-
+# npm run build
+mrt
 
 # local env files
 .env.local

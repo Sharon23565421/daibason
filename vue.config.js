@@ -2,9 +2,6 @@ const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
   runtimeCompiler: true,
-});
-
-module.exports = {
   css: {
     loaderOptions: {
       sass: {
@@ -14,4 +11,11 @@ module.exports = {
       },
     },
   },
-};
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/chd103/g5/mrt/'
+    : '/',
+  outputDir: 'mrt'
+});
+
+// module.exports = {
+// };
