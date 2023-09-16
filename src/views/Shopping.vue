@@ -76,10 +76,34 @@
   </transition>
     </div>
     <div class="ShopDelBox">
-
+      <div class="DelTitle">運送方式</div>
+      <div class="DelComent">
+        <div > 收件人姓名:<input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="請輸入收件人姓名"/></div> 
+        <div > 收件人電話:<input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="09XXXXXXXX"/></div> 
+        <div > 收件人信箱:<input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="請輸入信箱"/></div> 
+        <div > 收件人地址:<input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="清輸入地址"/></div> 
+      </div>
     </div>
     <div class="ShopSumBox">
-
+      <div class="SumCac">
+        <div class="SumCacTex">
+          <p>折扣後小計</p>
+          <p>運費</p>
+        </div>
+        <div class="SumCacPrice">
+          <p>NT${{250 }}</p>
+          <p>NT${{250 }}</p>
+        </div>
+      </div>
+      <div class="SumTol">
+        <div class="SumCacTex">
+          <p>商品金額統計</p>
+        </div>
+        <div class="SumCacPrice">
+          <p>NT${{  }}</p>
+          <p>(含運費)</p>
+        </div>
+      </div>
     </div>
     <div class="ShopBtmBox">
       <div class="ShopBtnBack" @click="gotoCart">上一頁</div>
@@ -105,6 +129,9 @@ export default {
     },
     gotoShoppingDone(){
       this.$router.push("/ShoppingDone"); 
+    },
+    cartTotal() {
+      return this.$store.getters.cartTotal;
     },
   },
 };
@@ -250,6 +277,7 @@ export default {
       padding: 30px 10px;
     }
     .PayTItle{
+      padding: 10px 20px;
       background-color: rgb(234, 233, 233); ;
     }
     label {
@@ -264,8 +292,51 @@ export default {
     }
   }
   }
-  .ShopDelBox{}
-  .ShopSumBox{}  
+  .ShopDelBox{
+    margin: 20px 0;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    div{padding: 30px 10px;}
+    .DelTitle{
+      padding: 10px 20px;
+      background-color: rgb(234, 233, 233); 
+    }
+    .DelComent{
+      display: flex;
+      flex-wrap: wrap;
+      div{
+        line-height: 2;
+        width: 100%;
+        input{
+          margin-left: 20px;
+          width: 30%;
+        }
+      }
+    }
+  }
+  .ShopSumBox{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(234, 233, 233);
+    align-items: flex-end; 
+    .SumCac{
+      justify-content: flex-end;
+      display: flex;
+      width: 100%;
+      .SumCacTex{
+
+      }
+      .SumCacPrice{
+        padding-left: 20%;
+      }
+    }
+    .SumTol{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }  
   .ShopBtmBox{
     width: 100%;
     display: flex;

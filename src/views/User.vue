@@ -98,7 +98,7 @@ export default {
             display: block;
             writing-mode: vertical-lr;
             position: absolute;
-            top: 50px;
+            top: 30px;
             left: 10px;
             height: 100px;
             text-align: center;
@@ -119,10 +119,11 @@ export default {
             /* display: none; */
             width: 100%;
             position: absolute;
-            top: 0;
+            top: -20px;
             left: -100%;
             transition: 1s;
             z-index: 999;
+            height: calc(100vh - 125px);
         }
     }
 }

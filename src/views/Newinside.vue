@@ -1,7 +1,7 @@
 <template>
     <div class="newsinWrap">
         <span class="newsinTag title-tag gray">#{{ news.tag }}</span>
-        <span class="newsindate">{{ news.date }}</span>
+        <span class="newsindate"> 發佈日期：{{ news.date }}</span>
         <h1>{{ news.title }}</h1>
 
         <div class="swiper">
@@ -31,7 +31,7 @@ export default {
         return {
             news: {
                 tag: '活動消息',
-                date: '2023-07-07~2024-01-07',
+                date: '2023-07-07',
                 title: '植感生活－植物郵票與押花特展',
                 image: '../img/newsbackimg.png',
                 image1: '../img/news4.png',
