@@ -276,12 +276,29 @@
       }
     }
   }
+  .swiperMRTCard {
+    width: 900px;
+    height: 400px;
+    margin: auto;
+    // background-color: aqua;
+    overflow: hidden;
+    margin-block: 1rem;
+
+    .swiper-slide {
+      width: 300px;
+      height: 200px;
+
+      .ard-h {
+        width: 50%;
+      }
+    }
+  }
 }
+
 /* 站點板塊左右對調 */
 .mrtWrap:nth-of-type(even) {
   .mrtSta {
     flex-direction: row-reverse;
-
     .mrtStaBox {
       flex-direction: row-reverse;
       justify-content: start;
@@ -310,6 +327,7 @@
 .cardSliFade-leave-from .cardSliFade-enter-to {
   opacity: 1;
 }
+
 // --------------------------------------------
 
 @media screen and (max-width: 1279px) {

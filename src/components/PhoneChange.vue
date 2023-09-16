@@ -38,7 +38,7 @@ export default {
 <style lang="scss">
 .phonechange {
     border: 1px solid #aaa;
-    background-color: #fff;
+    background-color: #fffd;
     border-radius: 20px;
     width: 900px;
     // margin-left: 10px;
