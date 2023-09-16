@@ -13,24 +13,24 @@
       </div>
 
       <div class="mrtMainLine">
-        <a class="pic border-redline" @click="showTag('red')">
+        <div class="pic border-redline" @click="showTag('red')">
           <img src="../../public/img/red.jpeg" alt="redline" />
-        </a>
-        <a class="pic border-blueline" @click="showTag('blue')">
+        </div>
+        <div class="pic border-blueline" @click="showTag('blue')">
           <img src="../../public/img/blue.jpeg" alt="blueline" />
-        </a>
-        <a class="pic border-greenline" @click="showTag('green')">
+        </div>
+        <div class="pic border-greenline" @click="showTag('green')">
           <img src="../../public/img/green.jpeg" alt="greenline" />
-        </a>
-        <a class="pic border-orangeline" @click="showTag('orange')">
+        </div>
+        <div class="pic border-orangeline" @click="showTag('orange')">
           <img src="../../public/img/orange.jpeg" alt="orangeline" />
-        </a>
-        <a class="pic border-brownline" @click="showTag('brown')">
+        </div>
+        <div class="pic border-brownline" @click="showTag('brown')">
           <img src="../../public/img/brown.jpeg" alt="brownline" />
-        </a>
-        <a class="pic border-yellowline" @click="showTag('yellow')">
+        </div>
+        <div class="pic border-yellowline" @click="showTag('yellow')">
           <img src="../../public/img/yellow.jpeg" alt="yellowline" />
-        </a>
+        </div>
       </div>
       <div class="pic mrtGrayStyle border-redline">
         <img src="../../public/img/red.jpeg" alt="redline" />
@@ -40,133 +40,50 @@
       </div>
     </div>
 
-    <div class="mrtTag">
-      <a
-        class="title-tag red"
-        :class="{ active: selectColor === 'red' }"
-        v-show="showAll || selectColor == 'red'"
-        >RED</a
+    <div v-if="MB" class="mrtTag">
+      <div
+        class="title-tag"
+        v-for="(color, index) in selectColor"
+        :key="color"
+        :class="({ active: selectColor === color }, color)"
+        v-show="showAll || selectColor == color"
       >
-      <a
-        class="title-tag blue info"
-        :class="{ active: selectColor === 'blue' }"
-        v-show="showAll || selectColor == 'blue'"
-        >BLUE</a
+        {{ upperCaseColorsMB[index] }}
+      </div>
+    </div>
+
+    <div v-if="PC" class="mrtTag">
+      <div
+        class="title-tag"
+        v-for="(color, index) in selectColor"
+        :key="color"
+        :class="({ active: selectColor === color }, color)"
+        v-show="showAll || selectColor == color"
       >
-      <a
-        class="title-tag green"
-        :class="{ active: selectColor === 'green' }"
-        v-show="showAll || selectColor == 'green'"
-        >GREEN</a
-      >
-      <a
-        class="title-tag orange"
-        :class="{ active: selectColor === 'orange' }"
-        v-show="showAll || selectColor == 'orange'"
-        >ORANGE</a
-      >
-      <a
-        class="title-tag brown"
-        :class="{ active: selectColor === 'brown' }"
-        v-show="showAll || selectColor == 'brown'"
-        >BROWN</a
-      >
-      <a
-        class="title-tag yellow"
-        :class="{ active: selectColor === 'yellow' }"
-        v-show="showAll || selectColor == 'yellow'"
-        >YELLOW</a
-      >
+        {{ upperCaseColorsPC[index] }}
+      </div>
     </div>
   </section>
 
   <div class="mrtBanner">
     <div class="swiper" id="mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="../../public/img/greenArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/purpleArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/orangeArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/greenArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/purpleArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/orangeArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/greenArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/purpleArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/orangeArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/greenArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/purpleArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/orangeArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/greenArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/purpleArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/orangeArrow.jpg" alt="" />
+        <div class="swiper-slide" v-for=" in 20">
+          <img src="../../public/img/mrtArrow.png" alt="" />
         </div>
       </div>
     </div>
   </div>
 
   <div class="mrtBanner">
-    <div class="swiper" id="mySwiper">
+    <div class="swiper" id="mySwiper2">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="../../public/img/greenArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/purpleArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/orangeArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/greenArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/purpleArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/orangeArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/greenArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/purpleArrow.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="../../public/img/orangeArrow.jpg" alt="" />
+        <div class="swiper-slide" v-for=" in 20">
+          <img src="../../public/img/mrtArrow.png" alt="" />
         </div>
       </div>
     </div>
   </div>
-
-  <!-- 虛線 -->
 </template>
 
 <script>
@@ -177,25 +94,27 @@ export default {
       selectColor: ["red", "blue", "green", "orange", "brown", "yellow"],
       showAll: true,
       src: "../../public/img/mrtArrow.jpg",
+      PC: false,
+      MB: false,
     };
   },
 
   mounted() {
     const swiper = new Swiper(".swiper", {
       direction: "vertical",
-      speed: 1000,
+      speed: 3000,
       loop: true,
       autoHeight: true,
-      loopedSlides: 4,
       slidesPerView: "auto",
       spaceBetween: 0,
-      updateOnWindowResize: true,
       autoplay: {
         delay: 0,
         pauseOnMouseEnter: false,
         disableOnInteraction: false,
       },
     });
+    this.WindowWidth();
+    window.addEventListener("resize", this.WindowWidth);
   },
   methods: {
     showTag(color) {
@@ -213,6 +132,27 @@ export default {
         ];
         this.showAll = true;
       }
+    },
+
+    WindowWidth() {
+      if (window.innerWidth <= 768) {
+        this.MB = true;
+        this.PC = false;
+      } else {
+        this.PC = true;
+        this.MB = false;
+      }
+    },
+  },
+
+  computed: {
+    upperCaseColorsMB() {
+      return this.selectColor.map((color) =>
+        color.toUpperCase().substring(0, 2)
+      );
+    },
+    upperCaseColorsPC() {
+      return this.selectColor.map((color) => color.toUpperCase());
     },
   },
 };
