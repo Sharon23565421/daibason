@@ -179,11 +179,13 @@
 
     .CBTitle {
         width: 1200px;
-        margin: auto;
+        margin: 8% auto;
+        padding-block: 1%;
         text-align: center;
         // border-top: 5px dashed #D9D9D9;
         // border-bottom: dashed #D9D9D9;
         // padding-block: 30px;
+        position: relative;
 
         h2 {
             font-size: map-get($fontsizes, h2);
@@ -204,6 +206,32 @@
 
     }
 
+    .CBTitle::after {
+        content: '';
+        background-image: url('~@/assets/images/Line.svg');
+        width: 1150px;
+        height: 2px;
+        position: absolute;
+        top: -20%;
+        left: 2%;
+        right: 2%;
+        opacity: .5;
+
+    }
+
+    .CBTitle::before {
+        content: '';
+        background-image: url('~@/assets/images/Line.svg');
+        width: 1150px;
+        height: 2px;
+        position: absolute;
+        bottom: -20%;
+        left: 2%;
+        right: 2%;
+        opacity: .5;
+
+    }
+
     .CBList {
         margin: auto;
         display: grid;
@@ -217,6 +245,8 @@
             width: 80px;
         }
     }
+
+
 
     .CBPost {
         width: 1200px;
@@ -395,4 +425,11 @@
     z-index: 9;
     opacity: 0.7;
 
+}
+
+.swiper22 {
+
+    .swiper-wrapper {
+        transition-timing-function: linear;
+    }
 }
