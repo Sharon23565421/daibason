@@ -1,6 +1,6 @@
 <template>
   <div class="newsWrap">
-    <h1>最新消息</h1>
+    <h1>消息資訊</h1>
     <div class="newsBanner">
 
       <div class="swiper">
@@ -13,8 +13,7 @@
             <div class="newsBackpic">
               <img :src="news.image" alt="">
             </div>
-
-
+            
             <a href="/Newinside" class="newsBox">
               <div class="newsCtxTxt">
                 <div class="newsTag title-tag gray">
@@ -57,11 +56,11 @@
           <img :src="card.image" alt="">
         </div>
         <div class="newsTxt">
-          <div class="newsTag title-tag gray">
+          <!-- <div class="newsTag title-tag gray">
             <span>
               #{{ card.tag }}
             </span>
-          </div>
+          </div> -->
           <div class="newsTag title-tag gray">
             <span>
               #{{ card.tag1 }}
@@ -100,21 +99,21 @@ export default {
       tagtoggle: '所有消息',
       slider: [{
         tag: '活動消息',
-        date: '2023-07-04~2024-01-07',
+        date: '2023-07-04',
         title: '植感生活',
         title2: '－植物郵票與押花特展',
         image: '../img/newsbackimg.png'
       },
       {
         tag: '活動消息2',
-        date: '2023-07-04~2024-01-07',
+        date: '2023-07-04',
         title: '植感生活',
         title2: '－植物郵票與押花特展',
         image: '../img/newsbackimg2.png'
       },
       {
         tag: '活動消息3',
-        date: '2023-07-04~2024-01-07',
+        date: '2023-07-04',
         title: '植感生活',
         title2: '－植物郵票與押花特展',
         image: '../img/newsbackimg.png'
@@ -132,7 +131,7 @@ export default {
       news: [{
         tag: '所有消息',
         tag1: '活動消息',
-        date: '2023-09-09~2023-11-02',
+        date: '2023-09-09',
         title: '止觀-堉泉個展',
         contents: '久⽯讓在《感動，如此創造》書中開篇提到：「創作者依循個⼈的信念、價值觀，去追求⾃我滿意的作品。但⽤此態度創作出的作品，也許讓⼈無法理解，也可能會花上漫長的時間才能完成⼀部作品。因此，秉持這種態度創作時，必然不會考慮付出成本及產量多寡的問題。所謂的藝術家，指的就是朝此⽅向前進的⼈。」',
         image: '../img/news1.png'

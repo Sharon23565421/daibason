@@ -26,8 +26,7 @@ export default {
     },
     methods: {
         menu() {
-            this.toggle = '會員資料'
-            this.$emit('toggle-change', this.toggle)
+            this.$emit('toggle-change')
             // console.log(11)
             // document.getElementById('MailChange').style.display = 'none'
             // document.querySelector('.userInfo').style.display = 'block'
@@ -56,7 +55,7 @@ export default {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
         justify-items: center;
-        gap: 30px;
+        gap: 40px;
 
         .mail {
             // border: 1px solid red;
