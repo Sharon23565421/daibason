@@ -54,7 +54,7 @@ export default {
 <style lang="scss">
 .pwdchange {
     border: 1px solid #aaa;
-    background-color: #fffd;
+    background-color: #fff;
     border-radius: 20px;
     width: 900px;
     // margin-left: 10px;

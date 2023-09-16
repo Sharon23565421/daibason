@@ -118,7 +118,7 @@ export default {
 <style lang="scss">
 .artWrap {
     border: 1px solid #aaa;
-    background-color: #fffd;
+    background-color: #fff;
     border-radius: 20px;
     width: 900px;
 
