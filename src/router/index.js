@@ -60,13 +60,6 @@ const routes = [
       import(/* webpackChunkName: "Mrt" */ "@/views/MrtView.vue"),
   },
   {
-    path: "/MrtContributeInPage",
-    name: "MrtContributeInPage",
-    // component: MrtContributeInPageView,
-    component: () =>
-      import(/* webpackChunkName: "MrtContributeInPage" */ "@/views/MrtContributeInPageView.vue"),
-  },
-  {
     path: "/Game",
     name: "game",
     // component: LoginView,

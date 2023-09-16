@@ -1,20 +1,11 @@
 <template>
     <!-- 背景色塊 -->
-    <!-- <template v-if="$route.name === '/User'"> -->
-        <div class="col">
-            <div id="col1"></div>
-            <div id="col2"></div>
-            <div id="col3"></div>
-        </div>
-        <div class="row">
-            <div id="row1"></div>
-            <div id="row2"></div>
-            <div id="row3"></div>
-        </div>
-        <div id="circle"></div>
-    <!-- </template> -->
-
-
+    <div id="col1"></div>
+    <div id="col2"></div>
+    <div id="col3"></div>
+    <div id="row1"></div>
+    <div id="row2"></div>
+    <div id="row3"></div>
     <!-- <div id="circle"></div> -->
     <div class="userWrap">
         <!-- Rwd返回鍵 -->
