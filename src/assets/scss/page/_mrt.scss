@@ -31,6 +31,7 @@
       transform: skew(-5deg);
       position: relative;
       bottom: 10px;
+      overflow: hidden;
     }
 
     .mrtMainLine {
@@ -151,9 +152,30 @@
       color: #fff;
     }
 
-    // .red:hover ~  .mrtTag + .mrtPic .mrtMainLine .border-redline{
+    .red:hover ~ .mrtTag + .mrtPic .mrtMainLine .border-redline.active {
+      animation: flash 300ms linear;
+    }
 
-    // }
+    @keyframes flash {
+      0% {
+        filter: brightness(100%);
+      }
+      20% {
+        filter: brightness(150%);
+      }
+      40% {
+        filter: brightness(100%);
+      }
+      60% {
+        filter: brightness(150%);
+      }
+      80% {
+        filter: brightness(100%);
+      }
+      100% {
+        filter: brightness(150%);
+      }
+    }
 
     .blue:hover {
       background-color: map-get($color, $key: info);
