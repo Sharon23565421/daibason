@@ -75,6 +75,9 @@ export default {
     goToStoreDetail() {
       this.$router.push("/StoreDetail"); 
     },
+    addToCart(product) {
+      this.$store.dispatch('addToCart', product);
+    },
   },
 };
 </script>

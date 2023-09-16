@@ -81,6 +81,9 @@ export default {
     selectImage(imageSrc) {
       this.selectedImage = imageSrc;
     },
+    addToCart(product) {
+      this.$store.dispatch('addToCart', product);
+    },
   },
 };
 </script>
